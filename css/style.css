@@ -1,31 +1,29 @@
+/*------GENERAL----------
+*/
+body{
+	color: #2c3e50;
+}
+
+a{
+	color: #2c3e50;
+}
+
+/*----NAVIGATION--------
+*/
+
+.header a{
+	color: #d35400;
+}
+.header a:hover{
+	color: #e67e22;
+}
+
 .nav-pills{
 	margin-top: 28px;
 }
 
 .navbar-wrapper{
 	margin-top: 0px;
-}
-
-.video-container { 
-	position: relative; 
-	padding-bottom: 56.25%; 
-	padding-top: 30px; 
-
-	padding-bottom: 40%; 
-	height: 0; 
-	overflow: hidden; }
-
-.video-container iframe, .video-container object, .video-container embed { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%; }
-
-.nav-pills a:hover{
-	background-color:#83CB2D;
-
-
 }
 
 .slide1{
@@ -51,6 +49,36 @@
   background-size: cover;
 }
 
+
+/*-------BODY--------
+*/
+
+
+.video-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	padding-top: 30px; 
+
+	padding-bottom: 40%; 
+	height: 0; 
+	overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; }
+
+.nav-pills a:hover{
+	background-color:#83CB2D;
+
+
+}
+
+
+/*----COLORS http://flatuicolors.com/ -------
+*/
 .sign-up-divider{
 	padding: 20px;
 	margin: 80px 0px 80px 0px;
@@ -67,13 +95,27 @@
 .blue-background{
 	background-color: #2D52CB;
 }
-.yellow-background{
-	background-color: #FEF252;
+.sun-flower-background{
+	background-color: #f1c40f;
+}
+
+.emerald-background{
+	background-color: #2ecc71;
+}
+
+.carrot-background{
+	background-color: #e67e22;
 }
 
 
-
 /*-------FOOTER----------*/
+footer{
+	padding: 40px;
+}
+
+.social{
+	margin-bottom: 20px;
+}
 footer .social_button{
 	border-radius: 50%;
 	width: 40px;
@@ -106,7 +148,7 @@ a.fill-div {
 
 .facebook{
   background: url("../images/social-buttons.png") 3px 5px;
-  background-color: #32528E;
+  background-color: #2980b9;
 }
 
 .google_plus{
