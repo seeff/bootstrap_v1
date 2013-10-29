@@ -1,0 +1,43 @@
+.nav-pills{
+	margin-top: 28px;
+}
+
+.navbar-wrapper{
+	margin-top: 0px;
+}
+
+.video-container { 
+	position: relative; 
+/*	padding-bottom: 56.25%; 
+*/	padding-top: 30px; 
+
+	padding-bottom: 40%; 
+	height: 0; 
+	overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; }
+
+.nav-pills a:hover{
+	background-color:#83CB2D;
+}
+/*----------COLORS-----------
+*/
+.green-background{
+	background-color:#83CB2D;
+}
+
+.purple-background{
+	background-color: #DDFE92;
+}
+
+.blue-background{
+	background-color: #2D52CB;
+}
+.yellow-background{
+	background-color: #FEF252;
+}
