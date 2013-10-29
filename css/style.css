@@ -70,3 +70,56 @@
 .yellow-background{
 	background-color: #FEF252;
 }
+
+
+
+/*-------FOOTER----------*/
+footer .social_button{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	background-repeat:no-repeat;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+
+}
+.social_button{
+  text-indent: -3333px;
+}
+
+.social_button img {
+	width: 32px;
+  	height: 30px;
+}
+a.fill-div {
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+}
+
+.social_button:hover{
+    opacity: .7;
+}
+
+.facebook{
+  background: url("../images/social-buttons.png") 3px 5px;
+  background-color: #32528E;
+}
+
+.google_plus{
+  background: url("../images/social-buttons.png") -31px 4px;
+  background-color: #DE3D33;
+}
+
+.instagram{
+  background: url("../images/social-buttons.png")  -65px 5px;
+  background-color: #CEBAA9;
+}
+
+.twitter{
+  background: url("../images/social-buttons.png") -98px 5px;
+  background-color: #00A0D1;
+}
