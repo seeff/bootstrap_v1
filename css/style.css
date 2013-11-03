@@ -40,7 +40,7 @@ a:hover{
 }
 
 .caption{
-	margin-top: -300px;
+	margin-top: -350px;
 	text-align: center;
 }
 
@@ -91,6 +91,22 @@ a:hover{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#testimonials .a-testimonial { display: none; }
+
+blockquote {
+	border-left: none;
+	padding:0px;
+	margin:0px;
+}
+
+blockquote small{
+	float: right;
+}
+
+.a-testimonial img{
+	margin: 0 auto;
 }
 
 /*----COLORS http://flatuicolors.com/ -------
