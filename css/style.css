@@ -31,27 +31,17 @@ a:hover{
 	margin-top: 0px;
 }
 
-.slide1{
-  background-image: url('../images/photos/Page4.jpg') ;
+.flexslider{
+	border: none;
 }
 
-.slide2{
-  background-image: url('../images/photos/Page3.jpg') ;
+.flex-control-nav{
+	bottom: 5px;
 }
 
-.slide3{
-  background-image: url('../images/photos/Page2.jpg') ;
-}
-
-.slide4{
-  background-image: url('../images/photos/Page1.jpg') ;
-}
-
-.item{
- -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.caption{
+	margin-top: -300px;
+	text-align: center;
 }
 
 
@@ -59,26 +49,12 @@ a:hover{
 */
 
 
-.video-container { 
-	position: relative; 
-	padding-bottom: 56.25%; 
-	padding-top: 30px; 
-
-	padding-bottom: 40%; 
-	height: 0; 
-	overflow: hidden; }
-
-.video-container iframe, .video-container object, .video-container embed { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%; }
-
+.center{
+	text-align: center;
+}
+}
 .nav-pills a:hover{
 	background-color:#83CB2D;
-
-
 }
 
 
