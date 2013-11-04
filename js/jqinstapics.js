@@ -12,8 +12,8 @@
 
         // Defaults
         var defaults = {
-            "user_id": 506676850,
-            "access_token": 506676850.674061d.d3f19b8a8cd542019737d33138eba6cd,
+            "user_id": null,
+            "access_token": null,
             "count": 10
         };                      
 
