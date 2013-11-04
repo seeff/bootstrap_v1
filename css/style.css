@@ -40,7 +40,7 @@ a:hover{
 	text-align: center;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 990px) {
 	.caption{
 		margin-top: 0px;
 	}
@@ -51,6 +51,14 @@ a:hover{
 
 	.flex-direction-nav{
 		display: none;
+	}
+
+	.pull-right{
+		float: none;
+	}
+
+	.header{
+		text-align: center;
 	}
 }
 
@@ -71,10 +79,14 @@ a:hover{
 }
 
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 990px) {
 	img{
 		margin: 0 auto;
 	}
+
+	.featurette-image{
+	margin-top: 0px;
+}
 }
 
 .video-container {
@@ -118,6 +130,15 @@ blockquote small{
 	padding-left: 50px;
 	padding-right: 50px;
 }
+
+.featurette-image{
+	margin-top: 40px;
+}
+
+.flex-direction-nav a{
+	overflow: visible;
+}
+
 /*----COLORS http://flatuicolors.com/ -------
 */
 .sign-up-divider{
