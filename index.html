@@ -20,21 +20,29 @@
     <!-- Custom styles for this template -->
     <link href="css/flexslider.css" rel="stylesheet">
     <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/social-likes.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
 
-  </head>
+
+</head>
 <!-- NAVBAR
 ================================================== -->
   <body>
     <div class="sun-flower-background">
       <div class="container">
           <div class="header">
-              <ul class="nav nav-pills pull-right">
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#faq">FAQ</a></li>
-                      <li><a href="#oursocks">Our Socks</a></li>
-                      <li><a href="#contact">Contact</a></li>
-              </ul>
+                <ul class="social-likes  pull-right"  data-url="http://sockscribe.me/" data-title="Sockscribe Me - Awesome Sock Subscription Service">
+                  <li class="facebook" title="Share link on Facebook">Facebook</li>
+                  <li class="twitter" data-via="sockscribeme" data-related="Awesome Sock Subscription Service" title="Share link on Twitter">Twitter</li>
+                  <li class="plusone" title="Share link on Google+">Google+</li>
+                  <li class="pinterest" title="Share image on Pinterest" data-media="http://sockscribe.me/images/logo.png">Pinterest</li>
+                </ul>
+                <ul class="nav nav-pills pull-right">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#oursocks">Our Socks</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                </ul>
               <h3 class="text-muted"><img src="./images/logo.png"></img></h3>
           </div>
       </div>
@@ -127,7 +135,7 @@
           <p><a class="btn btn-default" href="#">Get Started &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-      
+
       <hr class="featurette-divider">
 
 
@@ -292,6 +300,7 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/jquery.flexslider.js"></script>
+    <script src="./js/social-likes.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
