@@ -155,6 +155,12 @@ blockquote small{
 	overflow: visible;
 }
 
+.about-us-progress .progress{
+	height: 40px;
+}
+.about-us-progress h5{
+	margin-top: 5px;
+}
 /*----COLORS http://flatuicolors.com/ -------
 */
 .sign-up-divider{
@@ -189,6 +195,7 @@ blockquote small{
 /*-------FOOTER----------*/
 footer{
 	padding: 40px;
+	margin-top: 40px;
 }
 
 .social{

@@ -68,6 +68,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <script src="./js/collapse.js"></script>
     <script src="./js/jquery.flexslider.js"></script>
     <script src="./js/social-likes.min.js"></script>
     <script src="./js/app.js"></script>
