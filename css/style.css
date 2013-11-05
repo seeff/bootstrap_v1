@@ -96,13 +96,22 @@ a:hover{
 
 
 @media screen and (max-width: 990px) {
+
+	.social-likes{
+		display: none;
+	}
+
 	img{
 		margin: 0 auto;
 	}
 
 	.featurette-image{
-	margin-top: 0px;
-}
+		margin-top: 0px;
+	}
+
+	.marketing .col-lg-4{
+		margin-bottom: 75px;
+	}
 }
 
 .video-container {

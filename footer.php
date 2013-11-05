@@ -35,11 +35,11 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
               <strong>Sign up for our fun Sock Newsletter</strong>
                 <form role="form" action="http://sockscribe.us5.list-manage.com/subscribe/post?u=2cba5c3a551b962f52453c787&amp;id=af6ab3ce00" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  method="post">
                    <div class="form-group">
-                    <input type="email"  name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter email" required>  
+                    <input type="email"  name="EMAIL" class="form-control required" id="mce-EMAIL" placeholder="Enter email" required>  
                     </div>                
                     <button type="submit" class="btn btn-primary">Sign up!</button>
                 </form>
@@ -49,7 +49,7 @@
 
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-5 text-right">
               <div class="row"
                 <p class="pull-right"><a href="#">Back to top</a></p>
               </div>

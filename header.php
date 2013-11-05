@@ -56,12 +56,12 @@
                   <li class="pinterest" title="Share image on Pinterest" data-media="http://sockscribe.me/images/logo.png">Pinterest</li>
                 </ul>
                 <ul class="nav nav-pills pull-right">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="./about-us.php">About</a></li>
+                        <li><a href="./frequently-asked-questions.php">FAQ</a></li>
                         <li><a href="#oursocks">Our Socks</a></li>
                         <li><a href="#contact">Contact</a></li>
                 </ul>
-              <h3 class="text-muted"><img src="./images/logo.png"></img></h3>
+              <a href="./"> <h3 class="text-muted"><img src="./images/logo.png"></img></h3></a>
           </div>
       </div>
     </div>
