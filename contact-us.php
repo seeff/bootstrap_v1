@@ -19,7 +19,7 @@ include_once('header.php');
 	</div>
 
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-7">
 			<form role="form">
 			<div class="form-group">
 			    <label for="name">Your Name</label>
@@ -52,7 +52,7 @@ include_once('header.php');
 			</form>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-4 col-md-offset-1">
 			<div class="row">
 				<h4>Don't hesitate to contact us</h4>
 				<p>This can be about how much we love hearing from customers.

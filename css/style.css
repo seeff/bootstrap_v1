@@ -170,6 +170,77 @@ blockquote small{
 .about-us-progress h5{
 	margin-top: 5px;
 }
+
+/*----------Sock subscription options-------------*/
+
+.radios .radio{
+    display:inline-block;
+    width:300px;
+    height:300px;
+}
+
+.male{
+	background-image:url('../images/male.png');
+}
+
+.female{
+	background-image:url('../images/female.png');
+	}
+
+.male, .female, .crazy, .stylish{
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.gift, .for-me{
+	background-color: red;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+.radios input[type=radio]{
+    display:none;
+}
+
+.radios input[type=radio]:checked + .radio{
+	opacity:1;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+
+}
+
+.fadein img {
+    position:absolute;
+    left:-65px;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#s2, #c2 {
+    -webkit-animation-delay: -4s;
+}
+#s3, #c3 {
+    -webkit-animation-delay: -2s;
+}
+
 /*----COLORS http://flatuicolors.com/ -------
 */
 .sign-up-divider{

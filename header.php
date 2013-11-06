@@ -56,7 +56,7 @@
                   <li class="pinterest" title="Share image on Pinterest" data-media="http://sockscribe.me/images/logo.png">Pinterest</li>
                 </ul>
                 <ul class="nav nav-pills pull-right">
-                        <li><a href="#">Sign Up!</a></li>
+                        <li><a href="./sock-subscription.php">Sign Up!</a></li>
                         <li><a href="./about-us.php">About</a></li>
                         <li><a href="./frequently-asked-questions.php">FAQ</a></li>
                         <li><a href="./contact-us.php">Contact</a></li>
