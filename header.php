@@ -46,22 +46,41 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-    <div class="sun-flower-background">
+
+        <div class="navbar navbar-default navbar-static-top sun-flower-background">
       <div class="container">
-          <div class="header">
-                <ul class="social-likes  pull-right"  data-url="http://sockscribe.me/" data-title="Sockscribe Me - Awesome Sock Subscription Service">
-                  <li class="facebook" title="Share link on Facebook">Facebook</li>
-                  <li class="twitter" data-via="sockscribeme" data-related="Awesome Sock Subscription Service" title="Share link on Twitter">Twitter</li>
-                  <li class="plusone" title="Share link on Google+">Google+</li>
-                  <li class="pinterest" title="Share image on Pinterest" data-media="http://sockscribe.me/images/logo.png">Pinterest</li>
-                </ul>
-                <ul class="nav nav-pills pull-right">
-                        <li><a href="./sock-subscription.php">Sign Up!</a></li>
-                        <li><a href="./about-us.php">About</a></li>
-                        <li><a href="./frequently-asked-questions.php">FAQ</a></li>
-                        <li><a href="./contact-us.php">Contact</a></li>
-                </ul>
-              <a href="./"> <h3 class="text-muted"><img src="./images/logo.png"></img></h3></a>
-          </div>
+
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./"><h1>Sockscribe me - Fun Sock Subscription Service</h1><img src="./images/logo.png"></img></a>
+        </div>
+         <!--  <ul class="social-likes navbar-right"  data-url="http://sockscribe.me/" data-title="Sockscribe Me - Awesome Sock Subscription Service">
+            <li class="facebook" title="Share link on Facebook">Facebook</li>
+            <li class="twitter" data-via="sockscribeme" data-related="Awesome Sock Subscription Service" title="Share link on Twitter">Twitter</li>
+            <li class="plusone" title="Share link on Google+">Google+</li>
+            <li class="pinterest" title="Share image on Pinterest" data-media="http://sockscribe.me/images/logo.png">Pinterest</li>
+          </ul> -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./sock-subscription.php" class="bold-pill">Sign Up!</a></li>
+            <li><a href="./about-us.php">About</a></li>
+            <li><a href="./frequently-asked-questions.php">FAQ</a></li>
+            <li><a href="./contact-us.php">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+  
+
+
+              <!-- Static navbar -->
+
       </div>
     </div>

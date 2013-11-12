@@ -60,7 +60,7 @@ include_once('header.php');
 
       <!-- Three columns of text below the carousel -->
       <div class="row center">
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/calendar.svg" alt="Calendar">
           <h2>Step 1</h2>
           <p>This is about picking a duration. </p><br/>
@@ -69,7 +69,7 @@ include_once('header.php');
                     to your door monthly.</p> -->
           <p><a class="btn btn-info" href="#">Get Started &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/clipboard.svg" alt="Clipboard">
           <h2>Step 2</h2>
           <p>this is about sex, style, gift options and shipping</p>
@@ -78,7 +78,7 @@ include_once('header.php');
                     what they deserve</p -->
           <p><a class="btn btn-info" href="#">Get Started &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/paper-bag.svg" alt="Paper Bag">
           <h2>Step 3</h2>
           <p>Here we say that we ship the socks to your door and you are happy</p>

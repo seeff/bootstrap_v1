@@ -8,4 +8,6 @@ $(document).ready(function(){
 	        return 'https://sockscribemetest.foxycart.com/cart?&' + queryString;
 	    });
 	});
+
+	
 }) 

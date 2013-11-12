@@ -77,6 +77,10 @@ a:hover{
 	}
 }
 
+
+.navbar-brand img{
+	width: 200px;
+}
 /*-------BODY--------
 */
 
@@ -84,7 +88,10 @@ a:hover{
 .center{
 	text-align: center;
 }
-
+.navbar{
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
 .nav-pills{
 	clear: both;
 	margin-top: 10px;
@@ -94,6 +101,23 @@ a:hover{
 	background-color:#83CB2D;
 }
 
+.navbar-brand h1 {
+	text-indent: -999999px;
+	position: absolute;
+}
+
+.navbar-nav{
+	margin-top: 15px;
+
+}
+
+.social-likes{
+	margin-top: 15px;
+}
+
+.marketing .col-sm-4{
+	margin-bottom: 50px;
+}
 
 @media screen and (max-width: 990px) {
 
@@ -111,6 +135,25 @@ a:hover{
 
 	.marketing .col-lg-4{
 		margin-bottom: 75px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.navbar .nav{
+		float: none;
+	}
+	.nav li, .navbar .nav{
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar .navbar-brand {
+	width: 100%;
+	text-align: center;
+	margin-top: -45px;
+}
+	.navbar-brand img {
+		width: 65%;
 	}
 }
 
@@ -189,6 +232,12 @@ blockquote small{
 	margin-left: 20px;
 }
 
+@media screen and (max-width: 750px) {
+	.radios .radio{
+		width: 100%;
+	}
+
+}
 .female-svg{
 	margin-top: 12px;
 	fill:#F4898B;
@@ -205,6 +254,7 @@ blockquote small{
 .female path:hover{
 	fill:#F97575;
 }
+
 
 /*.radios .radio:hover{
 	border-color: #48C9B0;
@@ -277,6 +327,9 @@ blockquote small{
     -webkit-animation-delay: -2s;
 }
 
+.collapse {
+overflow: hidden !important;
+}
 /*----COLORS http://flatuicolors.com/ -------
 */
 .sign-up-divider{
