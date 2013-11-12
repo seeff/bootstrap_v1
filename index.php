@@ -20,7 +20,7 @@ include_once('header.php');
                 <div class="caption">
                   <h1>Awesome socks delivered to your door monthly</h1>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Get Started</a></p>
+                  <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
                 </div>
             </div>
     </li>
@@ -30,7 +30,7 @@ include_once('header.php');
               <div class="caption">
                 <h1>White Socks are for Wussies</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Get Started</a></p>
+                <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
     </li>
@@ -40,7 +40,7 @@ include_once('header.php');
               <div class="caption">
                 <h1>A Great Gift</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Get Started</a></p>
+                <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
     </li>
@@ -67,7 +67,7 @@ include_once('header.php');
           <!-- <p>Simply pick a plan and tell us the place. We'll select
                     boastfully bright and dynamically patterned socks to ship
                     to your door monthly.</p> -->
-          <p><a class="btn btn-info" href="#">Get Started &raquo;</a></p>
+          <p><a class="btn btn-info" href="./sock-subscription.php">Get Started &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/clipboard.svg" alt="Clipboard">
@@ -76,7 +76,7 @@ include_once('header.php');
           <!-- <p>Take off your flip-flops and white tube socks; change
                     the conversation. Our socks are for freethinkers who know
                     what they deserve</p -->
-          <p><a class="btn btn-info" href="#">Get Started &raquo;</a></p>
+          <p><a class="btn btn-info" href="./sock-subscription.php">Get Started &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/paper-bag.svg" alt="Paper Bag">
@@ -85,7 +85,7 @@ include_once('header.php');
           <!-- p>It’s your right to stand out. Go ahead; Sockscribe, and
                     marvel yourself, your lover, your friends, even your
                     favorite pair of clogs.</p -->
-          <p><a class="btn btn-info" href="#">Get Started &raquo;</a></p>
+          <p><a class="btn btn-info" href="./sock-subscription.php">Get Started &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -116,7 +116,7 @@ include_once('header.php');
      
 
       <div class="row sun-flower-background sign-up-divider">
-        <button type="button" class="btn btn-primary btn-lg">Get Started </button>
+        <a href="./sock-subscription.php"> <div class="btn btn-primary btn-lg" >Get Started </div></a>
       </div>
       <div class="container">
         <div class="row featurette">
@@ -171,7 +171,7 @@ include_once('header.php');
     </div>
 
       <div class="row sun-flower-background sign-up-divider">
-        <button type="button" class="btn btn-primary btn-lg">Get Started </button>
+        <a href="./sock-subscription.php"> <div class="btn btn-primary btn-lg" >Get Started </div></a>
       </div>
 
       <div class="container">
@@ -187,13 +187,13 @@ include_once('header.php');
 
       </div><!-- end container -->
       <div class="row sun-flower-background sign-up-divider">
-        <button type="button" class="btn btn-primary btn-lg">Get Started </button>
+        <a href="./sock-subscription.php"> <div class="btn btn-primary btn-lg" >Get Started </div></a>
       </div>
 
       <div class="container">
 
       <div class="row featurette">
-        <div class="video-container col-md-4 col-md-offset-3">
+        <div class="video-container col-md-8 col-md-offset-2">
                  <iframe src="http://www.youtube.com/embed/nGTxZukeAQM" frameborder="0" width="560" height="315"></iframe>
         </div>
       </div>

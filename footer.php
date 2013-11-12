@@ -38,15 +38,13 @@
             <div class="col-md-3">
               <strong>Sign up for our fun Sock Newsletter</strong>
                 <form role="form" action="http://sockscribe.us5.list-manage.com/subscribe/post?u=2cba5c3a551b962f52453c787&amp;id=af6ab3ce00" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  method="post">
-                   <div class="form-group">
-                    <input type="email"  name="EMAIL" class="form-control required" id="mce-EMAIL" placeholder="Enter email" required>  
-                    </div>                
-                    <button type="submit" class="btn btn-primary">Sign up!</button>
+                    <div class="input-group">
+                      <input ype="email"  name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email"  required>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+                    </div><!-- /input-group -->
                 </form>
-
-
-
-
             </div>
 
             <div class="col-md-5 text-right">

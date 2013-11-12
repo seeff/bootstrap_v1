@@ -12,8 +12,8 @@ include_once('header.php');
 <!-- begin page content -->
 
 <div class="row">
-<div class="col-md-8">
-{% block checkout %}
+<div class="col-md-8 col-md-offset-2">
+{% block checkout %} 
 
 
 {# BEGIN CHECKOUT TWIG TEMPLATE #}
@@ -26,7 +26,7 @@ BEGIN checkout
 <div id="container">
 
     {{ html_messages|raw }}
-<form id="fc_form_checkout" method="post" action="https://{{ store_domain }}{{ post_url }}" onsubmit="return false;">
+<form id="fc_form_checkout" role="form" method="post" action="https://{{ store_domain }}{{ post_url }}" onsubmit="return false;">
 
 
 
@@ -84,7 +84,6 @@ BEGIN checkout
     {% block login_register %}
     <!--  *********** login_register : Login or Register ************* -->
     <div class="form-group" id="fc_login_register_container">
-    <h2>{% if checkout_type == 'guest_only' %}{{ lang.checkout_as_guest|raw }}{% else %}{{ lang.checkout_login_or_register|raw }}{% endif %}</h2>
     <fieldset id="fc_login_register">
         <legend>{% if checkout_type == 'guest_only' %}{{ lang.checkout_as_guest|raw }}{% else %}{{ lang.checkout_login_or_register|raw }}{% endif %}</legend>
         <div class="fc_inner">
@@ -92,7 +91,7 @@ BEGIN checkout
         {% if not customer_is_authenticated %}
                 <li id="li_customer_email" class="row fc_customer_email">
                     <label class="control-label" for="customer_email">{{ lang.checkout_email|raw }}<span class="fc_ast">*</span></label>
-                    <input type="text" value="{{ email }}" autocomplete="off" class="form-control form-control_long fc_required" id="customer_email" name="customer_email">
+                    <input type="text" value="{{ email }}" autocomplete="off" class="form-control  fc_required" id="customer_email" name="customer_email">
                     <label style="display:none;" class="alert alert-warning" for="customer_email">{{ lang.checkout_error_email|raw }}</label>
                     <p class="fc_account_message" id="fc_account_message_status">
                         {{ lang.checkout_instructions_email|raw }}
@@ -101,13 +100,13 @@ BEGIN checkout
                     <p style="display:none;" class="fc_account_message" id="fc_account_message_explanation"></p>
                 </li>
             {% if not is_updateinfo and checkout_type != 'guest_only' and checkout_type != 'account_only' %}
-                <li class="row row_radio fc_guest_checkout">
+                <li class="form-group row_radio fc_guest_checkout">
                     <label for="is_anonymous_1" class="fc_radio">
                         <input type="radio" name="is_anonymous" value="1" id="is_anonymous_1" class="fc_radio"{% if default_to_guest %} checked="checked"{% endif %} autocomplete="off"/>
                         <span>{{ lang.checkout_as_guest|raw }}</span>
                     </label>
                 </li>
-                <li class="row row_radio fc_guest_checkout">
+                <li class="form-group row_radio fc_guest_checkout">
                     <label for="is_anonymous_0" class="fc_radio">
                         <input type="radio" name="is_anonymous" value="0" id="is_anonymous_0" class="fc_radio"{% if not default_to_guest %} checked="checked"{% endif %} autocomplete="off" />
                         <span>{{ lang.checkout_as_customer|raw }}</span>
@@ -121,7 +120,7 @@ BEGIN checkout
                 {% endif %}
             {% endif %}
         {% else %}
-                <li class="row fc_customer_email" id="li_customer_email">
+                <li class="form-group fc_customer_email" id="li_customer_email">
                     <span class="control-label">{{ lang.checkout_email|raw }}<span class="fc_ast">*</span></span>
                     <span id="customer_email_authenticated" class="form-control">{{ email }}</span>
                     <input type="hidden" name="customer_email" id="customer_email" value="{{ email }}" />
@@ -132,12 +131,12 @@ BEGIN checkout
                 <li id="li_customer_password" style="display:none;" class="row fc_customer_password">
                     <p style="display:none;" class="fc_account_message" id="fc_account_message_password"></p>
                     <label class="control-label" for="customer_password">{{ lang.checkout_password|raw }}</label>
-                    <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control form-control_long" id="customer_password" name="customer_password">
+                    <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control " id="customer_password" name="customer_password">
                     <label style="display:none;" class="alert alert-warning" for="customer_password">{{ lang.checkout_error_password|raw }}</label>
                 </li>
                 <li id="li_customer_password2" style="display:none;" class="row fc_customer_password2">
                     <label class="control-label" for="customer_password2">{{ lang.checkout_retype_password|raw }}</label>
-                    <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control form-control_long" onchange="FC.checkout.checkPasswords()" id="customer_password2" name="customer_password2">
+                    <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control " onchange="FC.checkout.checkPasswords()" id="customer_password2" name="customer_password2">
                     <label style="display:none;" class="alert alert-warning" for="customer_password2">{{ lang.checkout_error_retype_password|raw }}</label>
                 </li>
                 <li id="li_customer_email_password" class="row" style="display:none">
@@ -169,65 +168,64 @@ BEGIN checkout
         {% block customer_billing %}
             <!--  *********** customer_billing : Billing Address ************* -->
             <div class="form-group" id="fc_customer_billing_container">
-                <h2>{{ lang.checkout_billing_address|raw }}</h2>
                 <fieldset id="fc_customer_billing">
                     <legend>{{ lang.checkout_billing_address|raw }}</legend>
                     <div class="fc_inner">
                         <ol id="fc_customer_billing_list">
-                            <li class="row row_select fc_foxycomplete fc_customer_country_name">
+                            <li class="form-group row_select fc_foxycomplete fc_customer_country_name">
                                 <label class="control-label" for="customer_country_name">{{ lang.checkout_country|raw }}<span class="fc_ast">*</span></label>
-                                <select class="form-control form-control_long fc_required fc_location" data-default-value="{{ country_code }}" id="customer_country" name="customer_country">
+                                <select class="form-control  fc_required fc_location" data-default-value="{{ country_code }}" id="customer_country" name="customer_country">
                                 {{ country_options|raw }}
                                 </select>
-                                <input value="{{ (country_code == '') ? country_name : country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control form-control_long fc_required fc_location" id="customer_country_name" name="customer_country_name">
+                                <input value="{{ (country_code == '') ? country_name : country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="customer_country_name" name="customer_country_name">
                                 <label style="display:none;" class="alert alert-warning" for="customer_country_name">{{ lang.checkout_error_country|raw }}</label>
                             </li>
-                            <li class="row fc_customer_first_name">
+                            <li class="form-group fc_customer_first_name">
                                 <label class="control-label" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ first_name }}" class="form-control form-control_long fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name">
+                                <input type="text" value="{{ first_name }}" class="form-control  fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name">
                                 <label style="display:none;" class="alert alert-warning" for="customer_first_name">{{ lang.checkout_error_first_name|raw }}</label>
                             </li>
-                            <li class="row fc_customer_last_name">
+                            <li class="form-group fc_customer_last_name">
                                 <label class="control-label" for="customer_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ last_name }}" class="form-control form-control_long fc_required" id="customer_last_name" name="customer_last_name" autocomplete="billing family-name">
+                                <input type="text" value="{{ last_name }}" class="form-control  fc_required" id="customer_last_name" name="customer_last_name" autocomplete="billing family-name">
                                 <label style="display:none;" class="alert alert-warning" for="customer_last_name">{{ lang.checkout_error_last_name|raw }}</label>
                             </li>
-                            <li class="row fc_customer_company">
+                            <li class="form-group fc_customer_company">
                                 <label class="control-label" for="customer_company">{{ lang.checkout_company|raw }}</label>
-                                <input type="text" value="{{ company }}" class="form-control form-control_long" id="customer_company" name="customer_company" autocomplete="billing organization">
+                                <input type="text" value="{{ company }}" class="form-control " id="customer_company" name="customer_company" autocomplete="billing organization">
                                 <label style="display:none;" class="alert alert-warning" for="customer_company">{{ lang.checkout_error_company|raw }}</label>
                             </li>
-                            <li class="row fc_customer_address1">
+                            <li class="form-group fc_customer_address1">
                                 <label class="control-label" for="customer_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ address1 }}" class="form-control form-control_long fc_required" id="customer_address1" name="customer_address1" autocomplete="billing address-line1">
+                                <input type="text" value="{{ address1 }}" class="form-control  fc_required" id="customer_address1" name="customer_address1" autocomplete="billing address-line1">
                                 <label style="display:none;" class="alert alert-warning" for="customer_address1">{{ lang.checkout_error_address1|raw }}</label>
                             </li>
-                            <li class="row fc_customer_address2">
+                            <li class="form-group fc_customer_address2">
                                 <label class="control-label" for="customer_address2">{{ lang.checkout_address2|raw }}</label>
-                                <input type="text" value="{{ address2 }}" class="form-control form-control_long" id="customer_address2" name="customer_address2" autocomplete="billing address-line2">
+                                <input type="text" value="{{ address2 }}" class="form-control " id="customer_address2" name="customer_address2" autocomplete="billing address-line2">
                             </li>
-                            <li class="row fc_customer_city">
+                            <li class="form-group fc_customer_city">
                                 <label class="control-label" for="customer_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ city }}" class="form-control form-control_long fc_required" id="customer_city" name="customer_city" autocomplete="billing locality">
+                                <input type="text" value="{{ city }}" class="form-control  fc_required" id="customer_city" name="customer_city" autocomplete="billing locality">
                                 <label style="display:none;" class="alert alert-warning" for="customer_city">{{ lang.checkout_error_city|raw }}</label>
                             </li>
-                            <li class="row row_select fc_foxycomplete fc_customer_state_name">
+                            <li class="form-group row_select fc_foxycomplete fc_customer_state_name">
                                 <label class="control-label" for="customer_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
-                                <select class="form-control form-control_long fc_required fc_location" data-default-value="{{ region_code }}" id="customer_state" name="customer_state">
+                                <select class="form-control  fc_required fc_location" data-default-value="{{ region_code }}" id="customer_state" name="customer_state">
                                 {{ region_options|raw }}
                                 </select>
-                                <input value="{{ (region_code == '') ? region_name : region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control form-control_long fc_required fc_location" id="customer_state_name" name="customer_state_name">
+                                <input value="{{ (region_code == '') ? region_name : region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="customer_state_name" name="customer_state_name">
                                 <label style="display:none;" class="alert alert-warning" for="customer_state_name">{{ lang.checkout_error_state|raw }}</label>
                             </li>
-                                <li class="row fc_customer_postal_code">
+                                <li class="form-group fc_customer_postal_code">
                                 <label class="control-label" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
                                 <input type="text" value="{{ postal_code }}" class="form-control form-control_short fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code">
                                 <label style="display:none;" class="alert alert-warning" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
                                 <label style="display:none;" class="alert alert-warning alert alert-warning_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
                             </li>
-                            <li class="row fc_customer_phone">
+                            <li class="form-group fc_customer_phone">
                                 <label class="control-label" for="customer_phone">{{ lang.checkout_phone|raw }}</label>
-                                <input type="text" value="{{ phone }}" class="form-control form-control_long" id="customer_phone" name="customer_phone" autocomplete="billing tel">
+                                <input type="text" value="{{ phone }}" class="form-control " id="customer_phone" name="customer_phone" autocomplete="billing tel">
                                 <label style="display:none;" class="alert alert-warning" for="customer_phone">{{ lang.checkout_error_phone|raw }}</label>
                             </li>
                         </ol>
@@ -255,65 +253,64 @@ BEGIN checkout
             {% block customer_shipping %}
             <!--  *********** address_shipping : Shipping Address ************* -->
             <div style="display: none;" class="form-group" id="fc_address_shipping_container">
-                 <h2>{{ lang.checkout_shipping_address|raw }}</h2>
                 <fieldset id="fc_shipping_address">
                     <legend>{{ lang.checkout_shipping_address|raw }}</legend>
                     <div class="fc_inner">
                         <ol id="fc_address_shipping_list">
-                            <li class="row row_select fc_foxycomplete fc_shipping_country_name">
+                            <li class="form-group row_select fc_foxycomplete fc_shipping_country_name">
                                 <label class="control-label" for="shipping_country_name">{{ lang.checkout_country|raw }}<span class="fc_ast">*</span></label>
-                                <select class="form-control form-control_long fc_required fc_location" data-default-value="{{ country_code }}" id="shipping_country" name="shipping_country">
+                                <select class="form-control  fc_required fc_location" data-default-value="{{ country_code }}" id="shipping_country" name="shipping_country">
                                 {{ shipping_country_options|raw }}
                                 </select>
-                                <input value="{{ (shipping_country_code == '') ? shipping_country_name : shipping_country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control form-control_long fc_required fc_location" id="shipping_country_name" name="shipping_country_name">
+                                <input value="{{ (shipping_country_code == '') ? shipping_country_name : shipping_country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="shipping_country_name" name="shipping_country_name">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_country_name">{{ lang.checkout_error_country|raw }}</label>
                             </li>
-                            <li class="row fc_shipping_first_name">
+                            <li class="form-group fc_shipping_first_name">
                                 <label class="control-label" for="shipping_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ shipping_first_name }}" class="form-control form-control_long fc_required" id="shipping_first_name" name="shipping_first_name" autocomplete="shipping given-name">
+                                <input type="text" value="{{ shipping_first_name }}" class="form-control  fc_required" id="shipping_first_name" name="shipping_first_name" autocomplete="shipping given-name">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_first_name">{{ lang.checkout_error_first_name|raw }}</label>
                             </li>
-                            <li class="row fc_shipping_last_name">
+                            <li class="form-group fc_shipping_last_name">
                                 <label class="control-label" for="shipping_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ shipping_last_name }}" class="form-control form-control_long fc_required" id="shipping_last_name" name="shipping_last_name" autocomplete="shipping family-name">
+                                <input type="text" value="{{ shipping_last_name }}" class="form-control  fc_required" id="shipping_last_name" name="shipping_last_name" autocomplete="shipping family-name">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_last_name">{{ lang.checkout_error_last_name|raw }}</label>
                             </li>
-                            <li class="row fc_shipping_company">
+                            <li class="form-group fc_shipping_company">
                                 <label class="control-label" for="shipping_company">{{ lang.checkout_company|raw }}</label>
-                                <input type="text" value="{{ shipping_company }}" class="form-control form-control_long" id="shipping_company" name="shipping_company" autocomplete="shipping organization">
+                                <input type="text" value="{{ shipping_company }}" class="form-control " id="shipping_company" name="shipping_company" autocomplete="shipping organization">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_company">{{ lang.checkout_error_company|raw }}</label>
                             </li>
-                            <li class="row fc_shipping_address1">
+                            <li class="form-group fc_shipping_address1">
                                 <label class="control-label" for="shipping_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ shipping_address1 }}" class="form-control form-control_long fc_required" id="shipping_address1" name="shipping_address1" autocomplete="shipping address-line1">
+                                <input type="text" value="{{ shipping_address1 }}" class="form-control  fc_required" id="shipping_address1" name="shipping_address1" autocomplete="shipping address-line1">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_address1">{{ lang.checkout_error_address1|raw }}</label>
                             </li>
-                            <li class="row fc_shipping_address2">
+                            <li class="form-group fc_shipping_address2">
                                 <label class="control-label" for="shipping_address2">{{ lang.checkout_address2|raw }}</label>
-                                <input type="text" value="{{ shipping_address2 }}" class="form-control form-control_long" id="shipping_address2" name="shipping_address2" autocomplete="shipping address-line2">
+                                <input type="text" value="{{ shipping_address2 }}" class="form-control " id="shipping_address2" name="shipping_address2" autocomplete="shipping address-line2">
                             </li>
-                            <li class="row fc_shipping_city">
+                            <li class="form-group fc_shipping_city">
                                 <label class="control-label" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
-                                <input type="text" value="{{ shipping_city }}" class="form-control form-control_long fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality">
+                                <input type="text" value="{{ shipping_city }}" class="form-control  fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_city">{{ lang.checkout_error_city|raw }}</label>
                             </li>
-                            <li class="row row_select fc_foxycomplete fc_shipping_state_name">
+                            <li class="form-group row_select fc_foxycomplete fc_shipping_state_name">
                                 <label class="control-label" for="shipping_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
-                                <select class="form-control form-control_long fc_required fc_location" data-default-value="{{ shipping_region_code }}" id="shipping_state" name="shipping_state">
+                                <select class="form-control  fc_required fc_location" data-default-value="{{ shipping_region_code }}" id="shipping_state" name="shipping_state">
                                 {{ shipping_region_options|raw }}
                                 </select>
-                                <input value="{{ (shipping_region_code == '') ? shipping_region_name : shipping_region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control form-control_long fc_required fc_location" id="shipping_state_name" name="shipping_state_name">
+                                <input value="{{ (shipping_region_code == '') ? shipping_region_name : shipping_region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="shipping_state_name" name="shipping_state_name">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_state_name">{{ lang.checkout_error_state|raw }}</label>
                             </li>
-                                <li class="row fc_shipping_postal_code">
+                                <li class="form-group fc_shipping_postal_code">
                                 <label class="control-label" for="shipping_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
                                 <input type="text" value="{{ shipping_postal_code }}" class="form-control form-control_short fc_required" id="shipping_postal_code" name="shipping_postal_code" autocomplete="shipping postal-code">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
                                 <label style="display:none;" class="alert alert-warning alert alert-warning_invalid_postal_code" for="shipping_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
                             </li>
-                            <li class="row fc_shipping_phone">
+                            <li class="form-group fc_shipping_phone">
                                 <label class="control-label" for="shipping_phone">{{ lang.checkout_phone|raw }}</label>
-                                <input type="text" value="{{ shipping_phone }}" class="form-control form-control_long" id="shipping_phone" name="shipping_phone" autocomplete="shipping tel">
+                                <input type="text" value="{{ shipping_phone }}" class="form-control " id="shipping_phone" name="shipping_phone" autocomplete="shipping tel">
                                 <label style="display:none;" class="alert alert-warning" for="shipping_phone">{{ lang.checkout_error_phone|raw }}</label>
                             </li>
                         </ol>
@@ -338,7 +335,6 @@ BEGIN checkout
             <div id="fc_address_multiship_container">
             {% for multiship in multiship_data %}
                 <div class="form-group" id="fc_shipto_{{ multiship.number }}_container">
-                    <h2>{{ lang.checkout_shipto|raw }} <span class="fc_shipto_name">{{ multiship.address_name }}</span></h2>
                     <fieldset id="fc_shipto_{{ multiship.number }}">
                         <legend>{{ lang.checkout_shipto|raw }} <span class="fc_shipto_name">{{ multiship.address_name }}</span></legend>
                         <div style="display:none;" class="fc_inner fc_shipto_display" id="fc_shipto_{{ multiship.number }}_display"></div>
@@ -351,52 +347,52 @@ BEGIN checkout
                                     <option value="-1">{{ lang.checkout_multiship_use_billing_address|raw }}</option>
                                     </select>
                                 </li>
-                                <li class="row row_select fc_foxycomplete fc_shipto_{{ multiship.number }}_country_name">
+                                <li class="form-group row_select fc_foxycomplete fc_shipto_{{ multiship.number }}_country_name">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_country_name">{{ lang.checkout_country|raw }}<span class="fc_ast">*</span></label>
-                                    <select class="form-control form-control_long fc_required fc_location" data-default-value="" id="shipto_{{ multiship.number }}_country" name="shipto_{{ multiship.number }}_country">
+                                    <select class="form-control  fc_required fc_location" data-default-value="" id="shipto_{{ multiship.number }}_country" name="shipto_{{ multiship.number }}_country">
                                     {{ multiship.country_options|raw }}
                                     </select>
-                                    <input value="{{ (multiship.country_code == '') ? multiship.country_name : multiship.country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control form-control_long fc_required fc_location" id="shipto_{{ multiship.number }}_country_name" name="shipto_{{ multiship.number }}_country_name">
+                                    <input value="{{ (multiship.country_code == '') ? multiship.country_name : multiship.country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="shipto_{{ multiship.number }}_country_name" name="shipto_{{ multiship.number }}_country_name">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_country_name">{{ lang.checkout_error_country|raw }}</label>
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_first_name">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_first_name">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ multiship.first_name }}" class="form-control form-control_long fc_required" id="shipto_{{ multiship.number }}_first_name" name="shipto_{{ multiship.number }}_first_name" autocomplete="section-{{ multiship.number }} shipping given-name">
+                                    <input type="text" value="{{ multiship.first_name }}" class="form-control  fc_required" id="shipto_{{ multiship.number }}_first_name" name="shipto_{{ multiship.number }}_first_name" autocomplete="section-{{ multiship.number }} shipping given-name">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_first_name">{{ lang.checkout_error_first_name|raw }}</label>
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_last_name">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_last_name">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ multiship.last_name }}" class="form-control form-control_long fc_required" id="shipto_{{ multiship.number }}_last_name" name="shipto_{{ multiship.number }}_last_name" autocomplete="section-{{ multiship.number }} shipping family-name">
+                                    <input type="text" value="{{ multiship.last_name }}" class="form-control  fc_required" id="shipto_{{ multiship.number }}_last_name" name="shipto_{{ multiship.number }}_last_name" autocomplete="section-{{ multiship.number }} shipping family-name">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_last_name">{{ lang.checkout_error_last_name|raw }}</label>
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_company">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_company">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_company">{{ lang.checkout_company|raw }}</label>
-                                    <input type="text" value="{{ multiship.company }}" class="form-control form-control_long" id="shipto_{{ multiship.number }}_company" name="shipto_{{ multiship.number }}_company" autocomplete="section-{{ multiship.number }} shipping organization">
+                                    <input type="text" value="{{ multiship.company }}" class="form-control " id="shipto_{{ multiship.number }}_company" name="shipto_{{ multiship.number }}_company" autocomplete="section-{{ multiship.number }} shipping organization">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_company">{{ lang.checkout_error_company|raw }}</label>
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_address1">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_address1">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ multiship.address1 }}" class="form-control form-control_long fc_required" id="shipto_{{ multiship.number }}_address1" name="shipto_{{ multiship.number }}_address1" autocomplete="section-{{ multiship.number }} shipping address-line1">
+                                    <input type="text" value="{{ multiship.address1 }}" class="form-control  fc_required" id="shipto_{{ multiship.number }}_address1" name="shipto_{{ multiship.number }}_address1" autocomplete="section-{{ multiship.number }} shipping address-line1">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_address1">{{ lang.checkout_error_address1|raw }}</label>
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_address2">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_address2">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_address2">{{ lang.checkout_address2|raw }}</label>
-                                    <input type="text" value="{{ multiship.address2 }}" class="form-control form-control_long" id="shipto_{{ multiship.number }}_address2" name="shipto_{{ multiship.number }}_address2" autocomplete="section-{{ multiship.number }} shipping address-line2">
+                                    <input type="text" value="{{ multiship.address2 }}" class="form-control " id="shipto_{{ multiship.number }}_address2" name="shipto_{{ multiship.number }}_address2" autocomplete="section-{{ multiship.number }} shipping address-line2">
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_city">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_city">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ multiship.city }}" class="form-control form-control_long fc_required" id="shipto_{{ multiship.number }}_city" name="shipto_{{ multiship.number }}_city" autocomplete="section-{{ multiship.number }} shipping locality">
+                                    <input type="text" value="{{ multiship.city }}" class="form-control  fc_required" id="shipto_{{ multiship.number }}_city" name="shipto_{{ multiship.number }}_city" autocomplete="section-{{ multiship.number }} shipping locality">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_city">{{ lang.checkout_error_city|raw }}</label>
                                 </li>
-                                <li class="row row_select fc_foxycomplete fc_shipto_{{ multiship.number }}_state_name">
+                                <li class="form-group row_select fc_foxycomplete fc_shipto_{{ multiship.number }}_state_name">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
-                                    <select class="form-control form-control_long fc_required fc_location" data-default-value="{{ multiship.region_code }}" id="shipto_{{ multiship.number }}_state" name="shipto_{{ multiship.number }}_state" style="display: none;">
+                                    <select class="form-control  fc_required fc_location" data-default-value="{{ multiship.region_code }}" id="shipto_{{ multiship.number }}_state" name="shipto_{{ multiship.number }}_state" style="display: none;">
                                     {{ multiship.region_options|raw }}
                                     </select>
-                                    <input value="{{ (multiship.region_code == '') ? multiship.region_name : multiship.region_code }}" type="text" class="fc_foxycomplete_input form-control form-control_long fc_required fc_location" id="shipto_{{ multiship.number }}_state_name" name="shipto_{{ multiship.number }}_state_name">
+                                    <input value="{{ (multiship.region_code == '') ? multiship.region_name : multiship.region_code }}" type="text" class="fc_foxycomplete_input form-control  fc_required fc_location" id="shipto_{{ multiship.number }}_state_name" name="shipto_{{ multiship.number }}_state_name">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_state_name">{{ lang.checkout_error_state|raw }}</label>
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_postal_code">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_postal_code">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
                                     <input type="text" value="{{ multiship.postal_code }}" class="form-control form-control_short fc_required" id="shipto_{{ multiship.number }}_postal_code" name="shipto_{{ multiship.number }}_postal_code" autocomplete="section-{{ multiship.number }} shipping postal-code">
                                     <label style="display:none;" class="alert alert-warning" for="shipto_{{ multiship.number }}_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
@@ -404,13 +400,13 @@ BEGIN checkout
                                 </li>
                             </ol>
                             <ol{% if multiship_data|length == 1 %} style="display:none;"{% endif %} class="fc_shipto_subtotal">
-                                <li class="row fc_shipto_{{ multiship.number }}_subtotal">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_subtotal">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_subtotal">{{ lang.checkout_shipment_subtotal|raw }}</label>
                                     <span id="shipto_{{ multiship.number }}_subtotal_formatted">{{ multiship.checkout_sub_total|money_format }}</span>
                                     <input type="hidden" value="{{ multiship.checkout_sub_total }}" id="shipto_{{ multiship.number }}_subtotal" name="shipto_{{ multiship.number }}_subtotal" />
                                 </li>
                             {% if multiship.has_shipping_or_handling_cost %}
-                                <li class="row fc_shipto_{{ multiship.number }}_shipping_total">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_shipping_total">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_shipping_total">{{ multiship.shipping_and_handling_label|raw }}</label>
                                     <span id="shipto_{{ multiship.number }}_shipping_total_formatted">{{ multiship.shipping_total|money_format }}</span>
                                     <input type="hidden" value="{{ multiship.shipping_total }}" class="fc_shipping" id="shipto_{{ multiship.number }}_shipping_total" name="shipto_{{ multiship.number }}_shipping_total" />
@@ -418,12 +414,12 @@ BEGIN checkout
                             {% else %}
                                 <input type="hidden" name="shipto_{{ multiship.number }}_shipping_total" id="shipto_{{ multiship.number }}_shipping_total" class="fc_shipping" value="0" />
                             {% endif %}
-                                <li class="row fc_shipto_{{ multiship.number }}_tax_total">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_tax_total">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_tax_total">{{ lang.checkout_shipment_tax|raw }}</label>
                                     <span id="shipto_{{ multiship.number }}_tax_total_formatted">{{ multiship.checkout_tax_total|money_format }}</span>
                                     <input type="hidden" value="{{ multiship.checkout_tax_total }}" class="fc_taxes" id="shipto_{{ multiship.number }}_tax_total" name="shipto_{{ multiship.number }}_tax_total" />
                                 </li>
-                                <li class="row fc_shipto_{{ multiship.number }}_total">
+                                <li class="form-group fc_shipto_{{ multiship.number }}_total">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_total">{{ lang.checkout_shipment_total|raw }}</label>
                                     <span id="shipto_{{ multiship.number }}_total_formatted">{{ multiship.total|money_format }}</span>
                                     <input type="hidden" value="{{ multiship.total }}" id="shipto_{{ multiship.number }}_total" name="shipto_{{ multiship.number }}_total">
@@ -480,7 +476,6 @@ BEGIN checkout
     {% block checkout_shipping_and_summary %}
         <!--  *********** shipping : Delivery &amp; Subtotal ************* -->
         <div id="fc_shipping_container" class="form-group"{% if is_updateinfo %} style="display:none;"{% endif %}>
-            <h2>{{ lang.checkout_delivery_and_subtotal|raw }}</h2>
             <fieldset id="fc_shipping">
                 <legend>{{ lang.checkout_delivery_and_subtotal|raw }}</legend>
                 <div class="fc_inner">
@@ -506,26 +501,26 @@ BEGIN checkout
                     </div>
                 {% endif %}
                     <ol id="fc_shipping_list">
-                        <li class="row fc_subtotal">
+                        <li class="form-group fc_subtotal">
                             <label for="subtotal" >{{ lang.checkout_cart_subtotal|raw }}</label>
                             <span id="subtotal_formatted">{{ checkout_subtotal|money_format }}</span>
                             <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
                         </li>
                     {% if has_future_products %}
-                        <li class="row fc_future_subscriptions">
+                        <li class="form-group fc_future_subscriptions">
                             <label for="future_subscriptions" >{{ lang.cart_future_subscriptions|raw }}</label>
                             <span id="future_subscriptions_formatted" >{{ checkout_future_subscriptions|money_format }}</span>
                             <input value="{{ checkout_future_subscriptions }}" type="hidden" name="future_subscriptions" id="future_subscriptions" />
                         </li>
                     {% endif %}
                 {% if has_shipping_or_handling_cost %}
-                        <li class="row fc_shipping_cost">
+                        <li class="form-group fc_shipping_cost">
                             <label for="shipping_cost">{{ shipping_and_handling_label|raw }}</label>
                             <span id="shipping_cost_formatted">{{ checkout_shipping_cost|money_format }}</span>
                             <input value="{{ checkout_shipping_cost }}" type="hidden" name="shipping_cost" id="shipping_cost" />
                         </li>
                     {% if has_future_products %}
-                        <li class="row fc_future_shipping_cost"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
+                        <li class="form-group fc_future_shipping_cost"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
                             <label for="future_shipping_cost">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</label>
                             <span id="future_shipping_cost_formatted" >{{ checkout_future_shipping_cost|money_format }}</span>
                             <input value="{{ checkout_future_shipping_cost }}" type="hidden" name="future_shipping_cost" id="future_shipping_cost" />
@@ -533,18 +528,18 @@ BEGIN checkout
                     {% endif %}
                 {% endif %}
                     {% if has_discount %}
-                        <li class="row fc_discount">
+                        <li class="form-group fc_discount">
                             <label for="discount">{{ lang.checkout_discount|raw }}</label>
                             <span id="discount_formatted">{{ checkout_discount|money_format }}</span>
                             <input value="{{ checkout_discount }}" type="hidden" name="discount" id="discount" />
                         </li>
                     {% endif %}
-                        <li class="row fc_tax">
+                        <li class="form-group fc_tax">
                             <label for="tax">{{ lang.checkout_tax|raw }}</label>
                             <span id="tax_formatted">{{ checkout_tax|money_format }}</span>
                             <input value="{{ checkout_tax }}" type="hidden" name="tax" id="tax" />
                         </li>
-                        <li class="row fc_order_total">
+                        <li class="form-group fc_order_total">
                             <label for="order_total">{{ lang.checkout_order_total|raw }}</label>
                             <span id="order_total_formatted">{{ checkout_order_total|money_format }}</span>
                             <input value="{{ checkout_order_total }}" type="hidden" name="order_total" id="order_total" />
@@ -562,7 +557,6 @@ BEGIN checkout
     {% block checkout_payment %}
         <!--  *********** payment : Payment Information ************* -->
         <div id="fc_payment_container" class="form-group ">
-            <h2>{{ lang.checkout_payment_information|raw }}</h2>
             <fieldset id="fc_payment">
                 <legend>{{ lang.checkout_payment_information|raw }}</legend>
                 <div class="fc_inner">
@@ -594,7 +588,7 @@ BEGIN checkout
                                     </li>
                                     <li id="li_cc_number" class="row li_cc_number">
                                         <label for="cc_number" class="control-label">{{ lang.checkout_card_number|raw }}</label>
-                                        <input type="text" name="cc_number" id="cc_number" class="form-control form-control_long fc_required" autocomplete="off" value="{{ cc_number }}" />
+                                        <input type="text" name="cc_number" id="cc_number" class="form-control  fc_required" autocomplete="off" value="{{ cc_number }}" />
                                         <label for="cc_number" class="alert alert-warning" style="display:none">{{ lang.checkout_error_card_number|raw }}</label>
                                     </li>
                                     <li id="li_cc_cvv2" class="row li_cc_cvv2">
