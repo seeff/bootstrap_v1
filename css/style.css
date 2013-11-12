@@ -330,6 +330,13 @@ blockquote small{
 .collapse {
 overflow: hidden !important;
 }
+
+
+
+/*--------FOXYCART---------*/
+li{
+	list-style-type: none;
+}
 /*----COLORS http://flatuicolors.com/ -------
 */
 .sign-up-divider{

@@ -11,21 +11,21 @@ include_once('header.php');
 
 <!-- begin page content -->
 
-<!-- This is the script for the slider - http://jqueryui.com/slider/#steps -->
-<script>
-  $(function() {
-    $( "#slider" ).slider({
-      value:100,
-      min: 0,
-      max: 500,
-      step: 50,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.value );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
-  });
- </script>
+
+ <script type="text/javascript" charset="utf-8">
+	function padWithZero(value) {
+		if (value < 10) {
+			return '0'+value;
+		}	
+		return value;
+	}
+	jQuery(document).ready(function(){
+		var end_date_6mths = new Date();
+		end_date_6mths.setMonth(end_date.getMonth()+6);
+		sub_enddate_6mths = end_date_6mths.getFullYear()+padWithZero(end_date_6mths.getMonth()+1)+padWithZero(end_date.getDate());
+		jQuery("input[name=sub_enddate]").val(sub_enddate);
+	});
+</script>
 
 <div class="container">
 
