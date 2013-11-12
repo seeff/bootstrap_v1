@@ -71,6 +71,7 @@
     <script src="./js/collapse.js"></script>
     <script src="./js/jquery.flexslider.js"></script>
     <script src="./js/social-likes.min.js"></script>
+    <script src="./js/products-app.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>

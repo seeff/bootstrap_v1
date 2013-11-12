@@ -176,7 +176,7 @@ blockquote small{
 .radios .radio{
 	display: inline-block;
 	width: 200px;
-	height: 100px;
+	height: 115px;
 	border: 2px solid #bdc3c7;
 	padding: 8px 12px;
 	-webkit-appearance: none;
@@ -189,11 +189,21 @@ blockquote small{
 	margin-left: 20px;
 }
 
-.female svg{
+.female-svg{
 	margin-top: 12px;
+	fill:#F4898B;
 }
-.male svg{
+.male-svg{
 	margin-top: 28px;
+	fill: #3498db;
+}
+
+.male path:hover{
+	fill:#2980b9;
+}
+
+.female path:hover{
+	fill:#F97575;
 }
 
 /*.radios .radio:hover{
@@ -206,20 +216,6 @@ blockquote small{
 	background-color: #f4f6f6;
 }
 
-
-.male path:hover{
-	fill:#2980b9;
-}
-
-.female path:hover{
-	fill:#F97575;
-}
-
-.gift, .for-me{
-	background-color: red;
-	opacity:0.4;
-	filter:alpha(opacity=40); /* For IE8 and earlier */
-}
 .radios input[type=radio]{
     display:none;
 }
@@ -230,10 +226,15 @@ blockquote small{
 
 }
 
+.radios p{
+	margin: 0 0 -2px;
+}
 .fadein img {
     position:absolute;
     left:-65px;
     top:0;
+    margin-top: 10px;
+    width: 75px;
     -webkit-animation-name: fade;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 6s;
@@ -255,6 +256,18 @@ blockquote small{
     33% {opacity: 1;}
     53% {opacity: 0;}
     100% {opacity: 0;}
+}
+
+.stylish img{
+	left: 55px;
+}
+
+.crazy img{
+	left: 70px;
+}
+
+.fading-images{
+	height: 75px;
 }
 
 #s2, #c2 {
