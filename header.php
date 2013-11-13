@@ -32,6 +32,7 @@
     <link href="css/flexslider.css" rel="stylesheet">
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/social-likes.css" rel="stylesheet" >
+    <link rel="stylesheet" href="http://static.foxycart.com/scripts/colorbox/1.3.16/style5/colorbox.css" type="text/css" media="screen" charset="utf-8" />œ
     <link href="css/style.css" rel="stylesheet">
 
 
