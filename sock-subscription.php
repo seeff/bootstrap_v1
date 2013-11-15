@@ -59,16 +59,22 @@ include_once('header.php');
 				<input type="radio" name="name" id="6months" value="" />
 				    <label class="radio col-sm-4 col-md-4" for="6months">
 				    	<div class="six-month-sprite customize-images"></div>
-				    	<h4>Six Months</h4>
-				 		<p>$72 once off</p>
-				 		<p>1 Free Pair</p>
+				    	<div class="more-information">
+					    	<h4>Six Months</h4>
+					 		<p>$72 once off</p>
+					 		<p>1 Free Pair</p>
+					 		<div class="btn btn-default">Choose</div>
+					 	</div>
 				    </label>
 				<input type="radio" name="name" id="12months" value=""/>
 				    <label class="radio col-sm-4 col-md-4" for="12months">
 				    	<div class="twelve-month-sprite customize-images"></div>
-				    	<h4>Twelve Months</h4>
-				 		<p>$144 once off</p>
-				 		<p>2 Free Pairs</p>
+				    	<div class="more-information">
+					    	<h4>Twelve Months</h4>
+					 		<p>$144 once off</p>
+					 		<p>2 Free Pairs</p>
+					 		<div class="btn btn-default">Choose</div>
+					 	</div>
 				    </label>
 			 </div>
 		</div>

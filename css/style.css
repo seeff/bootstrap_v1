@@ -216,7 +216,7 @@ blockquote small{
 
 /*----------Sock subscription options-------------*/
 .form-container{
-	padding-left: 33px;
+	padding-left: 60px;
 	padding-right: 25px;
 	background-color: #edeff1;
 	border-radius: 6px;
@@ -275,17 +275,17 @@ blockquote small{
 	z-index: 99;
 }
 
-.radio:hover .month-to-month-sprite{
+.radio:hover .customize-images{
 	margin-top: -90px;
 
 }
 
 .radios .col-sm-4, .radios .col-md-4{
-	width: 30%;
+	width: 28%;
 }
 
 .radios .col-sm-6, .radios .col-md-6{
-width: 46%
+	width: 43.5%;
 }
 .radios .radio:hover{
 	border-color: #bdc3c7;
