@@ -37,25 +37,26 @@ include_once('header.php');
 		</div> -->
 
 
-	<form class="text-center">
+	<form class="text-center col-md-8 col-md-offset-2">
+
 		  <div class="row">
 		  	<div class="row">
-		  		<h6>Subscription Duration</h6>
+		  		<h6>Select a Subscription Duration</h6>
 		  	</div>
 		  	<div class="radios row">
-				<input type="radio" name="name"value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m" id="month-to-month" class="col-md-4"/>
-					 <label class="radio col-sm-4 col-md-2 col-md-offset-3" for="month-to-month">
+				<input type="radio" name="name"value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m" id="month-to-month"/>
+					 <label class="radio col-sm-4 col-md-4" for="month-to-month">
 					 		<h4>Month to Month</h4>
 					 		<p>$12 p/m</p>
 					 		</label>
-				<input type="radio" name="name" id="6months" value="" class="col-md-4" />
-				    <label class="radio col-sm-4 col-md-2" for="6months">
+				<input type="radio" name="name" id="6months" value="" />
+				    <label class="radio col-sm-4 col-md-4" for="6months">
 				    	<h4>Six Months</h4>
 				 		<p>$72 once off</p>
 				 		<p>1 Free Pair</p>
 				    </label>
-				<input type="radio" name="name" id="12months" value="" class="col-md-4" />
-				    <label class="radio col-sm-4 col-md-2" for="12months">
+				<input type="radio" name="name" id="12months" value=""/>
+				    <label class="radio col-sm-4 col-md-4" for="12months">
 				    	<h4>Twelve Months</h4>
 				 		<p>$144 once off</p>
 				 		<p>2 Free Pairs</p>
@@ -66,17 +67,16 @@ include_once('header.php');
 		 <div class="row">
 		  	<div class="row"><h6>Gift Options</h6></div>
 		  	<div class="radios row">
-				<input type="radio" name="2:Gift" value=""id="for-me" class="col-md-4"/>
-					 <label class="radio for-me col-sm-6 col-md-3 col-md-offset-3" for="for-me" ><h4>This is For Me</h4></label>
-				<input type="radio" name="2:Gift" value="This%20is%20a%20gift" id="gift"  class="col-md-4" />
-				    <label class="radio gift col-sm-6 col-md-3" for="gift">
+				<input type="radio" name="2:Gift" value=""id="for-me"/>
+					 <label class="radio for-me col-sm-6 col-md-6" for="for-me" >
+					 	<h4>This is For Me</h4>
+					 </label>
 
-
+				<input type="radio" name="2:Gift" value="This%20is%20a%20gift" id="gift"/>
+				    <label class="radio gift col-sm-6 col-md-6" for="gift">
 				    	<div class="row">
 				    		<h4>This is a Gift</h4>
 				    	</div>
-
-
 				    </label>
 		  	</div>
 		</div>
@@ -84,11 +84,11 @@ include_once('header.php');
 
 
 		<div class="row">
-		  <div class="row"><h6>Gender</h6></div>
+		  <div class="row"><h6>Select your gender</h6></div>
 		  <div class="radios row">
 				<input type="radio" name="2:Gender" value="Male" id="male"/>
 					
-						 <label class="radio male col-sm-6 col-md-3 col-md-offset-3" for="male">
+						 <label class="radio male col-sm-6 col-md-6" for="male">
 						 	
 
 							
@@ -101,7 +101,7 @@ include_once('header.php');
 						
 				<input type="radio" name="2:Gender" value="Female" id="female" />
 					
-					    <label class="radio female col-sm-6 col-md-3" for="female">
+					    <label class="radio female col-sm-6 col-md-6" for="female">
 
 
 							<div class="row">
@@ -114,10 +114,10 @@ include_once('header.php');
 
 
 		<div class="row">
-		  <div class="row"><h6>Sock Style</h6></div>
+		  <div class="row"><h6>What type of socks do you prefer?</h6></div>
 		  <div class="radios row">
-				<input type="radio" name="2:Style" value="Stylish" id="stylish" class="col-md-4"/>
-					<label class="radio fadein stylish col-sm-6 col-md-3 col-md-offset-3" for="stylish">
+				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
+					<label class="radio fadein stylish col-sm-6 col-md-6" for="Shapes">
 						<div class="row fading-images">
 							<img img id="s1" src="./images/types-of-socks/stylish-yellow-stripes.png" />
 							<img img id="s2" src="./images/types-of-socks/stylish-red-blue-stripes.png" />
@@ -125,12 +125,12 @@ include_once('header.php');
 						</div>
 
 						<div class="row">
-							<h4>Stylish</h4>
+							<h4>Shapes</h4>
 						</div>
 
 					</label>
-				<input type="radio" name="2:Style" value="Crazy" id="crazy"  class="col-md-4" />
-				    <label class="radio fadein crazy col-sm-6 col-md-3" for="crazy">
+				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
+				    <label class="radio fadein crazy col-sm-6 col-md-6" for="Pictures">
 				    	<div class="row fading-images">
 					    	<img id="c1" src="./images/types-of-socks/crazy-toaster.png" />
 							<img id="c2" src="./images/types-of-socks/crazy-sushi.png" />
@@ -138,7 +138,7 @@ include_once('header.php');
 						</div>
 
 						<div class="row">
-							<h4>Crazy</h4>
+							<h4>Pictures</h4>
 						</div>
 				    </label>
 		  </div>

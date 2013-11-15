@@ -218,6 +218,7 @@ blockquote small{
 
 .radios .radio{
 	height: 150px;
+	margin: 10px;
 	border: 2px solid #f4f6f6;
 	-webkit-transition: all 50ms linear;
 	-moz-transition: all 50ms linear;
@@ -238,6 +239,13 @@ blockquote small{
 
 }
 
+.radios .col-sm-4, .radios .col-md-4{
+	width: 30%;
+}
+
+.radios .col-sm-6, .radios .col-md-6{
+width: 46%
+}
 .radios .radio:hover{
 	border-color: #bdc3c7;
 }
@@ -255,7 +263,7 @@ blockquote small{
 
 @media screen and (max-width: 750px) {
 	.radios .radio{
-		width: 100%;
+		width: 93%;
 	}
 
 }
