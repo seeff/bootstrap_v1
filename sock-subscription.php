@@ -37,7 +37,7 @@ include_once('header.php');
 		</div> -->
 
 
-	<form class="text-center col-md-8 col-md-offset-2">
+	<form class="text-center form-container col-md-8 col-md-offset-2">
 
 		  <div class="row">
 		  	<div class="row">
@@ -46,17 +46,26 @@ include_once('header.php');
 		  	<div class="radios row">
 				<input type="radio" name="name"value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m" id="month-to-month"/>
 					 <label class="radio col-sm-4 col-md-4" for="month-to-month">
-					 		<h4>Month to Month</h4>
-					 		<p>$12 p/m</p>
+					 		<div class="month-to-month-sprite customize-images"></div>
+					 		
+
+					 		<div class="more-information">
+					 			<h4>Month to Month</h4>
+						 		<p>$12 p/m</p>
+						 		<p>More about month to month</p>
+						 		<div class="btn btn-default">Choose</div>
+					 		</div>
 					 		</label>
 				<input type="radio" name="name" id="6months" value="" />
 				    <label class="radio col-sm-4 col-md-4" for="6months">
+				    	<div class="six-month-sprite customize-images"></div>
 				    	<h4>Six Months</h4>
 				 		<p>$72 once off</p>
 				 		<p>1 Free Pair</p>
 				    </label>
 				<input type="radio" name="name" id="12months" value=""/>
 				    <label class="radio col-sm-4 col-md-4" for="12months">
+				    	<div class="twelve-month-sprite customize-images"></div>
 				    	<h4>Twelve Months</h4>
 				 		<p>$144 once off</p>
 				 		<p>2 Free Pairs</p>
