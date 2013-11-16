@@ -49,51 +49,31 @@ include_once('header.php');
 					 		<div class="month-to-month-sprite customize-images"></div>
 					 		
 
-					 		<div class="more-information">
+					 		<div class="more-information gradient">
 					 			<h4>Month to Month</h4>
 						 		<p>$12 p/m</p>
 						 		<p>More about month to month</p>
-						 		<div class="btn btn-default">Choose</div>
 					 		</div>
 					 		</label>
 				<input type="radio" name="name" id="6months" value="" />
 				    <label class="radio col-sm-4 col-md-4" for="6months">
 				    	<div class="six-month-sprite customize-images"></div>
-				    	<div class="more-information">
+				    	<div class="more-information gradient">
 					    	<h4>Six Months</h4>
 					 		<p>$72 once off</p>
 					 		<p>1 Free Pair</p>
-					 		<div class="btn btn-default">Choose</div>
 					 	</div>
 				    </label>
 				<input type="radio" name="name" id="12months" value=""/>
 				    <label class="radio col-sm-4 col-md-4" for="12months">
 				    	<div class="twelve-month-sprite customize-images"></div>
-				    	<div class="more-information">
+				    	<div class="more-information gradient">
 					    	<h4>Twelve Months</h4>
 					 		<p>$144 once off</p>
 					 		<p>2 Free Pairs</p>
-					 		<div class="btn btn-default">Choose</div>
 					 	</div>
 				    </label>
 			 </div>
-		</div>
-
-		 <div class="row">
-		  	<div class="row"><h6>Gift Options</h6></div>
-		  	<div class="radios row">
-				<input type="radio" name="2:Gift" value=""id="for-me"/>
-					 <label class="radio for-me col-sm-6 col-md-6" for="for-me" >
-					 	<h4>This is For Me</h4>
-					 </label>
-
-				<input type="radio" name="2:Gift" value="This%20is%20a%20gift" id="gift"/>
-				    <label class="radio gift col-sm-6 col-md-6" for="gift">
-				    	<div class="row">
-				    		<h4>This is a Gift</h4>
-				    	</div>
-				    </label>
-		  	</div>
 		</div>
 
 
@@ -101,29 +81,28 @@ include_once('header.php');
 		<div class="row">
 		  <div class="row"><h6>Select your gender</h6></div>
 		  <div class="radios row">
-				<input type="radio" name="2:Gender" value="Male" id="male"/>
+				<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
 					
-						 <label class="radio male col-sm-6 col-md-6" for="male">
-						 	
+						 <label class="radio dudes col-sm-6 col-md-6" for="Dudes">
+					 		<div class="dudes-sprite customize-images"></div>
+					 		<div class="more-information gradient">
+					 			<h4>Dudes</h4>
+						 		<p>Shoe size 8-12 US</p>
+					 		</div>
+				 		</label>
 
-							
-								<div class="row">
-							 		<h4>Dudes</h4>
-							 	</div>
-						 	
-
-						 </label>
-						
-				<input type="radio" name="2:Gender" value="Female" id="female" />
+				<input type="radio" name="2:Gender" value="Female" id="chicks" />
 					
-					    <label class="radio female col-sm-6 col-md-6" for="female">
 
 
-							<div class="row">
-						    	<h4>Chicks</h4>
-						    </div>
+						 <label class="radio chicks col-sm-6 col-md-6" for="chicks">
+					 		<div class="chicks-sprite customize-images"></div>
+					 		<div class="more-information gradient">
+					 			<h4>Chicks</h4>
+						 		<p>Shoe size 5-10 US</p>
+					 		</div>
+				 		</label>
 
-					    </label>
 					</div>
 		</div>
 
@@ -132,33 +111,32 @@ include_once('header.php');
 		  <div class="row"><h6>What type of socks do you prefer?</h6></div>
 		  <div class="radios row">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
-					<label class="radio fadein stylish col-sm-6 col-md-6" for="Shapes">
-						<div class="row fading-images">
-							<img img id="s1" src="./images/types-of-socks/stylish-yellow-stripes.png" />
-							<img img id="s2" src="./images/types-of-socks/stylish-red-blue-stripes.png" />
-							<img img id="s3" src="./images/types-of-socks/stylish-red-arrows.png" />
-						</div>
+						<label class="radio shapes col-sm-6 col-md-6" for="Shapes">
+					 		<div class="shapes-sprite customize-images"></div>
+					 		<div class="more-information gradient">
+					 			<h4>Shapes</h4>
+					 			<p>Example Socks</p>
+						 		<p>Stripes</p>
+						 		<p>Checks</p>
+						 		<p>blah blah</p>
+					 		</div>
+				 		</label>
 
-						<div class="row">
-							<h4>Shapes</h4>
-						</div>
-
-					</label>
 				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
-				    <label class="radio fadein crazy col-sm-6 col-md-6" for="Pictures">
-				    	<div class="row fading-images">
-					    	<img id="c1" src="./images/types-of-socks/crazy-toaster.png" />
-							<img id="c2" src="./images/types-of-socks/crazy-sushi.png" />
-							<img id="c3" src="./images/types-of-socks/crazy-beer.png" />
-						</div>
+					<label class="radio pictures col-sm-6 col-md-6" for="Pictures">
+				 		<div class="pictures-sprite customize-images"></div>
+				 		<div class="more-information gradient">
+				 			<h4>Pictures</h4>
+				 			<p>Example Socks</p>
+					 		<p>Sushi</p>
+					 		<p>Dogs</p>
+					 		<p>Flying Toast</p>
+				 		</div>
+			 		</label>
 
-						<div class="row">
-							<h4>Pictures</h4>
-						</div>
-				    </label>
 		  </div>
 		</div>
-		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&"> <div class="btn btn-primary btn-lg" >Checkout <span class="glyphicon glyphicon-chevron-right"></span></div></a>
+		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&"> <div class="btn btn-primary btn-lg btn-spacing">Checkout <span class="glyphicon glyphicon-chevron-right"></span></div></a>
 		  
 	</form>
 	

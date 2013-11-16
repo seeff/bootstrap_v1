@@ -32,9 +32,16 @@
     <link href="css/flexslider.css" rel="stylesheet">
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/social-likes.css" rel="stylesheet" >
-    <link rel="stylesheet" href="http://static.foxycart.com/scripts/colorbox/1.3.16/style5/colorbox.css" type="text/css" media="screen" charset="utf-8" />œ
+    <link href="http://static.foxycart.com/scripts/colorbox/1.3.16/style5/colorbox.css" rel="stylesheet"  type="text/css" media="screen" charset="utf-8" />
     <link href="css/style.css" rel="stylesheet">
 
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+  <![endif]-->
 
 </head>
 
