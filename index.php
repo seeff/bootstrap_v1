@@ -115,9 +115,8 @@ include_once('header.php');
      </div><!-- end container -->
      
 
-      <div class="row sun-flower-background sign-up-divider">
-        <a href="./sock-subscription.php"> <div class="btn btn-primary btn-lg" >Get Started </div></a>
-      </div>
+      <hr class="featurette-divider">
+      
       <div class="container">
         <div class="row featurette">
           <div class="col-md-12">
@@ -170,9 +169,7 @@ include_once('header.php');
         </div>
     </div>
 
-      <div class="row sun-flower-background sign-up-divider">
-        <a href="./sock-subscription.php"> <div class="btn btn-primary btn-lg" >Get Started </div></a>
-      </div>
+      <hr class="featurette-divider">
 
       <div class="container">
       <div class="row featurette">
@@ -186,9 +183,8 @@ include_once('header.php');
       </div>
 
       </div><!-- end container -->
-      <div class="row sun-flower-background sign-up-divider">
-        <a href="./sock-subscription.php"> <div class="btn btn-primary btn-lg" >Get Started </div></a>
-      </div>
+      
+      <hr class="featurette-divider">
 
       <div class="container">
 

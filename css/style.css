@@ -21,6 +21,19 @@ a:hover{
 	text-align: right;
 }
 
+.fixed {
+    position:fixed;
+    top:0;
+}
+
+hr {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.hide{
+	display: none;
+}
 /*----NAVIGATION--------
 */
 
@@ -50,6 +63,13 @@ a:hover{
 	margin-top: -350px;
 	text-align: center;
 }
+
+.navbar{
+	width: 100%;
+	-moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
 
 @media screen and (max-width: 990px) {
 	
@@ -93,6 +113,10 @@ a:hover{
 
 .navbar-brand img{
 	width: 200px;
+}
+
+.bold-pill{
+	font-weight: bolder;
 }
 /*-------BODY--------
 */
@@ -514,6 +538,9 @@ li{
 
 .carrot-background{
 	background-color: #e67e22;
+}
+.active{
+	color: #16a085 !important;
 }
 
 

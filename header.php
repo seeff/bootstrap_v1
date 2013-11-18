@@ -50,7 +50,7 @@
 ================================================== -->
   <body>
 
-        <div class="navbar navbar-default navbar-static-top sun-flower-background">
+        <div class="navbar navbar-default navbar-static-top sun-flower-background" data-spy="affix" data-offset-top="350">
       <div class="container">
 
 
@@ -70,10 +70,12 @@
           </ul> -->
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="./sock-subscription.php" class="bold-pill">Sign Up!</a></li>
-            <li><a href="./about-us.php">About</a></li>
-            <li><a href="./frequently-asked-questions.php">FAQ</a></li>
-            <li><a href="./contact-us.php">Contact</a></li>
+
+            <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-a-Sock-Subscription" ? "active" : "");($page == "Checkout-Page" ? "hide" : "")?>">Sign Up</a></li>
+            <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-Sock-Subscription-Gift" ? "active" : "")?>">Give a Gift</a></li>
+            <li><a href="./about-us.php" class="<?php echo ($page == "About-Sockscribe-Me" ? "active" : "")?>">About</a></li>
+            <li><a href="./frequently-asked-questions.php" class="<?php echo ($page == "Frequently-Asked-Questions" ? "active" : "")?>">FAQ</a></li>
+            <li><a href="./contact-us.php" class="<?php echo ($page == "Contact-Sockscribe-Me" ? "active" : "")?>">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
