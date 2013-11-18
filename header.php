@@ -71,7 +71,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
 
-            <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-a-Sock-Subscription" ? "active" : "");($page == "Checkout-Page" ? "hide" : "")?>">Sign Up</a></li>
+            <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-a-Sock-Subscription" ? "active" : "")?>">Sign Up</a></li>
             <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-Sock-Subscription-Gift" ? "active" : "")?>">Give a Gift</a></li>
             <li><a href="./about-us.php" class="<?php echo ($page == "About-Sockscribe-Me" ? "active" : "")?>">About</a></li>
             <li><a href="./frequently-asked-questions.php" class="<?php echo ($page == "Frequently-Asked-Questions" ? "active" : "")?>">FAQ</a></li>
