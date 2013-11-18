@@ -284,7 +284,7 @@ BEGIN checkout
                             </div>
                             <div class="fc_shipping_company">
                                 <!-- <label class="control-label" for="shipping_company">{{ lang.checkout_company|raw }}</label> -->
-                                <input type="text" value="{{ shipping_company }}" class="form-control " id="shipping_company" name="shipping_company" autocomplete="shipping organization" placeholder="">{{ lang.checkout_company|raw }}">
+                                <input type="text" value="{{ shipping_company }}" class="form-control " id="shipping_company" name="shipping_company" autocomplete="shipping organization" placeholder="">{{ lang.checkout_company|raw }}
                                 <label style="display:none;" class="help-block" for="shipping_company">{{ lang.checkout_error_company|raw }}</label>
                             </div>
 
@@ -299,24 +299,23 @@ BEGIN checkout
                                     <input type="text" value="{{ shipping_address2 }}" class="form-control " id="shipping_address2" name="shipping_address2" autocomplete="shipping address-line2" placeholder="{{ lang.checkout_address2|raw }}">
                                 </div>
                             </div>
-                            <div class="fc_shipping_city">
-                                <!-- <label class="control-label" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label> -->
-                                <input type="text" value="{{ shipping_city }}" class="form-control  fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality" placeholder="{{ lang.checkout_city|raw }}">
-                                <label style="display:none;" class="help-block" for="shipping_city">{{ lang.checkout_error_city|raw }}</label>
-                            </div>
-                            <div class="form-control_select fc_foxycomplete fc_shipping_state_name">
-                                <!-- <label class="control-label" for="shipping_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label> -->
-                                <select class="form-control  fc_required fc_location" data-default-value="{{ shipping_region_code }}" id="shipping_state" name="shipping_state" placeholder="{{ lang.checkout_state|raw }}">
-                                {{ shipping_region_options|raw }}
-                                </select>
-                                <input value="{{ (shipping_region_code == '') ? shipping_region_name : shipping_region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="shipping_state_name" name="shipping_state_name">
-                                <label style="display:none;" class="help-block" for="shipping_state_name">{{ lang.checkout_error_state|raw }}</label>
-                            </div>
-                                <div class="fc_shipping_postal_code">
-                                <!-- <label class="control-label" for="shipping_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
-                                <input type="text" value="{{ shipping_postal_code }}" class="form-control form-control_short fc_required" id="shipping_postal_code" name="shipping_postal_code" autocomplete="shipping postal-code" placeholder="{{ lang.checkout_postal_code|raw }}">
-                                <label style="display:none;" class="help-block" for="shipping_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
-                                <label style="display:none;" class="help-block" for="shipping_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
+
+                            <div class="form-group">
+                                <div class="fc_shipping_city col-sm-6">
+                                    <!-- <label class="control-label" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label> -->
+                                    <input type="text" value="{{ shipping_city }}" class="form-control  fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality" placeholder="{{ lang.checkout_city|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_city">{{ lang.checkout_error_city|raw }}</label>
+                                </div>
+                                <div class="form-control_select fc_foxycomplete fc_shipping_state_name col-sm-3">
+                                    <input type="text" value="{{ shipping_region_code }}" class="form-control  fc_required" id="shipping_state_name" name="shipping_state_name" autocomplete="shipping region" placeholder="{{ lang.checkout_state|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_state_name">{{ lang.checkout_error_state|raw }}</label>
+                                </div>
+                                    <div class="fc_shipping_postal_code col-sm-3">
+                                    <!-- <label class="control-label" for="shipping_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
+                                    <input type="text" value="{{ shipping_postal_code }}" class="form-control form-control_short fc_required" id="shipping_postal_code" name="shipping_postal_code" autocomplete="shipping postal-code" placeholder="{{ lang.checkout_postal_code|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
+                                    <label style="display:none;" class="help-block" for="shipping_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
+                                </div>
                             </div>
                             <div class="fc_shipping_phone">
                                 <!-- <label class="control-label" for="shipping_phone">{{ lang.checkout_phone|raw }}</label> -->
