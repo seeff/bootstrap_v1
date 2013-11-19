@@ -5,22 +5,17 @@ $(window).load(function() {
   });
 
 
-	var num = 110; //number of pixels before modifying styles
+	var num = 10; //number of pixels before modifying styles
 
 	$(window).bind('scroll', function () {
 	    if ($(window).scrollTop() > num) {
-	        $('.navbar').addClass('fixed');
-	        $('.navbar').css("padding-bottom", "5px");
-	        $('.navbar .navbar-brand').css("padding", "0");
-	        $('.navbar .navbar-brand').css("padding-top", "5px");
-	        $('.navbar-nav').css("margin-top", "0px");
-
-	        
+	        $('.navbar').addClass('navbar-condensed');
+	        $('.navbar .navbar-brand').addClass('navbar-brand-condensed');
+	        $('.navbar-nav').addClass('navbar-nav-condensed');
 	    } else {
-	        $('.navbar').removeClass('fixed');
-	        $('.navbar .navbar-brand').css("padding", "23px 28px 24px 17px");
-	        $('.navbar-nav').css("margin-top", "15px");
-	        $('.navbar').css("padding-bottom", "inherit");
+			$('.navbar').removeClass('navbar-condensed');
+	        $('.navbar .navbar-brand').removeClass('navbar-brand-condensed');
+	        $('.navbar-nav').removeClass('navbar-nav-condensed');
 
 	    }
 	});
