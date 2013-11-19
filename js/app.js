@@ -6,6 +6,7 @@ $(window).load(function() {
 
   $( ".radio-duration" ).click(function() {
 	   $(".check-duration").css( "color", "#1abc9c" );
+	   $(".check-duration").css( "display", "inline-block" );
 	   $(".btn").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
 	   $(this).children(".btn").text("Selected");
 	    var divID = '.gender-scroll' + this.id;
@@ -17,6 +18,7 @@ $(window).load(function() {
 });
   $( ".radio-gender" ).click(function() {
 	   $(".check-gender").css( "color", "#1abc9c" );
+   	   $(".check-gender").css( "display", "inline-block" );
 	   $(".btn").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
 	   $(this).children(".btn").text("Selected");
 	   	    var divID = '.style-scroll' + this.id;
@@ -26,6 +28,7 @@ $(window).load(function() {
 });
      $( ".radio-style" ).click(function() {
 	   $(".check-style").css( "color", "#1abc9c" );
+   	   $(".check-style").css( "display", "inline-block" );
 	   $(".btn").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
 	   $(this).children(".btn").text("Selected");
 

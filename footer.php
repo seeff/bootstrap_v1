@@ -1,6 +1,6 @@
 
       <!-- FOOTER -->
-      <footer class="sun-flower-background">
+      <footer class="sun-flower-background footer">
         <div class="container">
           <div class="row">
             <div class="col-md-4 social">

@@ -264,6 +264,15 @@ blockquote small{
 	margin-top: 5px;
 }
 
+.bg-image {
+    position: relative;
+}
+.bg-image img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
 /*----------Sock subscription options-------------*/
 .form-container{
 	padding-left: 60px;
@@ -271,6 +280,11 @@ blockquote small{
 	border-radius: 6px;
 }
 
+.check-duration,.check-gender,.check-style{
+	display: none;
+	-moz-transition: all 50ms linear;
+	-o-transition: all 50ms linear;
+}
 form h3{
 	font-size: 35px;
 }
@@ -314,11 +328,11 @@ label h6{
 }
 
 .radios .col-sm-4, .radios .col-md-4{
-	width: 28%;
+	width: 31%;
 }
 
 .radios .col-sm-6, .radios .col-md-6{
-	width: 43.5%;
+	width: 46.5%;
 }
 
 .radios .radio:hover{
@@ -545,9 +559,8 @@ label h6{
 .
 
 /*-------FOOTER----------*/
-footer{
+.footer{
 	padding: 40px;
-	margin-top: 40px;
 }
 
 .social{
