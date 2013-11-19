@@ -61,13 +61,13 @@ BEGIN checkout
 
 
 
-    {% block continue_shopping %}
+<!--     {% block continue_shopping %}
     <div id="fc_cancel_continue_shopping">
     {% if page_referer != '' and not is_updateinfo %}
         <a href="{{ page_referer }}">{{ lang.checkout_cancel_and_continue|raw }}</a>
     {% endif %}
     </div>
-    {% endblock continue_shopping %}
+    {% endblock continue_shopping %} -->
 
 
 
@@ -88,17 +88,17 @@ BEGIN checkout
 <!--     <h2>{% if checkout_type == 'guest_only' %}{{ lang.checkout_as_guest|raw }}{% else %}{{ lang.checkout_login_or_register|raw }}{% endif %}</h2>
  -->    <fieldset id="fc_login_register">
         <!-- <legend>{% if checkout_type == 'guest_only' %}{{ lang.checkout_as_guest|raw }}{% else %}{{ lang.checkout_login_or_register|raw }}{% endif %}</legend> -->
-        <div class="login-form">
+        <div class="shaded-form col-md-8 col-md-offset-2">
             <div id="fc_login_register_list">
         {% if not customer_is_authenticated %}
-                <div id="li_customer_email" class="fc_customer_email">
+                <div id="li_customer_email" class="form-group fc_customer_email">
 <!--                     <label class="control-label" for="customer_email">{{ lang.checkout_email|raw }}<span class="fc_ast">*</span></label> -->                    <input type="text" value="{{ email }}" autocomplete="off" class="form-control  fc_required" id="customer_email" name="customer_email" placeholder="{{ lang.checkout_email|raw }}">
                     <label style="display:none;" class="help-block" for="customer_email">{{ lang.checkout_error_email|raw }}</label>
-                    <p class="fc_account_message" id="fc_account_message_status">
+                    <p class="help-block" id="fc_account_message_status">
                         {{ lang.checkout_instructions_email|raw }}
                     </p>
                     <span style="display:none" id="login_ajax"><img alt="{{ lang.checkout_loading|raw }}" src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1"></span>
-                    <p style="display:none;" class="fc_account_message" id="fc_account_message_explanation"></p>
+                    <p style="display:none;" class="help-block" id="fc_account_message_explanation"></p>
                 </div>
             {% if not is_updateinfo and checkout_type != 'guest_only' and checkout_type != 'account_only' %}
                 <div class="form-control_radio fc_guest_checkout">
@@ -121,29 +121,29 @@ BEGIN checkout
                 {% endif %}
             {% endif %}
         {% else %}
-                <div class="fc_customer_email" id="li_customer_email">
+                <div class="fc_customer_email form-group" id="li_customer_email">
                     <span class="control-label">{{ lang.checkout_email|raw }}<span class="fc_ast">*</span></span>
                     <!-- <span id="customer_email_authenticated" class="form-control">{{ email }}</span> -->
                     <input type="hidden" name="customer_email" id="customer_email" value="{{ email }}" placeholder="{{ lang.checkout_email|raw }}" />
                     <label for="customer_email" class="alert alert-warning" style="display:none;">{{ lang.checkout_error_email|raw }}</label>
-                    <p id="fc_account_message_sso" class="fc_account_message">{{ lang.checkout_sso_already_logged_in|raw }}</p
+                    <p id="fc_account_message_sso" class="help-block">{{ lang.checkout_sso_already_logged_in|raw }}</p
                 </div>
         {% endif %}
-                <div id="li_customer_password" style="display:none;" class="fc_customer_password">
-                    <p style="display:none;" class="fc_account_message" id="fc_account_message_password"></p>
+                <div id="li_customer_password" style="display:none;" class="form-group fc_customer_password">
+                    <p style="display:none;" class="help-block" id="fc_account_message_password"></p>
                     <!-- <label class="control-label" for="customer_password">{{ lang.checkout_password|raw }}</label> -->
                     <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control " id="customer_password" name="customer_password" placeholder="{{ lang.checkout_password|raw }}">
                     <label style="display:none;" class="help-block" for="customer_password">{{ lang.checkout_error_password|raw }}</label>
                 </div>
-                <div id="li_customer_password2" style="display:none;" class="fc_customer_password2">
+                <div id="li_customer_password2" style="display:none;" class="form-group fc_customer_password2">
                     <!-- <label class="control-label" for="customer_password2">{{ lang.checkout_retype_password|raw }}</label> -->
                     <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control " onchange="FC.checkout.checkPasswords()" id="customer_password2" name="customer_password2" placeholder="{{ lang.checkout_retype_password|raw }}">
                     <label style="display:none;" class="help-block" for="customer_password2">{{ lang.checkout_error_retype_password|raw }}</label>
                 </div>
-                <div id="li_customer_email_password" class="form-control" style="display:none">
+                <div id="li_customer_email_password" class="form-group" style="display:none">
                     <label for="fc_email_password" class="alert alert-warning"><a id="fc_email_password" href="javascript:;" onclick="FC.checkout.emailPassword()">{{ lang.checkout_email_my_password|raw }}</a></label>
                 </div>
-                <div id="li_customer_new_password" class="form-control" style="display:none">
+                <div id="li_customer_new_password" class="form-group" style="display:none">
                     <label for="fc_new_password"><a id="fc_new_password" href="javascript:;" onclick="FC.checkout.newPassword()">{{ lang.checkout_change_my_password|raw }}</a></label>
                 </div>
             </div>
@@ -168,7 +168,7 @@ BEGIN checkout
 
             <!--  *********** customer_billing : Billing Address ************* -->
             {% block customer_billing %}
-            <div class="fc_fieldset_container" id="fc_customer_billing_container">
+            <div class="fc_fieldset_container hide" id="fc_customer_billing_container">
 <!--                 <h2>{{ lang.checkout_billing_address|raw }}</h2>
  -->                <fieldset id="fc_customer_billing">
                     <legend>{{ lang.checkout_billing_address|raw }}</legend>
@@ -261,7 +261,7 @@ BEGIN checkout
                     <legend>{{ lang.checkout_shipping_address|raw }}</legend>
                     <div class="fc_inner">
                         <div id="fc_address_shipping_list">
-                            <div class="form-control_select fc_foxycomplete fc_shipping_country_name">
+                            <div class="form-control_select fc_foxycomplete fc_shipping_country_name hide">
                                 <!-- <label class="control-label" for="shipping_country_name">{{ lang.checkout_country|raw }}<span class="fc_ast">*</span></label> -->
                                 <select class="form-control  fc_required fc_location" data-default-value="{{ country_code }}" id="shipping_country" name="shipping_country">
                                 {{ shipping_country_options|raw }}
@@ -270,12 +270,12 @@ BEGIN checkout
                                 <label style="display:none;" class="help-block" for="shipping_country_name">{{ lang.checkout_error_country|raw }}</label>
                             </div>
                             <div class="form-group">
-                                <div class="fc_shipping_first_name col-sm-6">
+                                <div class="fc_shipping_first_name form-group col-sm-6">
                                     <!-- <label class="control-label" for="shipping_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_first_name }}" class="form-control  fc_required" id="shipping_first_name" name="shipping_first_name" autocomplete="shipping given-name" placeholder="{{ lang.checkout_first_name|raw }}">
                                     <label style="display:none;" class="help-block" for="shipping_first_name">{{ lang.checkout_error_first_name|raw }}</label>
                                 </div>
-                                <div class="fc_shipping_last_name col-sm-6">
+                                <div class="fc_shipping_last_name form-group col-sm-6">
                                     <!-- <label class="control-label" for="shipping_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_last_name }}" class="form-control  fc_required" id="shipping_last_name" name="shipping_last_name" autocomplete="shipping family-name" placeholder="{{ lang.checkout_last_name|raw }}">
                                     <label style="display:none;" class="help-block" for="shipping_last_name">{{ lang.checkout_error_last_name|raw }}</label>
@@ -283,28 +283,28 @@ BEGIN checkout
                             </div>
 
                             <div class="form-group">
-                                <div class="fc_shipping_address1 col-sm-9">
+                                <div class="fc_shipping_address1 form-group col-sm-9">
                                     <!-- <label class="control-label" for="shipping_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_address1 }}" class="form-control  fc_required" id="shipping_address1" name="shipping_address1" autocomplete="shipping address-line1" placeholder="{{ lang.checkout_address1|raw }}">
                                     <label style="display:none;" class="help-block" for="shipping_address1">{{ lang.checkout_error_address1|raw }}</label>
                                 </div>
-                                <div class="fc_shipping_address2 col-sm-3">
+                                <div class="fc_shipping_address2 form-group col-sm-3">
                                     <!-- <label class="control-label" for="shipping_address2">{{ lang.checkout_address2|raw }}</label> -->
                                     <input type="text" value="{{ shipping_address2 }}" class="form-control " id="shipping_address2" name="shipping_address2" autocomplete="shipping address-line2" placeholder="{{ lang.checkout_address2|raw }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <div class="fc_shipping_city col-sm-6">
+                                <div class="fc_shipping_city form-group col-sm-6">
                                     <!-- <label class="control-label" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_city }}" class="form-control  fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality" placeholder="{{ lang.checkout_city|raw }}">
                                     <label style="display:none;" class="help-block" for="shipping_city">{{ lang.checkout_error_city|raw }}</label>
                                 </div>
-                                <div class="form-control_select fc_foxycomplete fc_shipping_state_name col-sm-3">
+                                <div class="form-group col-sm-3">
                                     <input type="text" value="{{ shipping_region_code }}" class="form-control  fc_required" id="shipping_state_name" name="shipping_state_name" autocomplete="shipping region" placeholder="{{ lang.checkout_state|raw }}">
                                     <label style="display:none;" class="help-block" for="shipping_state_name">{{ lang.checkout_error_state|raw }}</label>
                                 </div>
-                                    <div class="fc_shipping_postal_code col-sm-3">
+                                    <div class="fc_shipping_postal_code form-group col-sm-3">
                                     <!-- <label class="control-label" for="shipping_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_postal_code }}" class="form-control form-control_short fc_required" id="shipping_postal_code" name="shipping_postal_code" autocomplete="shipping postal-code" placeholder="{{ lang.checkout_postal_code|raw }}">
                                     <label style="display:none;" class="help-block" for="shipping_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
@@ -501,46 +501,46 @@ BEGIN checkout
                     </div>
                 {% endif %}
                     <div id="fc_shipping_list">
-                        <div class="fc_subtotal">
-                            <label for="subtotal" class="control-label">{{ lang.checkout_cart_subtotal|raw }}</label>
+                        <div class="row">
+                            <label for="subtotal" class="control-label col-xs-6">{{ lang.checkout_cart_subtotal|raw }}</label>
                             <span id="subtotal_formatted">{{ checkout_subtotal|money_format }}</span>
                             <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
                         </div>
                     {% if has_future_products %}
-                        <div class="fc_future_subscriptions">
-                            <label for="future_subscriptions" class="control-label">{{ lang.cart_future_subscriptions|raw }}</label>
+                        <div class="row">
+                            <label for="future_subscriptions" class="control-label col-xs-6">{{ lang.cart_future_subscriptions|raw }}</label>
                             <span id="future_subscriptions_formatted">{{ checkout_future_subscriptions|money_format }}</span>
                             <input value="{{ checkout_future_subscriptions }}" type="hidden" name="future_subscriptions" id="future_subscriptions" />
                         </div>
                     {% endif %}
                 {% if has_shipping_or_handling_cost %}
-                        <div class="fc_shipping_cost">
-                            <label for="shipping_cost" class="control-label">{{ shipping_and_handling_label|raw }}</label>
+                        <div class="row">
+                            <label for="shipping_cost" class="control-label col-xs-6">{{ shipping_and_handling_label|raw }}</label>
                             <span id="shipping_cost_formatted">{{ checkout_shipping_cost|money_format }}</span>
                             <input value="{{ checkout_shipping_cost }}" type="hidden" name="shipping_cost" id="shipping_cost" />
                         </div>
                     {% if has_future_products %}
-                        <div class="fc_future_shipping_cost"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
-                            <label for="future_shipping_cost" class="control-label">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</label>
+                        <div class="row"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
+                            <label for="future_shipping_cost" class="control-label col-xs-6">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</label>
                             <span id="future_shipping_cost_formatted">{{ checkout_future_shipping_cost|money_format }}</span>
                             <input value="{{ checkout_future_shipping_cost }}" type="hidden" name="future_shipping_cost" id="future_shipping_cost" />
                         </div>
                     {% endif %}
                 {% endif %}
                     {% if has_discount %}
-                        <div class="fc_discount">
-                            <label for="discount" class="control-label">{{ lang.checkout_discount|raw }}</label>
+                        <div class="row">
+                            <label for="discount" class="control-label col-xs-6">{{ lang.checkout_discount|raw }}</label>
                             <span id="discount_formatted">{{ checkout_discount|money_format }}</span>
                             <input value="{{ checkout_discount }}" type="hidden" name="discount" id="discount" />
                         </div>
                     {% endif %}
-                        <div class="fc_tax">
-                            <label for="tax" class="control-label">{{ lang.checkout_tax|raw }}</label>
+                        <div class="row">
+                            <label for="tax" class="control-label col-xs-6">{{ lang.checkout_tax|raw }}</label>
                             <span id="tax_formatted">{{ checkout_tax|money_format }}</span>
                             <input value="{{ checkout_tax }}" type="hidden" name="tax" id="tax" />
                         </div>
-                        <div class="fc_order_total">
-                            <label for="order_total" class="control-label">{{ lang.checkout_order_total|raw }}</label>
+                        <div class="row">
+                            <label for="order_total" class="control-label col-xs-6">{{ lang.checkout_order_total|raw }}</label>
                             <span id="order_total_formatted" checkout_order_total|money_format }}</span>
                             <input value="{{ checkout_order_total }}" type="hidden" name="order_total" id="order_total" />
                         </div>
@@ -563,7 +563,7 @@ BEGIN checkout
                 <div class="fc_inner">
                     <div id="fc_payment_list">
                     {% if supports_pay_with_plastic %}
-                        <div id="fc_payment_method_plastic_container" class="form-control_payment_method">
+                        <div id="fc_payment_method_plastic_container" class="form-group form-control_payment_method">
                             <label for="fc_payment_method_plastic">
                                 <input type="{{ payment_method_input_type }}"{% if payment_method_type == 'plastic' %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_plastic" value="plastic" autocomplete="off" />
                                 <span>{{ lang.checkout_pay_with_credit_card|raw }}</span>
@@ -574,14 +574,14 @@ BEGIN checkout
                         {% else %}
                             </div>
                         {% endif %}{# has_multiple_payment_options #}
-                                    <div id="li_cc_saved" class="form-control_radio">
+                                    <div id="li_cc_saved" class="form-group form-control_radio">
                                         <label for="c_card_saved">
                                             <input{% if cc_card_is_saved %} checked="checked"{% endif %} type="radio" name="c_card" value="saved" id="c_card_saved" class="form-control" onclick="FC.checkout.displayNewCC(0)" autocomplete="off" />
                                             <span>{{ lang.checkout_use_saved_payment_info|raw }}</span>
                                             <span id="fc_c_card_saved_number">{{ checkout_cc_number_masked }}</span>
                                         </label>
                                     </div>
-                                    <div id="li_cc_new" class="form-control_radio">
+                                    <div id="li_cc_new" class="form-group form-control_radio">
                                         <label for="c_card_new">
                                             <input{% if not cc_card_is_saved %} checked="checked"{% endif %} type="radio" name="c_card" value="new" id="c_card_new" class="form-control" onclick="FC.checkout.displayNewCC(1)" autocomplete="off" />
                                             <span>{{ lang.checkout_enter_new_card|raw }}</span>
@@ -589,20 +589,20 @@ BEGIN checkout
                                     </div>
 
                                     <div class="form-group">
-                                        <div id="li_cc_number" class="li_cc_number col-sm-10">
+                                        <div id="li_cc_number" class="li_cc_number form-group col-sm-10">
                                             <!-- <label for="cc_number" class="control-label">{{ lang.checkout_card_number|raw }}</label> -->
                                             <input type="text" name="cc_number" id="cc_number" class="form-control col-sm-10 fc_required" autocomplete="off" value="{{ cc_number }}" placeholder="{{ lang.checkout_card_number|raw }}" />
                                             <label for="cc_number" class="alert alert-warning" style="display:none">{{ lang.checkout_error_card_number|raw }}</label>
                                         </div>
-                                        <div id="li_cc_cvv2" class="li_cc_cvv2 col-sm-2">
+                                        <div id="li_cc_cvv2" class="li_cc_cvv2 form-group col-sm-2">
                                             <!-- <label for="cc_cvv2" class="control-label">
                                                 {{ lang.checkout_verification_code|raw }}
                                                 <span id="fc_help_cvv2" class="fc_help">(<a id="fc_help_cvv2_link" class="fc_help fc_jTip" href="https://{{ store_domain }}{{ base_directory }}/checkout.help.php?topic=cvv2&amp;width=308">{{ lang.checkout_question_mark|raw }}</a>)</span>
                                             </label> -->
-                                            <input value="{{ cc_cvv2 }}" type="text" name="cc_cvv2" id="cc_cvv2" autocomplete="off" class="form-control form-control_short fc_required" maxlength="4" placeholder="{{ lang.checkout_verification_code|raw }}" />
+                                            <input value="{{ cc_cvv2 }}" type="text" name="cc_cvv2" id="cc_cvv2" autocomplete="off" class="form-control fc_required" maxlength="4" placeholder="{{ lang.checkout_verification_code|raw }}" />
                                             <label for="cc_cvv2" class="alert alert-warning" style="display:none">{{ lang.checkout_error_verification_code|raw }}</label>
                                         </div>
-                                        <div id="li_cc_issue_number" class="col-sm-2">
+                                        <div id="li_cc_issue_number" class="col-sm-2 form-group">
 
                                             <!-- <label for="cc_issue_number" class="control-label">{{ lang.checkout_issue_number|raw }}</label> -->
                                             <input value="{{ cc_issue_number }}" type="text" name="cc_issue_number" id="cc_issue_number" class="form-control fc_required" maxlength="2" placeholder="{{ lang.checkout_issue_number|raw }}"/>
@@ -611,54 +611,56 @@ BEGIN checkout
                                     </div>
 
                                     <div class="form-group">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-6 form-group">
                                             <!-- <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label> -->
-                                            <input type="text" class="form-control  fc_required" id="customer_first_name" value="customer_first_name" name="customer_first_name" autocomplete="billing given-name" placeholder="{{ lang.checkout_first_name|raw }}">
+                                            <input type="text" class="form-control  fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name" placeholder="{{ lang.checkout_first_name|raw }}">
                                             <label style="display:none;" class="alert alert-warning" for="customer_first_name" value="customer_first_name">{{ lang.checkout_error_first_name|raw }}</label>
                                         </div>
 
-                                        <div id="li_cc_start_date_month">
-                                            <!-- <label for="cc_start_date_month" class="control-label">{{ lang.checkout_start_date|raw }}</label> -->
-                                            <!-- <select id="cc_start_date_month" name="cc_start_date_month" class="col-sm-1">
+                                        <!-- <div id="li_cc_start_date_month">
+                                            <label for="cc_start_date_month" class="control-label">{{ lang.checkout_start_date|raw }}</label>
+                                            <select id="cc_start_date_month" name="cc_start_date_month" class="col-sm-1">
                                                 <option value="">{{ lang.cart_month|raw }}</option>
                                                 {{ cc_start_date_month_options|raw }}
-                                            </select> -->
+                                            </select>
                                             <input type="text" class="form-control col-sm-1" id="cc_start_date_month" name="cc_start_date_month" placeholder="{{ lang.checkout_start_date|raw }}">
                                             <input type="text" class="form-control col-sm-1"  id="cc_start_date_year" name="cc_start_date_year" placeholder="{{ lang.cart_year|raw }}">
                                             
-                                            <!-- <select id="cc_start_date_year" name="cc_start_date_year" class="col-sm-1">
+                                            <select id="cc_start_date_year" name="cc_start_date_year" class="col-sm-1">
                                                 <option value="">{{ lang.cart_year|raw }}</option>
                                                 {{ cc_start_date_year_options|raw }}
-                                            </select> -->
+                                            </select>
                                             <label for="cc_start_date_month" class="alert alert-warning" style="display:none">{{ lang.checkout_error_start_date|raw }}</label>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-2 form-group">
                                             <!-- <label class="fc_pre" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
-                                            <input type="text"  class="form-control form-control_short fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code" value="customer_postal_code" placeholder="{{ lang.checkout_postal_code|raw }}">
+                                            <input type="text"  class="form-control fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code" placeholder="{{ lang.checkout_postal_code|raw }}">
                                             <label style="display:none;" class="alert alert-warning" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
                                             <label style="display:none;" class="alert alert-warning fc_error_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
                                         </div> 
 
-                                    <div id="li_cc_start_date_month">
-                                        <!-- <label for="cc_start_date_month" class="control-label">{{ lang.checkout_start_date|raw }}</label> -->
-                                        <input type="text"  class="col-sm-2" id="cc_start_date_month" name="cc_start_date_month" placeholder="{{ lang.cart_month|raw }}">
-                                            <!-- <option value="">{{ lang.cart_month|raw }}</option>
-                                            {{ cc_start_date_month_options|raw }} -->
+                                   <!--  <div id="li_cc_start_date_month">
+                                        <label for="cc_start_date_month" class="control-label">{{ lang.checkout_start_date|raw }}</label>
+                                        <input type="text"  class="col-sm-2 form-control " id="cc_start_date_month" name="cc_start_date_month" placeholder="{{ lang.cart_month|raw }}">
+                                            <option value="">{{ lang.cart_month|raw }}</option>
+                                            {{ cc_start_date_month_options|raw }}
                                         </input>
-                                        <input type="text" class="col-sm-2" id="cc_start_date_year" name="cc_start_date_year" placeholder="{{ lang.cart_year|raw }}">
-                                            <!-- <option value="">{{ lang.cart_year|raw }}</option>
-                                            {{ cc_start_date_year_options|raw }} -->
+                                        <input type="text" class="col-sm-2 form-control " id="cc_start_date_year" name="cc_start_date_year" placeholder="{{ lang.cart_year|raw }}">
+                                            <option value="">{{ lang.cart_year|raw }}</option>
+                                            {{ cc_start_date_year_options|raw }}
                                         </input>
                                         <label for="cc_start_date_month" class="alert alert-warning" style="display:none">{{ lang.checkout_error_start_date|raw }}</label>
-                                    </div>
-                                    <div id="li_cc_exp_month">
+                                    </div> -->
+                                    <div id="li_cc_exp_month" class="col-sm-2 form-group">
                                         <!-- <label for="cc_exp_month" class="control-label">{{ lang.checkout_expiration|raw }}</label> -->
-                                        <input type="text" class="col-sm-2" id="cc_exp_month" name="cc_exp_month" placeholder="{{ lang.cart_month|raw }}">
+                                        <input type="text" class="form-control"  id="cc_exp_month" name="cc_exp_month" placeholder="{{ lang.cart_month|raw }}">
                                             <!-- <option value="">{{ lang.cart_month|raw }}</option>
                                             {{ cc_expiration_month_options|raw }} -->
                                         </input>
-                                        <input type="text" class="col-sm-2" id="cc_exp_year" name="cc_exp_year" placeholder="{{ lang.cart_year|raw }}">
+                                    </div>
+                                    <div class="col-sm-2 form-group">
+                                        <input type="text" class="form-control " id="cc_exp_year" name="cc_exp_year" placeholder="{{ lang.cart_year|raw }}">
                                            <!--  <option value="">{{ lang.cart_year|raw }}</option>
                                             {{ cc_expiration_year_options|raw }} -->
                                         </input>
@@ -671,15 +673,16 @@ BEGIN checkout
 
                                     </div>
 
-                                    
-                                    <div id="li_save_cc">
-                                        <label for="save_cc">
-                                            <input{% if save_cc_is_checked %} checked="checked"{% endif %} type="checkbox" name="save_cc" id="save_cc" value="1"/>
-                                            <span>{{ save_cc_text }}</span>
-                                        </label>
-                                        <label for="save_cc" class="alert alert-warning" style="display:none">{{ lang.checkout_error_subscription_permission|raw }}</label>
-                                        <input type="hidden" name="cc_number_masked" id="cc_number_masked" value="{{ checkout_cc_number_masked }}" />
-                                    </div>
+                                                                            
+                                        <div class="checkbox" id="li_save_cc">
+                                            <label>
+                                                <input type="checkbox" name="save_cc" id="save_cc" value="1">{{ save_cc_text }}
+                                            </label>
+                                            <label for="save_cc" class="alert alert-warning" style="display:none">{{ lang.checkout_error_subscription_permission|raw }}</label>
+                                            <input type="hidden" name="cc_number_masked" id="cc_number_masked" value="{{ checkout_cc_number_masked }}" />
+
+                                        </div>
+
                         {% if has_multiple_payment_options %}
                                 </div>
                             </fieldset>
@@ -725,7 +728,7 @@ BEGIN checkout
 
                     {% if supports_purchase_order and not is_updateinfo %}
                         <div id="fc_payment_method_purchase_order_container" class="form-control_payment_method">
-                            <label for="fc_payment_method_purchase_order" class="form-control">
+                            <label for="fc_payment_method_purchase_order">
                                 <input type="{{ payment_method_input_type }}"{% if payment_method_type == 'purchase_order' %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_purchase_order" class="form-control" value="purchase_order" autocomplete="off" />
                                 <span>{{ lang.checkout_pay_with_purchase_order|raw }}</span>
                             </label>
@@ -749,14 +752,14 @@ BEGIN checkout
                         {% endif %}{# has_multiple_payment_options #}
                     {% endif %}{# supports_purchase_order and not is_updateinfo #}
 
-                        <div id="li_nopayment" class="form-control">
+                        <div id="li_nopayment">
                             {# This is used for $0 transactions and other situations where no payment info is collected #}
                             {{ lang.checkout_no_payment_needed|raw }}
                         </div>
                     </div>
 
-                    <div id="fc_complete_order_button_container" class="form-control_actions">
-                        <button id="fc_complete_order_button" class="fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }}</button>
+                    <div id="fc_complete_order_button_container" class="center">
+                        <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }}</button>
                         <div id="fc_complete_order_processing" style="display:none;"><strong class="alert alert-warning"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
                     </div><!-- #fc_complete_order_button_container -->
 
@@ -782,8 +785,8 @@ BEGIN checkout
             {{ lang.checkout_subscription_cancel_message|raw }}
         </div><!-- #fc_subscription_cancel_message -->
 
-        <div id="fc_complete_order_button_container" class="form-control_actions">
-            <button id="fc_complete_order_button" class="fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }}</button>
+        <div id="fc_complete_order_button_container" class="form-control_actions center">
+            <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }}</button>
             <div id="fc_complete_order_processing" style="display:none;"><strong class="alert alert-warning"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
         </div><!-- #fc_complete_order_button_container -->
         {% endblock subscription_cancel %}
