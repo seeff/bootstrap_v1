@@ -4,6 +4,33 @@ $(window).load(function() {
     animation: "slide"
   });
 
+  $( ".radio-duration" ).click(function() {
+	   $(".check-duration").css( "color", "#1abc9c" );
+	   $(".btn").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
+	   $(this).children(".btn").text("Selected");
+	    var divID = '.gender-scroll' + this.id;
+	    $('html, body').animate({
+	        scrollTop: $(divID).offset().top
+	    }, 2000);
+
+	   // $( this.children(".selected")).addClass("hidden");
+});
+  $( ".radio-gender" ).click(function() {
+	   $(".check-gender").css( "color", "#1abc9c" );
+	   $(".btn").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
+	   $(this).children(".btn").text("Selected");
+	   	    var divID = '.style-scroll' + this.id;
+	    $('html, body').animate({
+	        scrollTop: $(divID).offset().top
+	    }, 2000);
+});
+     $( ".radio-style" ).click(function() {
+	   $(".check-style").css( "color", "#1abc9c" );
+	   $(".btn").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
+	   $(this).children(".btn").text("Selected");
+
+});
+
 
 	var num = 10; //number of pixels before modifying styles
 

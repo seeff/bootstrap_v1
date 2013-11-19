@@ -37,101 +37,118 @@ include_once('header.php');
 		</div> -->
 
 
-	<form class="text-center form-container col-md-8 col-md-offset-2">
+	<form class="text-center form-container col-md-12">
 
 		  <div class="row">
 		  	<div class="row">
 		  		<h6>Select a Subscription Duration</h6>
+		  		<span class="fui-check-inverted check-duration"></span>
 		  	</div>
 		  	<div class="radios row">
-				<input type="radio" name="name"value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m" id="month-to-month"/>
-					 <label class="radio col-sm-4 col-md-4" for="month-to-month">
+				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m" id="month-to-month"/>
+					 <label class="radio radio-duration col-sm-4 col-md-4" for="month-to-month">
 					 		<div class="month-to-month-sprite customize-images"></div>
-					 		
+					 			<h3>Month to Month</h3>
+						 		<div class="price-block">
+							 		$<strong>12</strong>/month
+							 	</div>
+							 		<p>Cancel anytime</p>
+							 		<p>Great for the Uncomitted</p>
+							 	<div class="btn btn-block btn-inverse selected">Select<span class="fui-arrow-right"></span></div>
+			 		</label>
 
-					 		<div class="more-information gradient">
-					 			<h4>Month to Month</h4>
-						 		<p>$12 p/m</p>
-						 		<p>More about month to month</p>
-					 		</div>
-					 		</label>
-				<input type="radio" name="name" id="6months" value="" />
-				    <label class="radio col-sm-4 col-md-4" for="6months">
+				<input type="radio" name="name" id="6months" value=""/>
+				    <label class="radio radio-duration col-sm-4 col-md-4" for="6months">
 				    	<div class="six-month-sprite customize-images"></div>
-				    	<div class="more-information gradient">
-					    	<h4>Six Months</h4>
-					 		<p>$72 once off</p>
-					 		<p>1 Free Pair</p>
+				    	<h3>Six Months</h3>
+				 		<div class="price-block">
+					 		$<strong>72</strong>/up-front
 					 	</div>
+					 		<p>Cancel anytime</p>
+					 		<p>Great for the Uncomitted</p>
+					 		<div class="btn btn-block btn-inverse">Select<span class="fui-arrow-right"></span></div>
+
 				    </label>
+
 				<input type="radio" name="name" id="12months" value=""/>
-				    <label class="radio col-sm-4 col-md-4" for="12months">
+				    <label class="radio radio-duration col-sm-4 col-md-4" for="12months">
 				    	<div class="twelve-month-sprite customize-images"></div>
-				    	<div class="more-information gradient">
-					    	<h4>Twelve Months</h4>
-					 		<p>$144 once off</p>
-					 		<p>2 Free Pairs</p>
+					 	<h3>Twelve Months</h3>
+				 		<div class="price-block">
+					 		$<strong>144</strong>/up-front
 					 	</div>
+					 		<p>Cancel anytime</p>
+					 		<p>Great for the Uncomitted</p>
+					 		<div class="btn btn-block btn-inverse gender-scroll">Select<span class="fui-arrow-right"></span></div>
 				    </label>
 			 </div>
 		</div>
 
-
+      <hr class="featurette-divider">
 
 		<div class="row">
-		  <div class="row"><h6>Select your gender</h6></div>
+		  <div class="row">
+		  	<h6></span>Select your gender</h6>
+		  	<span class="fui-check-inverted check-gender">
+		  </div>
 		  <div class="radios row">
 				<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
 					
-						 <label class="radio dudes col-sm-6 col-md-6" for="Dudes">
-					 		<div class="dudes-sprite customize-images"></div>
-					 		<div class="more-information gradient">
-					 			<h4>Dudes</h4>
-						 		<p>Shoe size 8-12 US</p>
-					 		</div>
+						 <label class="radio radio-gender dudes col-sm-6 col-md-6" for="Dudes">
+					 		<div class="month-to-month-sprite customize-images"></div>
+					 			<h3>Dudes</h3>
+						 		<lead>Shoe size 8-12 US</lead>
+							 	<div class="btn btn-block btn-inverse ">Select<span class="fui-arrow-right"></span></div>
+
+
 				 		</label>
 
 				<input type="radio" name="2:Gender" value="Female" id="chicks" />
-					
 
-
-						 <label class="radio chicks col-sm-6 col-md-6" for="chicks">
-					 		<div class="chicks-sprite customize-images"></div>
-					 		<div class="more-information gradient">
-					 			<h4>Chicks</h4>
-						 		<p>Shoe size 5-10 US</p>
-					 		</div>
+						 <label class="radio radio-gender chicks col-sm-6 col-md-6" for="chicks">
+					 		<div class="month-to-month-sprite customize-images"></div>
+					 			<h3>Chicks</h3>
+						 		<lead>Shoe size 5-10 US</lead>
+							 	<div class="btn btn-block btn-inverse style-scroll">Select<span class="fui-arrow-right"></span></div>
 				 		</label>
 
 					</div>
 		</div>
 
+      <hr class="featurette-divider">
 
 		<div class="row">
-		  <div class="row"><h6>What type of socks do you prefer?</h6></div>
+		  <div class="row">
+		  	<h6></span>What type of socks do you prefer?</h6>
+		  	<span class="fui-check-inverted check-style">
+		  </div>
 		  <div class="radios row">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
-						<label class="radio shapes col-sm-6 col-md-6" for="Shapes">
-					 		<div class="shapes-sprite customize-images"></div>
-					 		<div class="more-information gradient">
-					 			<h4>Shapes</h4>
-					 			<p>Example Socks</p>
+						<label class="radio radio-style shapes col-sm-6 col-md-6" for="Shapes">
+
+						 		<div class="month-to-month-sprite customize-images"></div>
+					 			<h3>Shapes</h3>
+						 		<lead>Blah blah blah</lead>
+						 		<p>Example Socks</p>
 						 		<p>Stripes</p>
 						 		<p>Checks</p>
 						 		<p>blah blah</p>
-					 		</div>
+							 	<div class="btn btn-block btn-inverse">Select<span class="fui-arrow-right"></span></div>
+
 				 		</label>
 
 				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
-					<label class="radio pictures col-sm-6 col-md-6" for="Pictures">
-				 		<div class="pictures-sprite customize-images"></div>
-				 		<div class="more-information gradient">
-				 			<h4>Pictures</h4>
-				 			<p>Example Socks</p>
-					 		<p>Sushi</p>
-					 		<p>Dogs</p>
-					 		<p>Flying Toast</p>
-				 		</div>
+					<label class="radio radio-style pictures col-sm-6 col-md-6" for="Pictures">
+
+						 		<div class="month-to-month-sprite customize-images"></div>
+					 			<h3>Pictures</h3>
+						 		<lead>Blah blah blah</lead>
+						 		<p>Example Socks</p>
+						 		<p>Sushi</p>
+						 		<p>Dogs</p>
+						 		<p>Flying Toast</p>
+							 	<div class="btn btn-block btn-inverse">Select<span class="fui-arrow-right"></span></div>
+
 			 		</label>
 
 		  </div>
