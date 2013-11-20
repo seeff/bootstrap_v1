@@ -203,7 +203,7 @@ hr {
 	margin-top: -45px;
 }
 	.navbar-brand img {
-		width: 40%;
+		width: 72%;
 	}
 }
 
@@ -264,15 +264,6 @@ blockquote small{
 	margin-top: 5px;
 }
 
-.bg-image {
-    position: relative;
-}
-.bg-image img {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-}
-
 /*----------Sock subscription options-------------*/
 .form-container{
 	padding-left: 60px;
@@ -328,7 +319,7 @@ label h6{
 }
 
 .radios .col-sm-4, .radios .col-md-4{
-	width: 31%;
+	width: 30%;
 }
 
 .radios .col-sm-6, .radios .col-md-6{
@@ -504,12 +495,17 @@ label h6{
 		margin-left: 10%;
 	}
 
+	form h3 {
+		font-size: 30px;
+	}
+
 }
 
 /*--------FOXYCART---------*/
-/*form li{
-	list-style-type: none;
-}*/
+.help-block{
+	font-size: 0.8em;
+}
+
 /*----COLORS http://flatuicolors.com/ -------
 */
 .sign-up-divider{

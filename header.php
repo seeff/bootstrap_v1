@@ -50,7 +50,7 @@
 ================================================== -->
   <body>
 
-        <div class="navbar navbar-default navbar-static-top sun-flower-background" data-spy="affix" data-offset-top="350">
+        <div class="navbar navbar-default navbar-static-top sun-flower-background">
       <div class="container">
 
 

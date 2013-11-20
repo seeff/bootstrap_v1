@@ -11,15 +11,10 @@ include_once('header.php');
 
 <!-- begin page content -->
 
-
-
-	<div class="bg-image">
-        <img src="./images/photos/socks-on-tennis.jpg">
-    </div>
 		<div class="container">
 			<div class="page-header">
 	        <h1>Customize Your Sock Subscription <small>Everyone is different</small></h1>
-	    </div>
+		    </div>
 
 <!-- 		<div class="row text-center">
 			<div class="col-xs-6 col-sm-3">
@@ -46,7 +41,7 @@ include_once('header.php');
 		  <div class="row">
 		  	<div class="row">
 		  		<h6>Select a Subscription Duration</h6>
-		  		<span><span class="fui-check-inverted check-duration"></span>  Step 1:</span>
+		  		<span class="fui-check-inverted check-duration"></span>
 		  	</div>
 		  	<div class="radios row">
 				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m" id="month-to-month"/>
@@ -99,7 +94,7 @@ include_once('header.php');
 		<div class="row">
 		  <div class="row">
 		  	<h6>Select your gender</h6>
-		  	<span class="fui-check-inverted check-gender"></span>  Step 2:
+		  	<span class="fui-check-inverted check-gender"></span>
 		  </div>
 		  <div class="radios row">
 				<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
@@ -134,7 +129,7 @@ include_once('header.php');
 		<div class="row">
 		  <div class="row">
 		  	<h6>What type of socks do you prefer?</h6>
-		  	<span class="fui-check-inverted check-style"></span>  Step 3:
+		  	<span class="fui-check-inverted check-style"></span>
 		  </div>
 		  <div class="radios row">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
@@ -171,7 +166,7 @@ include_once('header.php');
 
 		  </div>
 		</div>
-		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&"> <div class="btn btn-primary btn-lg btn-spacing">Checkout <span class="glyphicon glyphicon-chevron-right"></span></div></a>
+		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&"> <div class="btn btn-primary btn-lg btn-spacing submit-scroll">Checkout <span class="glyphicon glyphicon-chevron-right"></span></div></a>
 		  
 	</form>
 	
