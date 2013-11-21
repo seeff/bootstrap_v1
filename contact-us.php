@@ -21,30 +21,26 @@ include_once('header.php');
 
 	<div class="row">
 		<div class="col-md-7">
-			<form role="form">
+			<form role="form" action="get-intouch-form.php" method="POST">
 			<div class="form-group">
-			    <label for="name">Your Name</label>
-			    <input type="text" class="form-control" id="name">
+			    <label for="name" >Your Name*</label>
+			    <input type="text" class="form-control" name="name" required autofocus>
 			</div>
 			<div class="form-group">
-			    <label for="email">Your Email</label>
-			    <input type="email" class="form-control" id="email">
+			    <label for="email_from">Your Email*</label>
+			    <input type="email" class="form-control" name="email" required>
 			</div>
 			<div class="form-group">
-			    <label for="order-number">Order Number</label>
-			    <input type="text" class="form-control" id="order-number">
+			    <label for="order_number">Order Number</label>
+			    <input type="number" class="form-control" name="order_number">
 			</div>  
 			<div class="form-group">
-			    <label for="order-number">Order Number</label>
-			    <input type="text" class="form-control" id="order-number">
-			</div>  
-			<div class="form-group">
-			    <label for="message">Your Message</label>
-				<textarea class="form-control" rows="5" id="message"></textarea>
+			    <label for="message">Your Message*</label>
+				<textarea class="form-control" rows="5" name="message" required></textarea>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="">
+			    <input type="checkbox" value="yes" name="newsletter">
 			    Sign Up for our Sock Newsletter
 			  </label>
 			</div>	
