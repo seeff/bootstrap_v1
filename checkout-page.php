@@ -823,6 +823,7 @@ BEGIN checkout
 
 
 <!-- end page content -->
+    <script src="./js/coupon-checkout.js"></script>
 
 <?php
 include_once('footer.php');

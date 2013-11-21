@@ -24,7 +24,7 @@ include_once('header.php');
 			<form role="form" action="get-intouch-form.php" method="POST">
 			<div class="form-group">
 			    <label for="name" >Your Name*</label>
-			    <input type="text" class="form-control" name="name" required autofocus>
+			    <input type="text" class="form-control" name="name" required>
 			</div>
 			<div class="form-group">
 			    <label for="email_from">Your Email*</label>
@@ -45,21 +45,20 @@ include_once('header.php');
 			  </label>
 			</div>	
 
-			  <button type="submit" class="btn btn-primary">Send</button>
+			  <button type="submit" class="btn btn-primary btn-lg">Send</button>
 			</form>
 		</div>
 
 		<div class="col-md-4 col-md-offset-1">
 			<div class="row">
 				<h4>Don't hesitate to contact us</h4>
-				<p>This can be about how much we love hearing from customers.
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+				<p>We love hearing from our customers. We pride our helpful customer service and can’t sleep at night if our customers aren’t loving our service.  Let us know what you love, what you dislike or just left us know how your day is going. 
 				</p>
 			</div>
 
 			<div class="row">
 				<h4>If all else fails</h4>
-				<p>You can call us on <a href="tel:555.555.5555">+1.555.555.5555</a> or send us an email at <a href="mailto:hello@sockscribe.me">hello@sockscribe.me</a> </p>
+				<p>You can call us on <a href="tel:1.650.762.5121">+1.650.762.5121</a> or send us an email at <a href="mailto:hello@sockscribe.me">hello@sockscribe.me</a> </p>
 			</div>
 
 		</div>

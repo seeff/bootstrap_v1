@@ -15,31 +15,41 @@ include_once('header.php');
 <div class="flexslider">
   <ul class="slides">
     <li>
-      <img src="./images/photos/Page4.jpg" />
+      <img src="./images/photos/socks-sitting-on-a-wall.png" alt="Feet on wall with fun socks" />
             <div class="container">
-                <div class="caption">
-                  <h1>Awesome socks delivered to your door monthly</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <div class="caption awesome-sock-subscription-caption">
+                  <h2>An awesome sock monthly subscription</h2>
+                  <p>Each month we will send you a fun pair of socks.</p>
                   <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
                 </div>
             </div>
     </li>
     <li>
-      <img src="./images/photos/Page3.jpg" />
+      <img src="./images/photos/tightrope-walker-with-fun-socks.png" alt="Tightrope walker wearing fun socks"/>
             <div class="container">
-              <div class="caption">
-                <h1>White Socks are for Wussies</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <div class="caption live-life-caption">
+                <h2>Live life on the edge</h2>
+                <p>Fun socks make you feel good, when you feel good you look good.</p>
+                <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
+              </div>
+            </div>
+    </li>
+        <li>
+      <img src="./images/photos/sock-are-a-perfect-gift.png" alt="Sock subscription gifts"/>
+            <div class="container">
+              <div class="caption great-gift-caption">
+                <h2>A great gift</h2>
+                <p>Don't be selfish, let your friends or loved ones join in on the fun.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
     </li>
     <li>
-      <img src="./images/photos/Page1.jpg" />
+      <img src="./images/photos/best-fun-sock-brands.png" alt="Best fun sock brands"/>
             <div class="container">
-              <div class="caption">
-                <h1>A Great Gift</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <div class="caption sock-brands-caption">
+                <h2>Pick up your feet, we’ll pick your socks.</h2>
+                <p>We only stock the high quality socks from the most stylish brands.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
@@ -63,7 +73,7 @@ include_once('header.php');
         <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/calendar.svg" alt="Calendar">
           <h2>Step 1</h2>
-          <p>This is about picking a duration. </p><br/>
+          <p>Tell us if the socks are for you or if they’re a gift</p>
           <!-- <p>Simply pick a plan and tell us the place. We'll select
                     boastfully bright and dynamically patterned socks to ship
                     to your door monthly.</p> -->
@@ -72,7 +82,7 @@ include_once('header.php');
         <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/clipboard.svg" alt="Clipboard">
           <h2>Step 2</h2>
-          <p>this is about sex, style, gift options and shipping</p>
+          <p>Customize your socks (duration, sex, style)</p>
           <!-- <p>Take off your flip-flops and white tube socks; change
                     the conversation. Our socks are for freethinkers who know
                     what they deserve</p -->
@@ -81,7 +91,7 @@ include_once('header.php');
         <div class="col-sm-4">
           <img class="sun-flower-background" src="./images/icons/paper-bag.svg" alt="Paper Bag">
           <h2>Step 3</h2>
-          <p>Here we say that we ship the socks to your door and you are happy</p>
+          <p>Let us know where to ship and who to charge</p>
           <!-- p>It’s your right to stand out. Go ahead; Sockscribe, and
                     marvel yourself, your lover, your friends, even your
                     favorite pair of clogs.</p -->
@@ -108,7 +118,7 @@ include_once('header.php');
           <h2 class="featurette-heading">The surprise, it's freaking exciting. <span class="text-muted">It's like chistmas every month..</span></h2>
           <p class="lead">We select a different brand and pattern of socks every month. Prepare yourself to be surprised by our choice every month. </p>
 
-          <p class="lead">This will be sure to make your life more exciting, help you start conversations and make you old pair of shoes look awesome once again.</p>
+          <p class="lead">You know awesome socks are headed to your door, you just don’t know what they’ll look like and how extraordinary they’ll make you feel. Stop pretending you’re not worth it. Treat yourself; you deserve to feel special.</p>
         </div>
       </div>
 

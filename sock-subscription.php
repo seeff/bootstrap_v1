@@ -44,9 +44,8 @@ include_once('header.php');
 		  		<span class="fui-check-inverted check-duration"></span>
 		  	</div>
 		  	<div class="radios row">
-				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m" id="month-to-month"/>
+				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&cart=checkout" id="month-to-month"/>
 					 <label class="radio radio-duration col-sm-4 col-md-4" for="month-to-month">
-					 		<div class="month-to-month-sprite customize-images"></div>
 					 		<div class="information">
 					 			<h3>Month to Month</h3>
 						 		<div class="price-block">
@@ -60,7 +59,6 @@ include_once('header.php');
 
 				<input type="radio" name="name" id="6months" value=""/>
 				    <label class="radio radio-duration col-sm-4 col-md-4" for="6months">
-				    	<div class="six-month-sprite customize-images"></div>
 				    	<div class="information">
 				    	<h3>Six Months</h3>
 				 		<div class="price-block">
@@ -75,7 +73,6 @@ include_once('header.php');
 
 				<input type="radio" name="name" id="12months" value=""/>
 				    <label class="radio radio-duration col-sm-4 col-md-4" for="12months">
-				    	<div class="twelve-month-sprite customize-images"></div>
 				    	<div class="information">
 					 	<h3>Twelve Months</h3>
 				 		<div class="price-block">
@@ -100,7 +97,6 @@ include_once('header.php');
 				<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
 					
 						 <label class="radio radio-gender dudes col-sm-6 col-md-6" for="Dudes">
-					 		<div class="month-to-month-sprite customize-images"></div>
 					 		<div class="information">
 					 			<h3>Dudes</h3>
 						 		<lead>Shoe size 8-12 US</lead>
@@ -113,7 +109,6 @@ include_once('header.php');
 				<input type="radio" name="2:Gender" value="Female" id="chicks" />
 
 						 <label class="radio radio-gender chicks col-sm-6 col-md-6" for="chicks">
-					 		<div class="month-to-month-sprite customize-images"></div>
 					 		<div class="information">
 					 			<h3>Chicks</h3>
 						 		<lead>Shoe size 5-10 US</lead>
@@ -135,7 +130,6 @@ include_once('header.php');
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
 						<label class="radio radio-style shapes col-sm-6 col-md-6" for="Shapes">
 
-						 		<div class="month-to-month-sprite customize-images"></div>
 					 			<div class="information">
 					 				<h3>Shapes</h3>
 							 		<lead>Blah blah blah</lead>
@@ -151,7 +145,6 @@ include_once('header.php');
 				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
 					<label class="radio radio-style pictures col-sm-6 col-md-6" for="Pictures">
 
-						 		<div class="month-to-month-sprite customize-images"></div>
 						 		<div class="information">
 						 			<h3>Pictures</h3>
 							 		<lead>Blah blah blah</lead>

@@ -64,6 +64,25 @@ hr {
 	text-align: center;
 }
 
+/*.live-life-caption{
+	margin-top: -346px;
+	margin-left: -590px;
+}
+
+.awesome-sock-subscription-caption{
+	margin-top: -278px;
+	text-align: center;
+}
+
+.great-gift-caption{
+	margin-top: -295px;
+	margin-left: -627px;
+}
+
+.sock-brands-caption{
+	margin-top: -314px;
+}*/
+
 .navbar{
 	width: 100%;
 	-moz-transition: opacity .25s ease-in-out;
@@ -88,6 +107,9 @@ hr {
 	.caption{
 		margin-top: 0px;
 	}
+
+
+
 
 	.flex-control-nav{
 		display: none;
@@ -203,7 +225,11 @@ hr {
 	margin-top: -45px;
 }
 	.navbar-brand img {
-		width: 72%;
+		width: 40%;
+	}
+
+	.footer-row .col-sm-12{
+		clear: both;
 	}
 }
 
@@ -557,6 +583,12 @@ label h6{
 /*-------FOOTER----------*/
 .footer{
 	padding: 40px;
+	margin-top: 50px;
+}
+
+.footer-row{
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .social{

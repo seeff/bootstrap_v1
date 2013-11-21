@@ -2,8 +2,8 @@
       <!-- FOOTER -->
       <footer class="sun-flower-background footer">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4 social">
+          <div class="row footer-row">
+            <div class="col-sm-12 col-md-4 social">
                 <div class="facebook social_button">
                     <a class="fill-div" href=
                     "https://www.facebook.com/sockscribeme" target=
@@ -35,24 +35,28 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-sm-12 col-md-3" id="mc_embed_signup">
               <strong>Sign up for our fun Sock Newsletter</strong>
-                <form role="form" action="http://sockscribe.us5.list-manage.com/subscribe/post?u=2cba5c3a551b962f52453c787&amp;id=af6ab3ce00" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  method="post">
+                <form action="http://sockscribe.us5.list-manage.com/subscribe/post?u=2cba5c3a551b962f52453c787&amp;id=af6ab3ce00" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div class="input-group">
-                      <input ype="email"  name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email"  required>
+                      <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="Enter email"  required>
                       <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
+                        <input class="btn btn-default" type="submit" name="subscribe" id="mc-embedded-subscribe" value="Go!"></button>
                       </span>
                     </div><!-- /input-group -->
                 </form>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div> 
             </div>
 
-            <div class="col-md-5 text-right">
+            <div class="col-sm-12 col-md-5 text-right">
               <div class="row"
                 <p class="pull-right"><a href="#">Back to top</a></p>
               </div>
               <div class="row">
-                <p>&copy; 2013 Sockscribe Me LLC. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <p>&copy; 2013 Sockscribe Me LLC. &middot; <a href="./privacy.php">Privacy</a> &middot; <a href="./terms.php">Terms</a></p>
               </div>
             </div>
         </div>
@@ -70,7 +74,7 @@
     <script src="./js/jquery.flexslider.js"></script>
     <script src="./js/social-likes.min.js"></script>
     <script src="./js/products-app.js"></script>
-    <script src="./js/coupon-checkout.js"></script>
+    <script src="./js/mailchimp.js"></script>
     <script src="./js/placeholders.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
