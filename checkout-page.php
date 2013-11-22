@@ -696,16 +696,17 @@ BEGIN checkout
             <span class="clearfix">&nbsp;</span>
         </div><!-- #fc_payment_container -->
     {% endblock checkout_payment %}
-
 </div>
-<div class="col-md-4 col-md-offset-1">
+
+
+<div class="col-md-4 col-sm-offset-1 shaded-form">
     {% block checkout_shipping_and_summary %}
         <!--  *********** shipping : Delivery &amp; Subtotal ************* -->
-        <div id="fc_shipping_container" class="form-group"{% if is_updateinfo %} style="display:none;"{% endif %}>
+        <div id="fc_shipping_container" class=" row form-group"{% if is_updateinfo %} style="display:none;"{% endif %}>
 <!--             <h2>{{ lang.checkout_delivery_and_subtotal|raw }}</h2>
  -->            <fieldset id="fc_shipping">
                 <legend>{{ lang.checkout_delivery_and_subtotal|raw }}</legend>
-                <div class="fc_inner">
+           <div class="col-sm-10 col-md-offset-1">
                 {% if has_live_rate_shippable_products and not has_multiship %}
                     <div id="fc_shipping_methods_container" class="fc_shipping_methods_container">
                         <label for="fc_shipping_methods" class="control-label fc_shipping_methods">{{ lang.checkout_shipping_methods|raw }}</label>
@@ -728,62 +729,67 @@ BEGIN checkout
                     </div>
                 {% endif %}
                     <div id="fc_shipping_list">
-                        <div class="row" id="add_coupon">
-                            <div class="col-xs-6 col-xs-offset-2 add_coupon_link"><a href="#" onclick="FC.checkout.AddCoupon(); this.blur(); return false;">Add a coupon</a> <a id="fc_coupon_apply" href="javascript:;" style="display:none;">Apply!</a></div>
-                            <div class="col-xs-4"><input type="text" name="coupon" id="fc_coupon" class="form-control" value="" style="display:none;" /></div>
-                            <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
-                        </div>
-                                                <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_cart_subtotal|raw }}</div>
+                        <div class="row">
+                            <div class="col-xs-8">{{ lang.checkout_cart_subtotal|raw }}</div>
                             <div class="col-xs-4">{{ checkout_subtotal|money_format }}</div>
                             <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
                         </div>
 
                     {% if has_future_products %}
                         <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.cart_future_subscriptions|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_future_subscriptions|money_format }}</div>
+                            <div class="col-xs-8">{{ lang.cart_future_subscriptions|raw }}</div>
+                            <div class="col-xs-4">{{ checkout_future_subscriptions|money_format }}</div>
                             <input value="{{ checkout_future_subscriptions }}" type="hidden" name="future_subscriptions" id="future_subscriptions" />
                         </div>
                     {% endif %}
                 {% if has_shipping_or_handling_cost %}
                         <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ shipping_and_handling_label|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_shipping_cost|money_format }}</div>
+                            <div class="col-xs-8">{{ shipping_and_handling_label|raw }}</div>
+                            <div class="col-xs-4">{{ checkout_shipping_cost|money_format }}</div>
                             <input value="{{ checkout_shipping_cost }}" type="hidden" name="shipping_cost" id="shipping_cost" />
                         </div>
                     {% if has_future_products %}
                         <div class="row"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_future_shipping_cost|money_format }}</div>
+                            <div class="col-xs-8">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</div>
+                            <div class="col-xs-4">{{ checkout_future_shipping_cost|money_format }}</div>
                             <input value="{{ checkout_future_shipping_cost }}" type="hidden" name="future_shipping_cost" id="future_shipping_cost" />
                         </div>
                     {% endif %}
                 {% endif %}
                     {% if has_discount %}
                         <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_discount|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_discount|money_format }}</div>
+                            <div class="col-xs-8">{{ lang.checkout_discount|raw }}</div>
+                            <div class="col-xs-4">{{ checkout_discount|money_format }}</div>
                             <input value="{{ checkout_discount }}" type="hidden" name="discount" id="discount" />
                         </div>
                     {% endif %}
                         <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_tax|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_tax|money_format }}</div>
+                            <div class="col-xs-8">{{ lang.checkout_tax|raw }}</div>
+                            <div class="col-xs-4">{{ checkout_tax|money_format }}</div>
                             <input value="{{ checkout_tax }}" type="hidden" name="tax" id="tax" />
                         </div>
                         <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2"><strong>{{ lang.checkout_order_total|raw }}</strong></div>
-                            <div class="col-xs-2"><strong>{{ checkout_order_total|money_format }}</strong></div>
+                            <div class="col-xs-8"><strong>{{ lang.checkout_order_total|raw }}</strong></div>
+                            <div class="col-xs-4"><strong>{{ checkout_order_total|money_format }}</strong></div>
                             <input value="{{ checkout_order_total }}" type="hidden" name="order_total" id="order_total" />
                         </div>
+                
+                        <div class="input-group" id="add_coupon">
+                              <input type="text" class="form-control" name="coupon" id="fc_coupon" value="">
+                                <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
+                              <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="fc_coupon_apply" href="javascript:;">Add Coupon</button>
+                              </span>
+                        </div><!-- /input-group -->
 
                     </div>
                     <span class="clearfix">&nbsp;</span>
-                </div><!-- .fc_inner -->
             </fieldset><!-- #fc_shipping -->
-            <span class="clearfix">&nbsp;</span>
         </div><!-- #fc_shipping_container -->
+    
+
+
+</div>
     {% endblock checkout_shipping_and_summary %}
 </div><!-- End pricing container -->
 
