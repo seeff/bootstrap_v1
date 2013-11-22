@@ -12,7 +12,7 @@ $(window).load(function() {
 	    var divID = '.gender-scroll' + this.id;
 	    $('html, body').animate({
 	        scrollTop: $(divID).offset().top
-	    }, 2000);
+	    }, 1000);
 
 	   // $( this.children(".selected")).addClass("hidden");
 });
@@ -24,7 +24,7 @@ $(window).load(function() {
 	   	    var divID = '.style-scroll' + this.id;
 	    $('html, body').animate({
 	        scrollTop: $(divID).offset().top
-	    }, 2000);
+	    }, 1000);
 });
      $( ".radio-style" ).click(function() {
 	   $(".check-style").css( "color", "#1abc9c" );
@@ -34,7 +34,7 @@ $(window).load(function() {
 	   	   	    var divID = '.submit-scroll' + this.id;
 	    $('html, body').animate({
 	        scrollTop: $(divID).offset().top
-	    }, 2000);
+	    }, 1000);
 
 });
 });

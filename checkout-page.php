@@ -1,7 +1,7 @@
 <?php
 
 $PageTitle="Checkout Page - Sockscribe Me - Awesome Socks Delivered to Your Door Monthly";
-$page = "Checkout-Page";
+$page = "Checkout";
 function customPageHeader(){?>
   <!--Arbitrary HTML Tags-->
 <?php }
@@ -14,7 +14,8 @@ include_once('header.php');
 <div class="container">
       
     <div class="page-header">
-        <h1>Checkout <small>You are 1 step away for happiness</small></h1>
+        <h1>Checkout</h1>
+        <h1><small>You are 1 step away for happiness</small></h1>
     </div>
 
 {% block checkout %}
@@ -31,96 +32,6 @@ BEGIN checkout
     {{ html_messages|raw }}
 <form id="fc_form_checkout" method="post" action="https://{{ store_domain }}{{ post_url }}" onsubmit="return false;">
 
-<div class="row">
-<div class="col-md-8 col-md-offset-2">
-    {% block checkout_shipping_and_summary %}
-        <!--  *********** shipping : Delivery &amp; Subtotal ************* -->
-        <div id="fc_shipping_container" class="form-group"{% if is_updateinfo %} style="display:none;"{% endif %}>
-<!--             <h2>{{ lang.checkout_delivery_and_subtotal|raw }}</h2>
- -->            <fieldset id="fc_shipping">
-<!--                 <legend>{{ lang.checkout_delivery_and_subtotal|raw }}</legend>
- -->                <div class="fc_inner">
-                {% if has_live_rate_shippable_products and not has_multiship %}
-                    <div id="fc_shipping_methods_container" class="fc_shipping_methods_container">
-                        <label for="fc_shipping_methods" class="control-label fc_shipping_methods">{{ lang.checkout_shipping_methods|raw }}</label>
-                        <div id="fc_shipping_methods" class="form-control_group_container fc_shipping_methods">
-                            <div id="fc_shipping_result" class="fc_shipping_result">{{ lang.checkout_update_shipping_message|raw }}</div>
-                            <span id="shipping_ajax" class="fc_shipping_ajax" style="display:none">{{ lang.checkout_updating_shipping_options|raw }}<img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" /></span>
-                            <textarea rows="1" cols="1" name="shipping_options" id="shipping_options" style="display:none;">{{ shipping_options }}</textarea>
-                            <input type="hidden" name="shipping_service_id" id="shipping_service_id" value="{{ shipping_service_id }}" />
-                            <input type="hidden" name="shipping_service_description" id="shipping_service_description" value="{{ shipping_service_description }}" />
-                            <div id="fc_shipping_methods_inner" class="fc_shipping_methods_inner">
-                                {{ shipping_options_html|raw }}
-                            </div>
-                            <label for="fc_shipping_methods" class="alert alert-warning" style="display:none">{{ lang.checkout_select_shipping_option|raw }}</label>
-                        </div>
-                    </div>
-                {% endif %}
-                {% if has_downloadables %}
-                    <div class="fc_downloadable_message_container">
-                        <p class="fc_downloadable_message">{{ lang.checkout_downloadables_message|raw }}</p>
-                    </div>
-                {% endif %}
-                    <div id="fc_shipping_list">
-                        <div class="row" id="add_coupon">
-                            <div class="col-xs-6 col-xs-offset-2 add_coupon_link"><a href="#" onclick="FC.checkout.AddCoupon(); this.blur(); return false;">Add a coupon</a> <a id="fc_coupon_apply" href="javascript:;" style="display:none;">Apply!</a></div>
-                            <div class="col-xs-4"><input type="text" name="coupon" id="fc_coupon" class="form-control" value="" style="display:none;" /></div>
-                            <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
-                        </div>
-                                                <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_cart_subtotal|raw }}</div>
-                            <div class="col-xs-4">{{ checkout_subtotal|money_format }}</div>
-                            <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
-                        </div>
-
-                    {% if has_future_products %}
-                        <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.cart_future_subscriptions|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_future_subscriptions|money_format }}</div>
-                            <input value="{{ checkout_future_subscriptions }}" type="hidden" name="future_subscriptions" id="future_subscriptions" />
-                        </div>
-                    {% endif %}
-                {% if has_shipping_or_handling_cost %}
-                        <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ shipping_and_handling_label|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_shipping_cost|money_format }}</div>
-                            <input value="{{ checkout_shipping_cost }}" type="hidden" name="shipping_cost" id="shipping_cost" />
-                        </div>
-                    {% if has_future_products %}
-                        <div class="row"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_future_shipping_cost|money_format }}</div>
-                            <input value="{{ checkout_future_shipping_cost }}" type="hidden" name="future_shipping_cost" id="future_shipping_cost" />
-                        </div>
-                    {% endif %}
-                {% endif %}
-                    {% if has_discount %}
-                        <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_discount|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_discount|money_format }}</div>
-                            <input value="{{ checkout_discount }}" type="hidden" name="discount" id="discount" />
-                        </div>
-                    {% endif %}
-                        <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_tax|raw }}</div>
-                            <div class="col-xs-2">{{ checkout_tax|money_format }}</div>
-                            <input value="{{ checkout_tax }}" type="hidden" name="tax" id="tax" />
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6 col-xs-offset-2"><strong>{{ lang.checkout_order_total|raw }}</strong></div>
-                            <div class="col-xs-2"><strong>{{ checkout_order_total|money_format }}</strong></div>
-                            <input value="{{ checkout_order_total }}" type="hidden" name="order_total" id="order_total" />
-                        </div>
-
-                    </div>
-                    <span class="clearfix">&nbsp;</span>
-                </div><!-- .fc_inner -->
-            </fieldset><!-- #fc_shipping -->
-            <span class="clearfix">&nbsp;</span>
-        </div><!-- #fc_shipping_container -->
-    {% endblock checkout_shipping_and_summary %}
-</div>
-</div>
 
 
 
@@ -253,7 +164,11 @@ BEGIN checkout
 
 
     {% if not is_subscription_cancel %}
-<div class="col-md-8 col-md-offset-2">
+<div class="row">
+
+
+
+<div class="col-md-7">
     <div id="fc_data_entry_container">
         <div id="fc_customer_info_container">
 
@@ -491,7 +406,7 @@ BEGIN checkout
                                     <label style="display:none;" class="help-block" for="shipto_{{ multiship.number }}_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
                                     <label style="display:none;" class="alert alert-warning alert alert-warning_invalid_postal_code" for="shipto_{{ multiship.number }}_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
                                 </div>
-                            </div>
+                            </div></div>
                             <div{% if multiship_data|length == 1 %} style="display:none;"{% endif %} class="fc_shipto_subtotal">
                                 <div class="fc_shipto_{{ multiship.number }}_subtotal">
                                     <label class="control-label" for="shipto_{{ multiship.number }}_subtotal">{{ lang.checkout_shipment_subtotal|raw }}</label>
@@ -564,10 +479,7 @@ BEGIN checkout
 
         {# This place holder is here for backward compatibility so that custom fields will be injected into the correct place. #}
         ^^custom_fields^^
-
-
-
-</div>
+</div><!-- end of shipping info -->
 
     {% block checkout_payment %}
         <!--  *********** payment : Payment Information ************* -->
@@ -785,10 +697,100 @@ BEGIN checkout
         </div><!-- #fc_payment_container -->
     {% endblock checkout_payment %}
 
+</div>
+<div class="col-md-4 col-md-offset-1">
+    {% block checkout_shipping_and_summary %}
+        <!--  *********** shipping : Delivery &amp; Subtotal ************* -->
+        <div id="fc_shipping_container" class="form-group"{% if is_updateinfo %} style="display:none;"{% endif %}>
+<!--             <h2>{{ lang.checkout_delivery_and_subtotal|raw }}</h2>
+ -->            <fieldset id="fc_shipping">
+                <legend>{{ lang.checkout_delivery_and_subtotal|raw }}</legend>
+                <div class="fc_inner">
+                {% if has_live_rate_shippable_products and not has_multiship %}
+                    <div id="fc_shipping_methods_container" class="fc_shipping_methods_container">
+                        <label for="fc_shipping_methods" class="control-label fc_shipping_methods">{{ lang.checkout_shipping_methods|raw }}</label>
+                        <div id="fc_shipping_methods" class="form-control_group_container fc_shipping_methods">
+                            <div id="fc_shipping_result" class="fc_shipping_result">{{ lang.checkout_update_shipping_message|raw }}</div>
+                            <span id="shipping_ajax" class="fc_shipping_ajax" style="display:none">{{ lang.checkout_updating_shipping_options|raw }}<img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" /></span>
+                            <textarea rows="1" cols="1" name="shipping_options" id="shipping_options" style="display:none;">{{ shipping_options }}</textarea>
+                            <input type="hidden" name="shipping_service_id" id="shipping_service_id" value="{{ shipping_service_id }}" />
+                            <input type="hidden" name="shipping_service_description" id="shipping_service_description" value="{{ shipping_service_description }}" />
+                            <div id="fc_shipping_methods_inner" class="fc_shipping_methods_inner">
+                                {{ shipping_options_html|raw }}
+                            </div>
+                            <label for="fc_shipping_methods" class="alert alert-warning" style="display:none">{{ lang.checkout_select_shipping_option|raw }}</label>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if has_downloadables %}
+                    <div class="fc_downloadable_message_container">
+                        <p class="fc_downloadable_message">{{ lang.checkout_downloadables_message|raw }}</p>
+                    </div>
+                {% endif %}
+                    <div id="fc_shipping_list">
+                        <div class="row" id="add_coupon">
+                            <div class="col-xs-6 col-xs-offset-2 add_coupon_link"><a href="#" onclick="FC.checkout.AddCoupon(); this.blur(); return false;">Add a coupon</a> <a id="fc_coupon_apply" href="javascript:;" style="display:none;">Apply!</a></div>
+                            <div class="col-xs-4"><input type="text" name="coupon" id="fc_coupon" class="form-control" value="" style="display:none;" /></div>
+                            <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
+                        </div>
+                                                <div class="row">
+                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_cart_subtotal|raw }}</div>
+                            <div class="col-xs-4">{{ checkout_subtotal|money_format }}</div>
+                            <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
+                        </div>
+
+                    {% if has_future_products %}
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-2">{{ lang.cart_future_subscriptions|raw }}</div>
+                            <div class="col-xs-2">{{ checkout_future_subscriptions|money_format }}</div>
+                            <input value="{{ checkout_future_subscriptions }}" type="hidden" name="future_subscriptions" id="future_subscriptions" />
+                        </div>
+                    {% endif %}
+                {% if has_shipping_or_handling_cost %}
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-2">{{ shipping_and_handling_label|raw }}</div>
+                            <div class="col-xs-2">{{ checkout_shipping_cost|money_format }}</div>
+                            <input value="{{ checkout_shipping_cost }}" type="hidden" name="shipping_cost" id="shipping_cost" />
+                        </div>
+                    {% if has_future_products %}
+                        <div class="row"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
+                            <div class="col-xs-6 col-xs-offset-2">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</div>
+                            <div class="col-xs-2">{{ checkout_future_shipping_cost|money_format }}</div>
+                            <input value="{{ checkout_future_shipping_cost }}" type="hidden" name="future_shipping_cost" id="future_shipping_cost" />
+                        </div>
+                    {% endif %}
+                {% endif %}
+                    {% if has_discount %}
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_discount|raw }}</div>
+                            <div class="col-xs-2">{{ checkout_discount|money_format }}</div>
+                            <input value="{{ checkout_discount }}" type="hidden" name="discount" id="discount" />
+                        </div>
+                    {% endif %}
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-2">{{ lang.checkout_tax|raw }}</div>
+                            <div class="col-xs-2">{{ checkout_tax|money_format }}</div>
+                            <input value="{{ checkout_tax }}" type="hidden" name="tax" id="tax" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-2"><strong>{{ lang.checkout_order_total|raw }}</strong></div>
+                            <div class="col-xs-2"><strong>{{ checkout_order_total|money_format }}</strong></div>
+                            <input value="{{ checkout_order_total }}" type="hidden" name="order_total" id="order_total" />
+                        </div>
+
+                    </div>
+                    <span class="clearfix">&nbsp;</span>
+                </div><!-- .fc_inner -->
+            </fieldset><!-- #fc_shipping -->
+            <span class="clearfix">&nbsp;</span>
+        </div><!-- #fc_shipping_container -->
+    {% endblock checkout_shipping_and_summary %}
+</div><!-- End pricing container -->
+
+</div><!-- end row of shipping, pricing and billing -->
 
 
     </div><!-- #fc_data_entry_container -->
-</div>
 
 
     {% else %} {# is_subscription_cancel #}
