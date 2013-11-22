@@ -69,7 +69,7 @@
             <li class="pinterest" title="Share image on Pinterest" data-media="http://sockscribe.me/images/logo.png">Pinterest</li>
           </ul> -->
         <div class="navbar-collapse collapse <?php echo ($page == "Checkout" ? "hide" : "")?>">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right <?php echo ($page == "Checkout" ? "hide" : "")?>">
 
             <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-a-Sock-Subscription" ? "active" : "")?>">Sign Up</a></li>
             <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-Sock-Subscription-Gift" ? "active" : "")?>">Give a Gift</a></li>

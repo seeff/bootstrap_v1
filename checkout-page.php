@@ -14,8 +14,7 @@ include_once('header.php');
 <div class="container">
       
     <div class="page-header">
-        <h1>Checkout</h1>
-        <h1><small>You are 1 step away for happiness</small></h1>
+        <h1>Checkout  <small>You are 1 step away for happiness</small></h1>
     </div>
 
 {% block checkout %}
@@ -490,10 +489,10 @@ BEGIN checkout
                 <div class="fc_inner">
                     <div id="fc_payment_list">
                     {% if supports_pay_with_plastic %}
-                        <div id="fc_payment_method_plastic_container" class="form-group form-control_payment_method">
+                        <div id="fc_payment_method_plastic_container">
                             <label for="fc_payment_method_plastic">
                                 <input type="{{ payment_method_input_type }}"{% if payment_method_type == 'plastic' %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_plastic" value="plastic" autocomplete="off" />
-                                <span>{{ lang.checkout_pay_with_credit_card|raw }}</span>
+                                <span class="text-center">{{ lang.checkout_pay_with_credit_card|raw }}</span>
                             </label>
                         {% if has_multiple_payment_options %}
                             <fieldset>
@@ -501,14 +500,14 @@ BEGIN checkout
                         {% else %}
                             </div>
                         {% endif %}{# has_multiple_payment_options #}
-                                    <div id="li_cc_saved" class="form-group form-control_radio">
+                                    <div id="li_cc_saved">
                                         <label for="c_card_saved">
                                             <input{% if cc_card_is_saved %} checked="checked"{% endif %} type="radio" name="c_card" value="saved" id="c_card_saved" onclick="FC.checkout.displayNewCC(0)" autocomplete="off" />
                                             <span>{{ lang.checkout_use_saved_payment_info|raw }}</span>
                                             <span id="fc_c_card_saved_number">{{ checkout_cc_number_masked }}</span>
                                         </label>
                                     </div>
-                                    <div id="li_cc_new" class="form-group form-control_radio">
+                                    <div id="li_cc_new">
                                         <label for="c_card_new">
                                             <input{% if not cc_card_is_saved %} checked="checked"{% endif %} type="radio" name="c_card" value="new" id="c_card_new" onclick="FC.checkout.displayNewCC(1)" autocomplete="off" />
                                             <span>{{ lang.checkout_enter_new_card|raw }}</span>
@@ -600,15 +599,21 @@ BEGIN checkout
 
                                     </div>
 
-                                                                            
-                                        <div class="checkbox" id="li_save_cc">
-                                            <label>
-                                                <input type="checkbox" name="save_cc" id="save_cc" value="1">{{ save_cc_text }}
-                                            </label>
-                                            <label for="save_cc" class="alert alert-warning" style="display:none">{{ lang.checkout_error_subscription_permission|raw }}</label>
-                                            <input type="hidden" name="cc_number_masked" id="cc_number_masked" value="{{ checkout_cc_number_masked }}" />
+                                    <div class="checkbox checkbox-container" id="li_save_cc">
+                                        <label>
+                                            <input type="checkbox" name="save_cc" id="save_cc" value="1">{{ save_cc_text }}
+                                        </label>
+                                        <label for="save_cc" class="alert alert-warning" style="display:none">{{ lang.checkout_error_subscription_permission|raw }}</label>
+                                        <input type="hidden" name="cc_number_masked" id="cc_number_masked" value="{{ checkout_cc_number_masked }}" />
+                                    </div>
 
-                                        </div>
+                                    <div class="checkbox checkbox-container" id="li_save_cc">
+                                        <label>
+                                            <input type="checkbox" name="Subscribe" value="yes" checked="checked">Sign up for our awesome newsletter (don't worry we won't spam you)
+                                        </label>
+                                    </div>
+
+
 
                         {% if has_multiple_payment_options %}
                                 </div>
@@ -618,9 +623,9 @@ BEGIN checkout
                     {% endif %}{# supports_pay_with_plastic #}
 
                     {% if supports_paypal_express and not is_updateinfo %}
-                        <div id="fc_payment_method_paypal_container" class="form-control_payment_method">
+                        <div id="fc_payment_method_paypal_container">
                         {% if has_multiple_payment_options %}
-                            <label for="fc_payment_method_paypal" class="form-control">
+                            <label for="fc_payment_method_paypal">
                                 <input type="{{ payment_method_input_type }}"{% if payment_method_type == 'paypal' %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_paypal" class="form-control" value="paypal" autocomplete="off" />
                                 <span>{{ lang.checkout_pay_with_paypal|raw }}</span>
                             </label>
@@ -636,10 +641,10 @@ BEGIN checkout
 
                     {% if not is_updateinfo %}
                     {% for hosted_gateway in hosted_payment_gateways %}
-                        <div id="fc_payment_method_{{ hosted_gateway.type }}_container" class="form-control_payment_method form-control_hosted_payment_method">
+                        <div id="fc_payment_method_{{ hosted_gateway.type }}_container">
                         {% if has_multiple_payment_options %}
                             <label class="form-control">
-                                <input type="{{ payment_method_input_type }}"{% if payment_method_type == hosted_gateway.type %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_{{ hosted_gateway.type }}" class="form-control" value="{{ hosted_gateway.type }}" autocomplete="off" />
+                                <input type="{{ payment_method_input_type }}"{% if payment_method_type == hosted_gateway.type %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_{{ hosted_gateway.type }}" value="{{ hosted_gateway.type }}" autocomplete="off" />
                                 <span>{{ hosted_gateway.lang_pay_with|raw }}</span>
                             </label>
                         {% else %}
@@ -654,9 +659,9 @@ BEGIN checkout
                     {% endif %}{# not is_updateinfo #}
 
                     {% if supports_purchase_order and not is_updateinfo %}
-                        <div id="fc_payment_method_purchase_order_container" class="form-control_payment_method">
+                        <div id="fc_payment_method_purchase_order_container">
                             <label for="fc_payment_method_purchase_order">
-                                <input type="{{ payment_method_input_type }}"{% if payment_method_type == 'purchase_order' %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_purchase_order" class="form-control" value="purchase_order" autocomplete="off" />
+                                <input type="{{ payment_method_input_type }}"{% if payment_method_type == 'purchase_order' %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_purchase_order" value="purchase_order" autocomplete="off" />
                                 <span>{{ lang.checkout_pay_with_purchase_order|raw }}</span>
                             </label>
                         {% if has_multiple_payment_options %}
@@ -666,7 +671,7 @@ BEGIN checkout
                         </div>
                         {% endif %}{# has_multiple_payment_options #}
                                     <div id="li_purchase_order" class="li_purchase_order">
-                                        <label for="purchase_order" class="control-label">
+                                        <label for="purchase_order">
                                             {{ lang.checkout_purchase_order_number|raw }}
                                         </label>
                                         <input value="{{ purchase_order }}" type="text" name="purchase_order" id="purchase_order" class="form-control fc_required" />
@@ -705,8 +710,8 @@ BEGIN checkout
         <div id="fc_shipping_container" class=" row form-group"{% if is_updateinfo %} style="display:none;"{% endif %}>
 <!--             <h2>{{ lang.checkout_delivery_and_subtotal|raw }}</h2>
  -->            <fieldset id="fc_shipping">
-                <legend>{{ lang.checkout_delivery_and_subtotal|raw }}</legend>
            <div class="col-sm-10 col-md-offset-1">
+                <legend class="text-center">{{ lang.checkout_delivery_and_subtotal|raw }}</legend>
                 {% if has_live_rate_shippable_products and not has_multiship %}
                     <div id="fc_shipping_methods_container" class="fc_shipping_methods_container">
                         <label for="fc_shipping_methods" class="control-label fc_shipping_methods">{{ lang.checkout_shipping_methods|raw }}</label>

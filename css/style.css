@@ -616,6 +616,11 @@ label h6 {
 	margin-right: 12px;
 }
 
+.checkbox-container{
+	position: inherit;
+	clear: both;
+}
+
 /*-------FOOTER----------*/
 .footer {
 	padding: 40px;
