@@ -40,12 +40,12 @@ include_once('header.php');
 
 		  <div class="row">
 		  	<div class="row">
-		  		<h6>Select a Subscription Duration</h6>
+		  		<h2>Select a Subscription Duration</h2>
 		  		<span class="fui-check-inverted check-duration"></span>
 		  	</div>
 		  	<div class="radios row">
 				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&cart=checkout" id="month-to-month"/>
-					 <label class="radio radio-duration col-sm-4 col-md-4" for="month-to-month">
+					 <label class="radio radio-duration col-sm-12 col-md-4" for="month-to-month">
 					 		<div class="information">
 					 			<h3>Month to Month</h3>
 						 		<div class="price-block">
@@ -58,7 +58,7 @@ include_once('header.php');
 			 		</label>
 
 				<input type="radio" name="name" id="6months" value=""/>
-				    <label class="radio radio-duration col-sm-4 col-md-4" for="6months">
+				    <label class="radio radio-duration col-sm-12 col-md-4" for="6months">
 				    	<div class="information">
 				    	<h3>Six Months</h3>
 				 		<div class="price-block">
@@ -67,12 +67,12 @@ include_once('header.php');
 					 		<p>Cancel anytime</p>
 					 		<p>Great for the Uncomitted</p>
 					 	</div>
-					 		<div class="btn btn-block btn-inverse">Select<span class="fui-arrow-right"></span></div>
+					 		<div class="btn btn-block btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
 
 				    </label>
 
 				<input type="radio" name="name" id="12months" value=""/>
-				    <label class="radio radio-duration col-sm-4 col-md-4" for="12months">
+				    <label class="radio radio-duration col-sm-12 col-md-4" for="12months">
 				    	<div class="information">
 					 	<h3>Twelve Months</h3>
 				 		<div class="price-block">
@@ -81,7 +81,7 @@ include_once('header.php');
 					 		<p>Cancel anytime</p>
 					 		<p>Great for the Uncomitted</p>
 					 	</div>
-					 		<div class="btn btn-block btn-inverse gender-scroll">Select<span class="fui-arrow-right"></span></div>
+					 		<div class="btn btn-block btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
 				    </label>
 			 </div>
 		</div>
@@ -96,24 +96,24 @@ include_once('header.php');
 		  <div class="radios row">
 				<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
 					
-						 <label class="radio radio-gender dudes col-sm-6 col-md-6" for="Dudes">
+						 <label class="radio radio-gender dudes col-sm-12 col-md-6" for="Dudes">
 					 		<div class="information">
 					 			<h3>Dudes</h3>
 						 		<lead>Shoe size 8-12 US</lead>
 						 	</div>
-							 	<div class="btn btn-block btn-inverse ">Select<span class="fui-arrow-right"></span></div>
+							 	<div class="btn btn-block btn-inverse gender-button">Select<span class="fui-arrow-right"></span></div>
 
 
 				 		</label>
 
 				<input type="radio" name="2:Gender" value="Female" id="chicks" />
 
-						 <label class="radio radio-gender chicks col-sm-6 col-md-6" for="chicks">
+						 <label class="radio radio-gender chicks col-sm-12 col-md-6" for="chicks">
 					 		<div class="information">
 					 			<h3>Chicks</h3>
 						 		<lead>Shoe size 5-10 US</lead>
 						 	</div>
-							 	<div class="btn btn-block btn-inverse style-scroll">Select<span class="fui-arrow-right"></span></div>
+							 	<div class="btn btn-block btn-inverse style-scroll gender-button">Select<span class="fui-arrow-right"></span></div>
 				 		</label>
 
 					</div>
@@ -123,12 +123,12 @@ include_once('header.php');
 
 		<div class="row">
 		  <div class="row">
-		  	<h6>What type of socks do you prefer?</h6>
+		  	<h2>What type of socks do you prefer?</h2>
 		  	<span class="fui-check-inverted check-style"></span>
 		  </div>
 		  <div class="radios row">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
-						<label class="radio radio-style shapes col-sm-6 col-md-6" for="Shapes">
+						<label class="radio radio-style shapes col-sm-12 col-md-6" for="Shapes">
 
 					 			<div class="information">
 					 				<h3>Shapes</h3>
@@ -138,12 +138,12 @@ include_once('header.php');
 							 		<p>Checks</p>
 							 		<p>blah blah</p>
 							 	</div>
-							 	<div class="btn btn-block btn-inverse">Select<span class="fui-arrow-right"></span></div>
+							 	<div class="btn btn-block btn-inverse style-button">Select<span class="fui-arrow-right"></span></div>
 
 				 		</label>
 
 				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
-					<label class="radio radio-style pictures col-sm-6 col-md-6" for="Pictures">
+					<label class="radio radio-style pictures col-sm-12 col-md-6" for="Pictures">
 
 						 		<div class="information">
 						 			<h3>Pictures</h3>
@@ -153,7 +153,7 @@ include_once('header.php');
 							 		<p>Dogs</p>
 							 		<p>Flying Toast</p>
 							 	</div>
-							 	<div class="btn btn-block btn-inverse">Select<span class="fui-arrow-right"></span></div>
+							 	<div class="btn btn-block btn-inverse style-button">Select<span class="fui-arrow-right"></span></div>
 
 			 		</label>
 

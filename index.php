@@ -202,7 +202,13 @@ include_once('header.php');
         <div class="video-container col-md-8 col-md-offset-2">
                  <iframe src="http://www.youtube.com/embed/nGTxZukeAQM" frameborder="0" width="560" height="315"></iframe>
         </div>
+
+       <div class="col-md-12">
+          <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+        </div>
+
       </div>
+
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->

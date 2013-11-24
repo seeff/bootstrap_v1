@@ -736,46 +736,46 @@ BEGIN checkout
                     <div id="fc_shipping_list">
                         <div class="row">
                             <div class="col-xs-8">{{ lang.checkout_cart_subtotal|raw }}</div>
-                            <div class="col-xs-4">{{ checkout_subtotal|money_format }}</div>
+                            <div class="col-xs-4 text-center">{{ checkout_subtotal|money_format }}</div>
                             <input value="{{ checkout_subtotal }}" type="hidden" name="subtotal" id="subtotal" />
                         </div>
 
                     {% if has_future_products %}
                         <div class="row">
                             <div class="col-xs-8">{{ lang.cart_future_subscriptions|raw }}</div>
-                            <div class="col-xs-4">{{ checkout_future_subscriptions|money_format }}</div>
+                            <div class="col-xs-4 text-center">{{ checkout_future_subscriptions|money_format }}</div>
                             <input value="{{ checkout_future_subscriptions }}" type="hidden" name="future_subscriptions" id="future_subscriptions" />
                         </div>
                     {% endif %}
                 {% if has_shipping_or_handling_cost %}
                         <div class="row">
                             <div class="col-xs-8">{{ shipping_and_handling_label|raw }}</div>
-                            <div class="col-xs-4">{{ checkout_shipping_cost|money_format }}</div>
+                            <div class="col-xs-4 text-center">{{ checkout_shipping_cost|money_format }}</div>
                             <input value="{{ checkout_shipping_cost }}" type="hidden" name="shipping_cost" id="shipping_cost" />
                         </div>
                     {% if has_future_products %}
                         <div class="row"{% if not has_future_shipping_and_handling %} style="display:none;"{% endif %}>
                             <div class="col-xs-8">{{ lang.cart_future_subscriptions|raw }} {{ shipping_and_handling_label|raw }}</div>
-                            <div class="col-xs-4">{{ checkout_future_shipping_cost|money_format }}</div>
+                            <div class="col-xs-4 text-center">{{ checkout_future_shipping_cost|money_format }}</div>
                             <input value="{{ checkout_future_shipping_cost }}" type="hidden" name="future_shipping_cost" id="future_shipping_cost" />
                         </div>
                     {% endif %}
                 {% endif %}
                     {% if has_discount %}
                         <div class="row">
-                            <div class="col-xs-8">{{ lang.checkout_discount|raw }}</div>
-                            <div class="col-xs-4">{{ checkout_discount|money_format }}</div>
+                            <div class="col-xs-8" id="fc_cart_foot_subtotal">{{ lang.checkout_discount|raw }}</div>
+                            <div class="col-xs-4 text-center">{{ checkout_discount|money_format }}</div>
                             <input value="{{ checkout_discount }}" type="hidden" name="discount" id="discount" />
                         </div>
                     {% endif %}
                         <div class="row">
                             <div class="col-xs-8">{{ lang.checkout_tax|raw }}</div>
-                            <div class="col-xs-4">{{ checkout_tax|money_format }}</div>
+                            <div class="col-xs-4 text-center">{{ checkout_tax|money_format }}</div>
                             <input value="{{ checkout_tax }}" type="hidden" name="tax" id="tax" />
                         </div>
                         <div class="row">
                             <div class="col-xs-8"><strong>{{ lang.checkout_order_total|raw }}</strong></div>
-                            <div class="col-xs-4"><strong>{{ checkout_order_total|money_format }}</strong></div>
+                            <div class="col-xs-4 text-center"><strong>{{ checkout_order_total|money_format }}</strong></div>
                             <input value="{{ checkout_order_total }}" type="hidden" name="order_total" id="order_total" />
                         </div>
                 
@@ -786,6 +786,7 @@ BEGIN checkout
                                 <button class="btn btn-default" type="button" id="fc_coupon_apply" href="javascript:;">Add Coupon</button>
                               </span>
                         </div><!-- /input-group -->
+
 
                     </div>
                     <span class="clearfix">&nbsp;</span>

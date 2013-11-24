@@ -36,10 +36,10 @@ FC.checkout.BuildCouponTR = function (coupons) {
     fc_cart_foot_discounts = '';
     FC.checkout.config.orderDiscount = 0;
     for (var coupon in coupons) {
-        fc_cart_foot_discounts += '<tr class="fc_cart_foot_discount"><td class="add_coupon_link" colspan="2">' + coupons[coupon].name + ':</td><td class="fc_col2"><span class="fc_discount">' + FC.formatter.currency(coupons[coupon].discount, true) + '</span></td></tr>';
+        fc_cart_foot_discounts += '<tr class="fc_cart_foot_discount"><td class="add_coupon_link" colspan="2">' + 'Discount Name' coupons[coupon].name + ':</td><td class="fc_col2"><span class="fc_discount">' + FC.formatter.currency(coupons[coupon].discount, true) + '</span></td></tr>';
         FC.checkout.config.orderDiscount += coupons[coupon].discount;
     }
-    jQuery(fc_cart_foot_discounts).insertAfter('#fc_cart_foot_subtotal');
+    jQuery(fc_cart_foot_discounts).insertAfter('#fc_discount');
     // Set the subtotal amounts
     jQuery('#discount, label[for=discount]').remove();
     if (FC.checkout.config.orderDiscount != 0) {
@@ -49,7 +49,7 @@ FC.checkout.BuildCouponTR = function (coupons) {
     FC.checkout.updatePriceDisplay();
 
     // Comment the following line out if you want to remove the coupon line once a coupon has been added
-    jQuery('#add_coupon').remove();
+    // jQuery('#add_coupon').remove();
 }
 
 
