@@ -75,6 +75,7 @@
     <script src="./js/social-likes.min.js"></script>
     <script src="./js/products-app.js"></script>
     <script src="./js/mailchimp.js"></script>
+    <script src="./js/jquery.colorbox.js"></script>
     <script src="./js/placeholders.min.js"></script>
     <script src="./js/app.js"></script>
   </body>

@@ -52,7 +52,7 @@ include_once('header.php');
 		<div class="col-md-4 col-md-offset-1">
 			<div class="row">
 				<h4>Don't hesitate to contact us</h4>
-				<p>We love hearing from our customers. We pride our helpful customer service and can’t sleep at night if our customers aren’t loving our service.  Let us know what you love, what you dislike or just left us know how your day is going. 
+				<p>Help us help you, help us. By that we mean, tell us what’s on your mind. Let us know what you like, or what you think we could be doing better. We pride ourselves on reading customer feedback, making dreams come true and scotch drinking. Bottom line, if you have a question, a fun fact, an unrelated comment, or a photo of a platypus wearing socks, send it our way. 
 				</p>
 			</div>
 

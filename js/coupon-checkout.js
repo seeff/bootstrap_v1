@@ -1,8 +1,7 @@
-FC.checkout.InitCoupon = function () {
-
-
-    jQuery('#fc_coupon_apply').unbind('click').click(function () {
-        var coupon = jQuery('#fc_coupon').val();
+FC.checkout.InitCoupon = function() {
+ 
+    jQuery('#apply_coupon').unbind('click').click(function(){
+        var coupon = jQuery('#coupon_code').val();
         if (coupon != '') {
             FC.checkout.ApplyCoupon(coupon);
         } else {
@@ -10,36 +9,37 @@ FC.checkout.InitCoupon = function () {
         }
     });
 }
-
-FC.checkout.AddCoupon = function () {
-    jQuery("#fc_coupon, #fc_coupon_apply").toggle();
-    if (jQuery("#fc_coupon").is(":visible")) {
-        jQuery("#fc_coupon")[0].focus();
+ 
+FC.checkout.AddCoupon = function() {
+    jQuery("#coupon_code, #apply_coupon").toggle();
+    if (jQuery("#coupon_code").is(":visible")) {
+        jQuery("#coupon_code")[0].focus();
     }
 }
-
-FC.checkout.ApplyCoupon = function (coupon) {
-    jQuery('#fc_coupon_apply').html('Loading...');
+ 
+FC.checkout.ApplyCoupon = function(coupon) {
+    jQuery('#apply_coupon').html('Loading...');
     jQuery.getJSON('https://' + window.location.hostname + '/cart?output=json&' + FC.checkout.config.session + '&coupon=' + coupon + '&callback=?',
-        function (data) {
+        function(data) {
             if (data.messages.errors.length > 0) {
                 alert("We're sorry. An error occurred: " + data.messages.errors[0]);
             } else {
                 FC.checkout.BuildCouponTR(data.coupons);
             }
-            jQuery('#fc_coupon_apply').html('Apply!');
+            jQuery('#apply_coupon').html('Apply!');
         }
     );
 }
-
-FC.checkout.BuildCouponTR = function (coupons) {
+ 
+FC.checkout.BuildCouponTR = function(coupons) {
+    var colspan = jQuery("#fc_cart_foot_total .col-xs-8").attr("colspan");
     fc_cart_foot_discounts = '';
     FC.checkout.config.orderDiscount = 0;
     for (var coupon in coupons) {
-        fc_cart_foot_discounts += '<tr class="fc_cart_foot_discount"><td class="add_coupon_link" colspan="2">' + 'Discount Name' coupons[coupon].name + ':</td><td class="fc_col2"><span class="fc_discount">' + FC.formatter.currency(coupons[coupon].discount, true) + '</span></td></tr>';
+        fc_cart_foot_discounts += '<tr class="fc_cart_foot_discount"><td class="fc_col1" colspan="' + colspan + '">' + coupons[coupon].name + ':</td><td class="fc_col2"><span class="fc_discount">' + FC.formatter.currency(coupons[coupon].discount, true) + '</span></td></tr>';
         FC.checkout.config.orderDiscount += coupons[coupon].discount;
     }
-    jQuery(fc_cart_foot_discounts).insertAfter('#fc_discount');
+    jQuery(fc_cart_foot_discounts).insertAfter('#fc_cart_foot_subtotal');
     // Set the subtotal amounts
     jQuery('#discount, label[for=discount]').remove();
     if (FC.checkout.config.orderDiscount != 0) {
@@ -47,20 +47,20 @@ FC.checkout.BuildCouponTR = function (coupons) {
         jQuery(discount_total).insertAfter('li.fc_shipping_cost');
     }
     FC.checkout.updatePriceDisplay();
-
+ 
     // Comment the following line out if you want to remove the coupon line once a coupon has been added
-    // jQuery('#add_coupon').remove();
+    jQuery('#add_coupon').remove();
 }
-
-
-jQuery(document).ready(function () {
+ 
+ 
+jQuery(document).ready(function(){
     var coupon_length = 0;
     for (var c in fc_json.coupons) {
-        if (c.hasOwnProperty('id')) coupon_length++;
+        if (fc_json.coupons[c].hasOwnProperty('id')) coupon_length++;
     }
     if (coupon_length == 0) FC.checkout.InitCoupon();
-
+ 
     // If you'd like to display the "apply coupon" regardless of whether
     // or not a coupon has already been added, comment out the above lines and uncomment the following
-    FC.checkout.InitCoupon();
+    // FC.checkout.InitCoupon();
 });

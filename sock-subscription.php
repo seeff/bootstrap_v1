@@ -49,24 +49,26 @@ include_once('header.php');
 					 		<div class="information">
 					 			<h3>Month to Month</h3>
 						 		<div class="price-block">
-							 		$<strong>12</strong>/month
+							 		$<strong>12</strong>/month + shipping
 							 	</div>
+								 	<p>1 pair of socks every month</p>
 							 		<p>Cancel anytime</p>
 							 		<p>Great for the Uncomitted</p>
+
 							 	</div>
 							 	<div class="btn btn-block btn-inverse selected">Select<span class="fui-arrow-right"></span></div>
 			 		</label>
 
 				<input type="radio" name="name" id="6months" value=""/>
-				    <label class="radio radio-duration col-sm-12 col-md-4" for="6months">
+				    <label class="radio radio-duration col-sm-12 col-md-4 " for="6months">
 				    	<div class="information">
 				    	<h3>Six Months</h3>
 				 		<div class="price-block">
 					 		$<strong>72</strong>/up-front
 					 	</div>
+					 		<p>1 pair of socks every month for 6 months</p>
 						 	<p>Free shipping</p>
-					 		<p>Cancel anytime</p>
-					 		<p>Great for the Uncomitted</p>
+					 		<p>Great way to get started</p>
 					 	</div>
 					 		<div class="btn btn-block btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
 
@@ -79,9 +81,9 @@ include_once('header.php');
 				 		<div class="price-block">
 					 		$<strong>144</strong>/up-front
 					 	</div>
+					 		<p>1 pair of socks every month for 12 months</p>
 						 	<p>Free shipping</p>
-					 		<p>Cancel anytime</p>
-					 		<p>Great for the Uncomitted</p>
+					 		<p>Get an amazing sock draw</p>
 					 	</div>
 					 		<div class="btn btn-block btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
 				    </label>
@@ -124,21 +126,10 @@ include_once('header.php');
       <hr class="featurette-divider">
 
 		<div class="row">
-		  <div class="row">
-		  	<div class="col-md-2">
-		  		<div class="row">
-			  		<h6>Step 3</h6>
-			  	</div>
-
-
-			  	<div class="row">
-				  	<span class="fui-check-inverted check-style"></span>
-			  </div>
-		  	</div>
-
 		  	<div class="col-md-10">
 			  	<h2>What type of socks do you prefer?</h2>
-		  </div>
+			  	<span class="fui-check-inverted check-style"></span>
+
 		  </div>
 		  <div class="radios row">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
@@ -146,8 +137,7 @@ include_once('header.php');
 
 					 			<div class="information">
 					 				<h3>Shapes</h3>
-							 		<lead>Blah blah blah</lead>
-							 		<p>Example Socks</p>
+							 		<p class="lead">Example Socks</p>
 							 		<p>Stripes</p>
 							 		<p>Checks</p>
 							 		<p>blah blah</p>
@@ -161,8 +151,7 @@ include_once('header.php');
 
 						 		<div class="information">
 						 			<h3>Pictures</h3>
-							 		<lead>Blah blah blah</lead>
-							 		<p>Example Socks</p>
+							 		<p class="lead">Example Socks</p>
 							 		<p>Sushi</p>
 							 		<p>Dogs</p>
 							 		<p>Flying Toast</p>

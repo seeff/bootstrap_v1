@@ -119,10 +119,8 @@ include_once('header.php');
           <img class="featurette-image img-responsive" src="./images/socks-in-envelopes.jpg" alt="Sock Delivery in Envelopes">
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">The surprise, it's freaking exciting. <span class="text-muted">It's like chistmas every month..</span></h2>
-          <p class="lead">We select a different brand and pattern of socks every month. Prepare yourself to be surprised by our choice every month. </p>
-
-          <p class="lead">You know awesome socks are headed to your door, you just don’t know what they’ll look like and how extraordinary they’ll make you feel. Stop pretending you’re not worth it. Treat yourself; you deserve to feel special.</p>
+          <h2 class="featurette-heading">The surprise <span class="text-muted">It’s freaking exciting!</span></h2>
+          <p class="lead">Unlike boysenberry picking season, sock picking season is an activity we partake in year round. While we allow you the option to choose from two categories of sock styles--patterns and graphics--we wouldn’t be able to call your socks a surprise if you knew exactly what you were getting ahead of time. So relax, we’ve got your feet covered.</p>
         </div>
       </div>
 
@@ -181,11 +179,9 @@ include_once('header.php');
 
           </div>
         </div>
-    </div>
 
       <hr class="featurette-divider">
 
-      <div class="container">
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">The Best Socks. <span class="text-muted">Trust us.</span></h2>
@@ -196,15 +192,20 @@ include_once('header.php');
         </div>
       </div>
 
-      </div><!-- end container -->
       
       <hr class="featurette-divider">
 
-      <div class="container">
-
-      <div class="row featurette">
-        <div class="video-container col-md-8 col-md-offset-2">
-                 <iframe src="http://www.youtube.com/embed/nGTxZukeAQM" frameborder="0" width="560" height="315"></iframe>
+       
+        <div class="row featurette">
+        <div class="col-md-5">
+          <a class='youtube' href="//www.youtube.com/embed/nGTxZukeAQM">
+            <span class="play-button"></span>
+            <img class="featurette-image img-responsive" src="./images/sock-video-preview-picture.png" alt="Watch our sock video">
+          </a>
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Watch Our Video. <span class="text-muted">Lets make it viral.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
 
       </div>

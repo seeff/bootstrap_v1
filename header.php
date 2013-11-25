@@ -32,9 +32,8 @@
     <link href="css/flexslider.css" rel="stylesheet">
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/social-likes.css" rel="stylesheet" >
-    <link href="http://static.foxycart.com/scripts/colorbox/1.3.16/style5/colorbox.css" rel="stylesheet"  type="text/css" media="screen" charset="utf-8" />
+    <link href="css/colorbox.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
-
     <!--[if gte IE 9]>
       <style type="text/css">
         .gradient {
@@ -61,8 +60,8 @@
       <div class="container">
 
 
-        <div class="navbar-header <?php echo ($page == "Checkout" ? "hide" : "")?>">
-          <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle pull-right <?php echo ($page == "Checkout" ? "hide" : "")?>" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -82,6 +81,7 @@
             <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-Sock-Subscription-Gift" ? "active" : "")?>">Give a Gift</a></li>
             <li><a href="./about-us.php" class="<?php echo ($page == "About-Sockscribe-Me" ? "active" : "")?>">About</a></li>
             <li><a href="./frequently-asked-questions.php" class="<?php echo ($page == "Frequently-Asked-Questions" ? "active" : "")?>">FAQ</a></li>
+            <li><a href="./blog/" class="<?php echo ($page == "Blog" ? "active" : "")?>">Blog</a></li>
             <li><a href="./contact-us.php" class="<?php echo ($page == "Contact-Sockscribe-Me" ? "active" : "")?>">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->

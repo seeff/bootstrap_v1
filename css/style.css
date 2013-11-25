@@ -65,6 +65,33 @@ hr {
 	width: 95%;
 	}
 
+	.col-md-4 .shaded-form{
+	width: 85%;
+	margin: 0 auto;	
+	}
+
+	.navbar .nav {
+		float: none;
+	}
+	
+	.nav li,.navbar .nav {
+		width: 100%;
+		text-align: center;
+	}
+	
+	.navbar .navbar-brand {
+		width: 100%;
+		text-align: center;
+		margin-top: -45px;
+	}
+	
+	.navbar-brand img {
+		width: 40%;
+	}
+	
+	.footer-row .col-sm-12 {
+		clear: both;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -106,6 +133,23 @@ hr {
 		font-size: 14px;
 	}
 
+		.social-likes {
+		display: none;
+	}
+	
+	img {
+		margin: 0 auto;
+	}
+	
+	.featurette-image {
+		margin-top: 0;
+	}
+	
+	.marketing .col-lg-4 {
+		margin-bottom: 75px;
+	}
+
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -140,9 +184,6 @@ hr {
 	}
 
 }
-
-
-
 
 
 
@@ -289,51 +330,6 @@ hr {
 
 .social-likes {
 	margin-top: 15px;
-}
-
-@media (max-width: 990px) {
-	.social-likes {
-		display: none;
-	}
-	
-	img {
-		margin: 0 auto;
-	}
-	
-	.featurette-image {
-		margin-top: 0;
-	}
-	
-	.marketing .col-lg-4 {
-		margin-bottom: 75px;
-	}
-
-}
-
-@media (max-width: 750px) {
-	.navbar .nav {
-		float: none;
-	}
-	
-	.nav li,.navbar .nav {
-		width: 100%;
-		text-align: center;
-	}
-	
-	.navbar .navbar-brand {
-		width: 100%;
-		text-align: center;
-		margin-top: -45px;
-	}
-	
-	.navbar-brand img {
-		width: 40%;
-	}
-	
-	.footer-row .col-sm-12 {
-		clear: both;
-	}
-
 }
 
 .video-container {
@@ -654,6 +650,21 @@ label h6 {
 	margin:0px;
 }
 
+
+.play-button {
+	display: block;
+	background: url("../images/play-button-sprite.png") no-repeat;
+	height: 186px;
+	width: 186px;
+	position: absolute;
+	margin-left: 137px;
+	margin-top: 151px;
+	}
+
+.play-button:hover {
+       background-position: -189px 0;
+}
+
 /*--------FOXYCART---------*/
 .help-block {
 	font-size: .8em;
@@ -662,6 +673,29 @@ label h6 {
 #add_coupon{
 	margin-top: 30px;
 }
+
+.recipt-social{
+	margin-bottom: 35px;
+	margin-top:35px;
+	text-align: center;
+}
+.recipt-social a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.recipt-social-img{
+	border-radius: 50%;
+	margin-top: px;
+	width: 225px;
+	height: 225px;
+	margin: 0 auto;
+	background-color: #FEF252;
+}
+
+
+
 
 /*----COLORS http://flatuicolors.com/ -------
 */
@@ -704,6 +738,11 @@ label h6 {
 }
 .active {
 	color: #16a085 !important;
+}
+
+
+.red{
+	color: #c0392b;
 }
 
 /*----------CHECKOUT PAGE---------*/
