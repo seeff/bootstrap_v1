@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-3" id="mc_embed_signup">
+            <div class="col-sm-12 col-md-3 newsletter-footer" id="mc_embed_signup">
               <strong>Sign up for our fun Sock Newsletter</strong>
                 <form action="http://sockscribe.us5.list-manage.com/subscribe/post?u=2cba5c3a551b962f52453c787&amp;id=af6ab3ce00" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div class="input-group">

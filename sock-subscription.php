@@ -64,6 +64,7 @@ include_once('header.php');
 				 		<div class="price-block">
 					 		$<strong>72</strong>/up-front
 					 	</div>
+						 	<p>Free shipping</p>
 					 		<p>Cancel anytime</p>
 					 		<p>Great for the Uncomitted</p>
 					 	</div>
@@ -78,6 +79,7 @@ include_once('header.php');
 				 		<div class="price-block">
 					 		$<strong>144</strong>/up-front
 					 	</div>
+						 	<p>Free shipping</p>
 					 		<p>Cancel anytime</p>
 					 		<p>Great for the Uncomitted</p>
 					 	</div>
@@ -90,7 +92,7 @@ include_once('header.php');
 
 		<div class="row">
 		  <div class="row">
-		  	<h6>Select your gender</h6>
+		  	<h2>Select your gender</h2>
 		  	<span class="fui-check-inverted check-gender"></span>
 		  </div>
 		  <div class="radios row">
@@ -123,8 +125,20 @@ include_once('header.php');
 
 		<div class="row">
 		  <div class="row">
-		  	<h2>What type of socks do you prefer?</h2>
-		  	<span class="fui-check-inverted check-style"></span>
+		  	<div class="col-md-2">
+		  		<div class="row">
+			  		<h6>Step 3</h6>
+			  	</div>
+
+
+			  	<div class="row">
+				  	<span class="fui-check-inverted check-style"></span>
+			  </div>
+		  	</div>
+
+		  	<div class="col-md-10">
+			  	<h2>What type of socks do you prefer?</h2>
+		  </div>
 		  </div>
 		  <div class="radios row">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
@@ -159,7 +173,7 @@ include_once('header.php');
 
 		  </div>
 		</div>
-		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&"> <div class="btn btn-primary btn-lg btn-spacing submit-scroll">Checkout <span class="glyphicon glyphicon-chevron-right"></span></div></a>
+		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&"> <div class="btn btn-primary btn-lg btn-spacing submit-scroll">Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span></div></a>
 		  
 	</form>
 	

@@ -36,37 +36,33 @@ hr {
 }
 
 
-
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-	h1 {
-		font-size: 61px;
+/*cell phone*/
+@media (max-width: 767px) {
+	h1 {	
+		font-size: 33px;
 	}
 
 	h2 {
-		font-size: 53px;
+		font-size: 27px;
 	}
-	
+
 	h3 {
-		font-size: 40px;
+		font-size: 20px;
 	}
 
 	p {
-		font-size: 18px;
+		font-size: 13px;
 	}
 
 	.price-block strong {
-	font-size: 20px;
+	font-size: 16px;
 	}
 
 	.radios .col-md-4 {
-	width: 30%;
+	width: 95%;
 	}
-
-	.radios .col-md-6 {
-		width: 46.5%;
+	.radios .col-sm-12 {
+	width: 95%;
 	}
 
 }
@@ -112,37 +108,43 @@ hr {
 
 }
 
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width:1200px) {
 
-/*cell phone*/
-@media (max-width: 767px) {
-	h1 {	
-		font-size: 33px;
+	h1 {
+		font-size: 61px;
 	}
 
 	h2 {
-		font-size: 27px;
+		font-size: 53px;
 	}
-
+	
 	h3 {
-		font-size: 20px;
+		font-size: 40px;
 	}
 
 	p {
-		font-size: 13px;
+		font-size: 18px;
 	}
 
 	.price-block strong {
-	font-size: 16px;
+	font-size: 20px;
 	}
 
 	.radios .col-md-4 {
-	width: 95%;
+	width: 30%;
 	}
-	.radios .col-sm-12 {
-	width: 95%;
+
+	.radios .col-md-6 {
+		width: 46.5%;
 	}
 
 }
+
+
+
+
+
 
 /*----NAVIGATION--------
 */
@@ -170,14 +172,9 @@ hr {
 	bottom: 5px;
 }
 
-.caption {
-	margin-top: -350px;
-	text-align: center;
-}
 
-/*.live-life-caption{
+.live-life-caption{
 	margin-top: -346px;
-	margin-left: -590px;
 }
 
 .awesome-sock-subscription-caption{
@@ -187,12 +184,11 @@ hr {
 
 .great-gift-caption{
 	margin-top: -295px;
-	margin-left: -627px;
 }
 
 .sock-brands-caption{
 	margin-top: -314px;
-}*/
+}
 
 
 .navbar {
@@ -201,7 +197,7 @@ hr {
 	-webkit-transition: opacity .25s ease-in-out;
 }
 
-@media screen and max-width 990px {
+@media (max-width: 990px) {
 	h1 {
 		font-size: 1.8em;
 	}
@@ -295,11 +291,7 @@ hr {
 	margin-top: 15px;
 }
 
-.marketing .col-sm-4 {
-	margin-bottom: 50px;
-}
-
-@media screen and max-width 990px {
+@media (max-width: 990px) {
 	.social-likes {
 		display: none;
 	}
@@ -318,7 +310,7 @@ hr {
 
 }
 
-@media screen and max-width 750px {
+@media (max-width: 750px) {
 	.navbar .nav {
 		float: none;
 	}
@@ -616,7 +608,7 @@ label h6 {
 	margin-left: 20px;
 }
 
-@media screen and max-width 750px {
+@media max-width: 750px) {
 
 
 
@@ -656,6 +648,10 @@ label h6 {
 	}
 
 
+}
+
+.sale-container p{
+	margin:0px;
 }
 
 /*--------FOXYCART---------*/
@@ -699,6 +695,13 @@ label h6 {
 	background-color: #e67e22;
 }
 
+.pomegranate-background{
+	background-color: #c0392b;
+}
+
+.white-text{
+	color: white;
+}
 .active {
 	color: #16a085 !important;
 }
@@ -737,6 +740,9 @@ label h6 {
 	height: 45px;
 }
 
+.newsletter-footer{
+	margin-top: -25px;
+}
 footer .social_button {
 	border-radius: 50%;
 	width: 40px;

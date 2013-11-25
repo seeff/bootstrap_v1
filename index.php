@@ -20,6 +20,7 @@ include_once('header.php');
                 <div class="caption awesome-sock-subscription-caption">
                   <h2>An awesome sock monthly subscription</h2>
                   <p>Each month we will send you a fun pair of socks.</p>
+                  <p>Plans start at just $12 per month.</p>
                   <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
                 </div>
             </div>
@@ -30,6 +31,7 @@ include_once('header.php');
               <div class="caption live-life-caption">
                 <h2>Live life on the edge</h2>
                 <p>Fun socks make you feel good, when you feel good you look good.</p>
+                <p>Plans start at just $12 per month.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
@@ -40,6 +42,7 @@ include_once('header.php');
               <div class="caption great-gift-caption">
                 <h2>A great gift</h2>
                 <p>Don't be selfish, let your friends or loved ones join in on the fun.</p>
+                <p>Gifts start at just $36.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
@@ -50,6 +53,7 @@ include_once('header.php');
               <div class="caption sock-brands-caption">
                 <h2>Pick up your feet, we’ll pick your socks.</h2>
                 <p>We only stock the high quality socks from the most stylish brands.</p>
+                <p>Plans start at just $12 per month.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
@@ -203,13 +207,16 @@ include_once('header.php');
                  <iframe src="http://www.youtube.com/embed/nGTxZukeAQM" frameborder="0" width="560" height="315"></iframe>
         </div>
 
-       <div class="col-md-12">
-          <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
-        </div>
-
       </div>
 
       <hr class="featurette-divider">
+
+      <div class="row">
+         <div class="col-md-12 text-center">
+            <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+          </div>
+      </div>
+
 
       <!-- /END THE FEATURETTES -->
 
