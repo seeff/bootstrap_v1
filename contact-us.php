@@ -15,8 +15,8 @@ include_once('header.php');
 
 <div class="container">
 	<div class="row">
-		<h1>Contact Us<h1>
-		<h4 class="text-muted">We love chatting, so let us know whats on your mind</h4>
+		<h1>Contact Us <h1>
+		<p class="lead">We love chatting, so let us know whats on your mind</p>
 	</div>
 
 	<div class="row">

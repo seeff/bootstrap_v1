@@ -14,8 +14,8 @@ include_once('header.php');
 
 <div class="container">
 	<div class="row">
-		<h1>About Us<h1>
-		<h4 class="text-muted">Meet the Feet Behind the Socks</h4>
+		<h1>About Us <h1><p class="lead">Meet the Feet Behind the Socks</p>
+		
 	</div>
 
 	<div class="content">

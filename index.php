@@ -15,48 +15,49 @@ include_once('header.php');
 <div class="flexslider">
   <ul class="slides">
     <li>
-      <img src="./images/photos/socks-sitting-on-a-wall.png" alt="Feet on wall with fun socks" />
-            <div class="container">
-                <div class="caption awesome-sock-subscription-caption">
+      <div class="container caption">
+                <div class="awesome-sock-subscription-caption">
                   <h2>An awesome sock monthly subscription</h2>
                   <p>Each month we will send you a fun pair of socks.</p>
                   <p>Plans start at just $12 per month.</p>
                   <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
                 </div>
-            </div>
+      </div>
+      <img src="./images/photos/socks-sitting-on-a-wall.png" alt="Feet on wall with fun socks" />
+            
     </li>
     <li>
-      <img src="./images/photos/tightrope-walker-with-fun-socks.png" alt="Tightrope walker wearing fun socks"/>
-            <div class="container">
-              <div class="caption live-life-caption">
+        <div class="container caption">
+              <div class="live-life-caption">
                 <h2>Live life on the edge</h2>
                 <p>Fun socks make you feel good, when you feel good you look good.</p>
                 <p>Plans start at just $12 per month.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
-            </div>
+        </div>
+      <img src="./images/photos/tightrope-walker-with-fun-socks.png" alt="Tightrope walker wearing fun socks"/>
     </li>
         <li>
-      <img src="./images/photos/sock-are-a-perfect-gift.png" alt="Sock subscription gifts"/>
-            <div class="container">
-              <div class="caption great-gift-caption">
+            <div class="container caption">
+              <div class="great-gift-caption">
                 <h2>A great gift</h2>
                 <p>Don't be selfish, let your friends or loved ones join in on the fun.</p>
                 <p>Gifts start at just $36.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
+      <img src="./images/photos/sock-are-a-perfect-gift.png" alt="Sock subscription gifts"/>
     </li>
     <li>
-      <img src="./images/photos/best-fun-sock-brands.png" alt="Best fun sock brands"/>
-            <div class="container">
-              <div class="caption sock-brands-caption">
+            <div class="container caption">
+              <div class="sock-brands-caption">
                 <h2>Pick up your feet, we’ll pick your socks.</h2>
                 <p>We only stock the high quality socks from the most stylish brands.</p>
                 <p>Plans start at just $12 per month.</p>
                 <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
               </div>
             </div>
+      <img src="./images/photos/best-fun-sock-brands.png" alt="Best fun sock brands"/>
     </li>
   </ul>
 </div>
@@ -185,7 +186,8 @@ include_once('header.php');
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">The Best Socks. <span class="text-muted">Trust us.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p class="lead">With great power comes great responsibility, which is why we’ll never send you a pair of Aunt Sheryl’s DIY holiday socks. Every month our sock stylists select high quality socks from some of the most well known brands in the industry.</p>
+          <p class="lead">While you may never see our stylists, appreciate that they share 117% of their DNA with both unicorns and musical, green-haired chocolate factory workers; they’re good at what they do. </p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="./images/socks-on-ropes.jpg" alt="Sock Brands - Happy Socks, Richer and Poorer, The Sock Guys and Sock it to Me">
@@ -198,14 +200,15 @@ include_once('header.php');
        
         <div class="row featurette">
         <div class="col-md-5">
-          <a class='youtube' href="//www.youtube.com/embed/nGTxZukeAQM">
+          <a class="youtube" href="//www.youtube.com/embed/nGTxZukeAQM">
             <span class="play-button"></span>
             <img class="featurette-image img-responsive" src="./images/sock-video-preview-picture.png" alt="Watch our sock video">
           </a>
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Watch Our Video. <span class="text-muted">Lets make it viral.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Watch Our Video. <span class="text-muted">Now.</span></h2>
+          <p class="lead">So you’re excited about your impending transformation to greatness, but you apprehensive about coming off like some type of superhero. Well, don’t worry! You’re not  going to possess magical abilities to fly or spin webs any time soon; after all, we’re sending you socks. </p>
+          <p class="lead">Either way, if you want a more realistic idea of what these socks will do for you watch this video, it may give you a glimpse into your future. </p>
         </div>
 
       </div>

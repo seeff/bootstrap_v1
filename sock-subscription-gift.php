@@ -1,7 +1,7 @@
 <?php
 
 $PageTitle="Sockscribe Me - Awesome Socks Delivered to Your Door Monthly";
-$page = "Buy-a-Sock-Subscription";
+$page = "Buy-Sock-Subscription-Gift";
 function customPageHeader(){?>
   <!--Arbitrary HTML Tags-->
 <?php }
@@ -13,7 +13,7 @@ include_once('header.php');
 
 		<div class="container">
 			<div class="page-header">
-	        <h1>Customize Your Sock Subscription <small>Everyone is different</small></h1>
+	        <h1>Everyone Loves Gifts<small>Everyone loves socks</small></h1>
 		    </div>
 
 <!-- 		<div class="row text-center">
@@ -38,70 +38,86 @@ include_once('header.php');
 
 	<form class="text-center form-container col-md-12">
 
+
+
+<?php 
+
+include_once('gift-block.php');
+?>
+
+
+
+
 		  <div class="row">
 		  	<div class="row">
 		  		<h2>Select a Subscription Duration</h2>
 		  		<span class="fui-check-inverted check-duration"></span>
 		  	</div>
-		  	<div class="radios row">
-				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&cart=checkout" id="month-to-month"/>
-					 <label class="radio radio-duration col-sm-12 col-md-4" for="month-to-month">
-					 		<div class="information">
-					 			<h3>Month to Month</h3>
-						 		<div class="price-block">
-							 		$<strong>12</strong>/month + shipping
-							 	</div>
-								 	<p>1 pair of socks every month</p>
-							 		<p>Cancel anytime</p>
-							 		<p>Great for the Uncomitted</p>
+		  	<div class="row">
 
-							 	</div>
-							 	<div class="btn btn-block btn-inverse selected">Select<span class="fui-arrow-right"></span></div>
-			 		</label>
+				<input type="radio" name="name" id="3months" value=""/>
+		  		<div class="col-md-4">
+				    <label class="tile" for="3months">
+				    	<div class="information">
+				    	<h3>Three Months</h3>
+				 		<div class="price-block">
+					 		$<strong>72</strong>/up-front
+					 	</div>
+					 		<p>1 pair of socks every month for 3 months</p>
+						 	<p>Free shipping</p>
+					 	</div>
+					 		<div class="btn btn-block btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
+
+				    </label>
+				</div>
+
 
 				<input type="radio" name="name" id="6months" value=""/>
-				    <label class="radio radio-duration col-sm-12 col-md-4 " for="6months">
+		  		<div class="col-md-4">
+				    <label class="tile" for="6months">
 				    	<div class="information">
 				    	<h3>Six Months</h3>
 				 		<div class="price-block">
 					 		$<strong>72</strong>/up-front
 					 	</div>
-					 		<p>Monthly delivery for 6 months</p>
+					 		<p>1 pair of socks every month for 6 months</p>
 						 	<p>Free shipping</p>
-					 		<p>Great way to get started</p>
 					 	</div>
 					 		<div class="btn btn-block btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
 
 				    </label>
+				</div>
 
-				<input type="radio" name="name" id="12months" value=""/>
-				    <label class="radio radio-duration col-sm-12 col-md-4" for="12months">
-				    	<div class="information">
-					 	<h3>Twelve Months</h3>
-				 		<div class="price-block">
-					 		$<strong>144</strong>/up-front
-					 	</div>
-					 		<p>Monthly delivery for 12 months</p>
-						 	<p>Free shipping</p>
-					 		<p>Get an amazing sock draw</p>
-					 	</div>
-					 		<div class="btn btn-block btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
-				    </label>
+		  		<div class="col-md-4">
+				<input type="radio" name="name" id="12months" value="">
+					 <label class="tile" for="12months">
+					 		<div class="information">
+					 			<h3>Twelve Months</h3>
+						 		<div class="price-block">
+							 		$<strong>144</strong>/up-front
+							 	</div>
+								 	<p>1 pair of socks every month for 12 months</p>
+							 		<p>Free shipping</p>
+
+							 	</div>
+							 	<div class="btn btn-block btn-inverse selected">Select<span class="fui-arrow-right"></span></div>
+			 		</label>
+			 	</div>				
 			 </div>
 		</div>
 
-      <hr class="featurette-divider">
+		<hr class="featurette-divider">
 
-<?php
-include_once('gender-box.php');
-?>
+			<?php
+			include_once('gender-box.php');
+			?>
 
 
-      <hr class="featurette-divider">
+		<hr class="featurette-divider">
 
-<?php
-include_once('sock-style-box.php');
-?>
+			<?php
+			include_once('sock-style-box.php');
+			?>
 
 		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&"> <div class="btn btn-primary btn-lg btn-spacing submit-scroll">Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span></div></a>
 		  
