@@ -32,13 +32,13 @@ $(window).load(function() {
 		// $('html, body').animate({
 		// 	scrollTop: $(divID).offset().top
 		// }, 1000);
-		// $('.radio-duration').not(this).stop().animate({
-	 //        opacity: 0.4
-	 //    }, 150);
+		$('.radio-duration').not(this).stop().animate({
+	        opacity: 0.4
+	    }, 150);
 	    // Make this opaque
-	    // $(this).stop().animate({
-	    //     opacity: 1.0
-	    // }, 150);
+	    $(this).stop().animate({
+	        opacity: 1.0
+	    }, 150);
 		// $( this.children(".selected")).addClass("hidden");
 	});
 
@@ -62,13 +62,13 @@ $(window).load(function() {
 		// $('html, body').animate({
 		// 	scrollTop: $(divID).offset().top
 		// }, 1000);
-		// $('.radio-gender').not(this).stop().animate({
-	 //        opacity: 0.4
-	 //    }, 150);
+		$('.radio-gender').not(this).stop().animate({
+	        opacity: 0.4
+	    }, 150);
 	    // Make this opaque
-	    // $(this).stop().animate({
-	    //     opacity: 1.0
-	    // }, 150);
+	    $(this).stop().animate({
+	        opacity: 1.0
+	    }, 150);
 	});
 	// $('.radio-gender').hover(function() {
 	//     // Make all images (except this) transparent
@@ -90,13 +90,13 @@ $(window).load(function() {
 		// $('html, body').animate({
 		// 	scrollTop: $(divID).offset().top
 		// }, 1000);
-		// $('.radio-style').not(this).stop().animate({
-	 //        opacity: 0.4
-	 //    }, 150);
+		$('.radio-style').not(this).stop().animate({
+	        opacity: 0.4
+	    }, 150);
 	    // Make this opaque
-	    // $(this).stop().animate({
-	    //     opacity: 1.0
-	    // }, 150);
+	    $(this).stop().animate({
+	        opacity: 1.0
+	    }, 150);
 	});
 
 	// $('.radio-style').hover(function() {

@@ -34,7 +34,6 @@
     <link href="css/social-likes.css" rel="stylesheet" >
     <link href="css/colorbox.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/checkout-slider.css" rel="stylesheet">
 
     <!--[if gte IE 9]>
       <style type="text/css">

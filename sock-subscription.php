@@ -23,7 +23,6 @@ include_once('header.php');
 	<!-- progressbar -->
 	<div class="row">
 		<div class="shaded-form col-md-6 col-md-offset-3">
-			<p class="lead">3 Easy Steps</p>
 			<ul id="progressbar">
 				<li class="active">Subscription Duration</li>
 				<li>Gender</li>
@@ -32,15 +31,17 @@ include_once('header.php');
 		</div>
 	</div>
 	<!-- fieldsets -->
+
 	<fieldset>
 			<div class="col-md-12">
 				<h3 class="fs-title">Select a Subscription Duration</h3>
 			</div>
 		
 		
-		<div class="radios row">
-				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&cart=checkout" id="month-to-month"/>
-					 <label class="radio radio-duration col-sm-12 col-md-4" for="month-to-month">
+		<div class="row">
+			<div class="col-md-4">
+				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&empty=true&cart=checkout" id="month-to-month"/>
+					 <label class="tile radio-duration next" for="month-to-month">
 					 		<div class="information">
 					 			<h3>Month to Month</h3>
 						 		<div class="price-block">
@@ -51,11 +52,13 @@ include_once('header.php');
 							 		<p>Cancel anytime</p>
 
 							 	</div>
-							 	<div class="btn btn-block btn-inverse selected">Select<span class="fui-arrow-right"></span></div>
+							 	<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
 			 		</label>
+			</div>
 
+			<div class="col-md-4">
 				<input type="radio" name="name" id="6months" value=""/>
-				    <label class="radio radio-duration col-sm-12 col-md-4 " for="6months">
+				    <label class="tile radio-duration next" for="6months">
 				    	<div class="information">
 				    	<h3>Six Months</h3>
 				 		<div class="price-block">
@@ -65,12 +68,15 @@ include_once('header.php');
 						 	<p>Free shipping</p>
 					 		<p>Monthly delivery for 6 months</p>
 					 	</div>
-					 		<div class="btn btn-block btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
+					 		<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
 
 				    </label>
+			</div>
+
+			<div class="col-md-4">
 
 				<input type="radio" name="name" id="12months" value=""/>
-				    <label class="radio radio-duration col-sm-12 col-md-4" for="12months">
+				    <label class="tile radio-duration next" for="12months">
 				    	<div class="information">
 					 	<h3>Twelve Months</h3>
 				 		<div class="price-block">
@@ -80,58 +86,62 @@ include_once('header.php');
 						 	<p>Free shipping</p>
 					 		<p>Monthly delivery for 12 months</p>
 					 	</div>
-					 		<div class="btn btn-block btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
+					 		<div class="btn btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
 				    </label>
+		    </div>
 			 </div>
-				<input type="button" name="next" class="next action-button btn btn-lg style-button col-sm-1 col-md-offset-10" value="Next" />
-
-		<div class="row">
-			<div class="col-sm-4">
-		</div>
+<!-- 				<input type="button" name="next" class="next action-button btn style-button col-sm-1 col-md-offset-11" value="Next" />
+ -->
 
 
 	</fieldset>
-	<fieldset>
 
-		
+
+<fieldset>
 			<div class="col-md-12">
 				<h3 class="fs-title">Select your Gender</h3>
 			</div>
 
-			<div class="radios row">
-				<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
+			<div class="row">
+				<div class="col-md-6">
+									<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
 
-					 <label class="radio radio-gender dudes col-sm-12 col-md-6" for="Dudes">
-				 		<div class="information">
-				 			<h3>Dudes</h3>
-					 		<lead>Shoe size 8-12 US</lead>
-					 	</div>
-						 	<div class="btn btn-block btn-inverse gender-button">Select<span class="fui-arrow-right"></span></div>
+						 <label class="tile radio-gender dudes next" for="Dudes">
+					 		<div class="information">
+					 			<h3>Dudes</h3>
+						 		<lead>Shoe size 8-12 US</lead>
+						 	</div>
+							 	<div class="btn btn-inverse gender-button">Select<span class="fui-arrow-right"></span></div>
 
 
-						</label>
+							</label>
+				</div>
 
-				<input type="radio" name="2:Gender" value="Female" id="chicks" />
+				<div class="col-md-6">
+									<input type="radio" name="2:Gender" value="Female" id="chicks" />
 
-					 <label class="radio radio-gender chicks col-sm-12 col-md-6" for="chicks">
-				 		<div class="information">
-				 			<h3>Chicks</h3>
-					 		<lead>Shoe size 5-10 US</lead>
-					 	</div>
-						 	<div class="btn btn-block btn-inverse style-scroll gender-button">Select<span class="fui-arrow-right"></span></div>
-						</label>
+						 <label class="tile radio-gender chicks next" for="chicks">
 
+					 		<div class="information">
+					 			<h3>Chicks</h3>
+						 		<lead>Shoe size 5-10 US</lead>
+						 	</div>
+							 	<div class="btn btn-inverse style-scroll gender-button">Select<span class="fui-arrow-right"></span></div>
+							</label>
+				</div>
 			</div>
 		
-		<input type="button" name="previous" class="previous action-button btn btn-lg style-button col-sm-1" value="Back" />
-		<input type="button" name="next" class="next action-button btn btn-lg style-button col-sm-1 col-md-offset-9" value="Next" />
+		<input type="button" name="previous" class="previous action-button btn style-button col-sm-1" value="Back" />
+<!-- 		<input type="button" name="next" class="next action-button btn btn-primary style-button col-sm-1 col-md-offset-10" value="Next" />
+ -->
+</fieldset>
 
-	</fieldset>
 	<fieldset>
 		<h3 class="fs-title">Stelect Your Style</h3>
-  		  <div class="radios row">
+  		  <div class="row">
+  		  	<div class="col-md-6">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
-						<label class="radio radio-style shapes col-sm-12 col-md-6" for="Shapes">
+						<label class="tile radio-style shapes" for="Shapes">
 
 					 			<div class="information">
 					 				<h3>Patterns</h3>
@@ -140,12 +150,14 @@ include_once('header.php');
 							 		<p><small>Checks</small></p>
 							 		<p><small>Polka-dots</small></p>
 							 	</div>
-							 	<div class="btn btn-block btn-inverse style-button">Select<span class="fui-arrow-right"></span></div>
+							 	<div class="btn btn-inverse style-button">Select<span class="fui-arrow-right"></span></div>
 
 				 		</label>
+				 	</div>
 
+			<div class="col-md-6">
 				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
-					<label class="radio radio-style pictures col-sm-12 col-md-6" for="Pictures">
+					<label class="tile radio-style pictures" for="Pictures">
 
 						 		<div class="information">
 						 			<h3>Graphics</h3>
@@ -154,13 +166,16 @@ include_once('header.php');
 							 		<p><small>Dogs</small></p>
 							 		<p><small>Flying Toast</small></p>
 							 	</div>
-							 	<div class="btn btn-block btn-inverse style-button">Select<span class="fui-arrow-right"></span></div>
+							 	<div class="btn btn-inverse style-button">Select<span class="fui-arrow-right"></span>
+							 		
+							 	</div>
 
 			 		</label>
+			 	</div>
 
 		  </div>
 		
-		<input type="button" name="previous" class="previous action-button btn btn-lg style-button col-sm-1" value="Back" />
+		<input type="button" name="previous" class="previous action-button btn style-button col-sm-1" value="Back" />
 
 
 		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&" class="btn continue-checkout-btn col-sm-2 col-md-offset-4"> 
