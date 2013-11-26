@@ -69,14 +69,31 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.eislideshow.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>    
+    <script src="./js/customization.js"></script>    
     <script src="./js/bootstrap.js"></script>
     <script src="./js/collapse.js"></script>
-    <script src="./js/jquery.flexslider.js"></script>
     <script src="./js/social-likes.min.js"></script>
     <script src="./js/products-app.js"></script>
     <script src="./js/mailchimp.js"></script>
     <script src="./js/jquery.colorbox.js"></script>
     <script src="./js/placeholders.min.js"></script>
     <script src="./js/app.js"></script>
+
+
+    <script type="text/javascript">
+    $(function() {
+        $('#ei-slider').eislideshow({
+          animation     : 'center',
+          autoplay      : true,
+          slideshow_interval  : 3000,
+          speed           : 800,
+           easing          : '',
+          titlesFactor    : 0,
+          thumbMaxWidth       : 150,
+        });
+    });
+</script>
   </body>
 </html>

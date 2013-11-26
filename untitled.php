@@ -1,43 +1,14 @@
-<?php
-
-$PageTitle="Sockscribe Me - Awesome Socks Delivered to Your Door Monthly";
-$page = "";
-
-function customPageHeader(){?>
-  <!--Arbitrary HTML Tags-->
-<?php }
-
-include_once('header.php');
-?>
-
-<!-- begin page content -->
-
-<div class="container">
-	<div class="row text-center">
-		<h1>Customize Your Order <p class="lead"> Everyone is special</p><h1>
-	</div>
-
-		<div class="col-md-10 col-md-offset-1">
 <!-- multistep form -->
-<form id="msform">
+<form id="msform" class="col-md-8">
 	<!-- progressbar -->
-	<div class="row">
-		<div class="shaded-form col-md-6 col-md-offset-3">
-			<p class="lead">3 Easy Steps</p>
-			<ul id="progressbar">
-				<li class="active">Subscription Duration</li>
-				<li>Gender</li>
-				<li>Style</li>
-			</ul>
-		</div>
-	</div>
+	<ul id="progressbar">
+		<li class="active">Account Setup</li>
+		<li>Social Profiles</li>
+		<li>Personal Details</li>
+	</ul>
 	<!-- fieldsets -->
 	<fieldset>
-			<div class="col-md-12">
-				<h3 class="fs-title">Select a Subscription Duration</h3>
-			</div>
-		
-		
+		<h2 class="fs-title">Select a Subscription Duration</h2>
 		<div class="radios row">
 				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&cart=checkout" id="month-to-month"/>
 					 <label class="radio radio-duration col-sm-12 col-md-4" for="month-to-month">
@@ -83,21 +54,10 @@ include_once('header.php');
 					 		<div class="btn btn-block btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
 				    </label>
 			 </div>
-				<input type="button" name="next" class="next action-button btn btn-lg style-button col-sm-1 col-md-offset-10" value="Next" />
-
-		<div class="row">
-			<div class="col-sm-4">
-		</div>
-
-
+		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
-
-		
-			<div class="col-md-12">
-				<h3 class="fs-title">Select your Gender</h3>
-			</div>
-
+		<h2 class="fs-title">Select your gender</h2>
 			<div class="radios row">
 				<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
 
@@ -122,13 +82,12 @@ include_once('header.php');
 						</label>
 
 			</div>
-		
-		<input type="button" name="previous" class="previous action-button btn btn-lg style-button col-sm-1" value="Back" />
-		<input type="button" name="next" class="next action-button btn btn-lg style-button col-sm-1 col-md-offset-9" value="Next" />
-
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
-		<h3 class="fs-title">Stelect Your Style</h3>
+		<h2 class="fs-title">Personal Details</h2>
+		<h3 class="fs-subtitle">We will never sell it</h3>
   		  <div class="radios row">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
 						<label class="radio radio-style shapes col-sm-12 col-md-6" for="Shapes">
@@ -159,23 +118,7 @@ include_once('header.php');
 			 		</label>
 
 		  </div>
-		
-		<input type="button" name="previous" class="previous action-button btn btn-lg style-button col-sm-1" value="Back" />
-
-
-		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&" class="btn continue-checkout-btn col-sm-2 col-md-offset-4"> 
-		Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-
-
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="submit" name="submit" class="submit action-button" value="Submit" />
 	</fieldset>
 </form>
-
-</div>
-</div>
-
-<!-- end page content -->
-
-<?php
-include_once('footer.php');
-?>

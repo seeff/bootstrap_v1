@@ -8,63 +8,57 @@ function customPageHeader(){?>
 
 include_once('header.php');
 ?>
-
 <!-- begin page content -->
 
-<!-- Flexslider stuff-->
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <div class="container caption">
-                <div class="awesome-sock-subscription-caption">
-                  <h2>An awesome sock monthly subscription</h2>
-                  <p>Each month we will send you a fun pair of socks.</p>
-                  <p>Plans start at just $12 per month.</p>
-                  <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
-                </div>
-      </div>
-      <img src="./images/photos/socks-sitting-on-a-wall.png" alt="Feet on wall with fun socks" />
-            
-    </li>
-    <li>
-        <div class="container caption">
-              <div class="live-life-caption">
-                <h2>Live life on the edge</h2>
-                <p>Fun socks make you feel good, when you feel good you look good.</p>
-                <p>Plans start at just $12 per month.</p>
-                <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
-              </div>
-        </div>
-      <img src="./images/photos/tightrope-walker-with-fun-socks.png" alt="Tightrope walker wearing fun socks"/>
-    </li>
-        <li>
-            <div class="container caption">
-              <div class="great-gift-caption">
-                <h2>A great gift</h2>
-                <p>Don't be selfish, let your friends or loved ones join in on the fun.</p>
-                <p>Gifts start at just $36.</p>
-                <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
-              </div>
-            </div>
-      <img src="./images/photos/sock-are-a-perfect-gift.png" alt="Sock subscription gifts"/>
-    </li>
-    <li>
-            <div class="container caption">
-              <div class="sock-brands-caption">
-                <h2>Pick up your feet, we’ll pick your socks.</h2>
-                <p>We only stock the high quality socks from the most stylish brands.</p>
-                <p>Plans start at just $12 per month.</p>
-                <p><a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a></p>
-              </div>
-            </div>
-      <img src="./images/photos/best-fun-sock-brands.png" alt="Best fun sock brands"/>
-    </li>
-  </ul>
-</div>
 
 
+<div id="ei-slider" class="ei-slider">
+                    <ul class="ei-slider-large">
+                        <li>
+                            <img src="./images/photos/socks-sitting-on-a-wall.png" alt="Feet on wall with fun socks" />
+                            <div class="ei-title">
+                                <h2>An awesome sock monthly subscription</h2>
+                                <h4>Each month we will send you a fun pair of socks.</h4>
+<!--                                 <h3>Plans start at just $12 per month.</h3>
+ -->                            </div>
+                        </li>
 
+                        <li>
+                            <img src="./images/photos/sock-are-a-perfect-gift.png" alt="Sock subscription gifts" />
+                            <div class="ei-title">
+                                <h2>A great gift</h2>
+                                <h4>Don't be selfish, let your friends or loved ones join in on the fun.</h4>
+<!--                                 <h3>Gifts start at just $36.</h3>
+ -->                            </div>
+                        </li>
 
+                        <li>
+                            <img src="./images/photos/best-fun-sock-brands.png" alt="Best fun sock brands"/>
+                            <div class="ei-title">
+                                <h2>Pick up your feet, we’ll pick your socks.</h2>
+                                <h4>We only stock the high quality socks from the most stylish brands.</h4>
+                                <!-- <h3>Plans start at just $12 per month.</h3> -->
+                            </div>
+                        </li>   
+
+                        <li>
+                            <img src="./images/photos/tightrope-walker-with-fun-socks.png" alt="Tightrope walker wearing fun socks" />
+                            <div class="ei-title">
+                                <h2>Live life on the edge</h2>
+                                <h4>Fun socks make you feel good, when you feel good you look good.</h4>
+                                <!-- <h3>Plans start at just $12 per month.</h3> -->
+                            </div>
+                        </li>
+
+                    </ul><!-- ei-slider-large -->
+                        <ul class="ei-slider-thumbs hide">
+                        <li class="ei-slider-element">Current</li>
+                        <li><a href="#">Slide 1</a><img src="./images/photos/thumb-socks-sitting-on-a-wall.jpg" alt="thumb01" /></li>
+                        <li><a href="#">Slide 2</a><img src="./images/photos/thumb-sock-are-a-perfect-gift.jpg" alt="thumb02" /></li>
+                        <li><a href="#">Slide 3</a><img src="./images/photos/thumb-best-fun-sock-brands.jpg" alt="thumb03" /></li>
+                        <li><a href="#">Slide 4</a><img src="./images/photos/thumb-tightrope-walker-with-fun-socks.jpg" alt="thumb07" /></li>
+                    </ul><!-- ei-slider-thumbs -->
+</div><!-- ei-slider -->
 
 
     <!-- Marketing messaging and featurettes
@@ -226,6 +220,8 @@ include_once('header.php');
 
       </div><!-- end container -->
 <!-- end page content -->
+
+
 
 <?php
 include_once('footer.php');

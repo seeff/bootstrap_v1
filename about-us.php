@@ -31,7 +31,7 @@ include_once('header.php');
 						Many moons ago, two best friends began a tradition (that did not consist of breaking open a piñata) to celebrate their friendship. Before the first Saturday of every month these friends would scour through department stores, specialty shops, and even pet boutiques to find a pair of socks worthy of gifting to the other. On Saturday morning, each friend would excitedly open their sock drawer only to discover a vibrant new pair of surprise socks awaiting their debut. Obligated to spread their tradition of bringing joy to others through socks, these friends birthed the idea for Sockscribe Me. 
 					</p>
 					<p>
-						Eager to turn the Sockscribe Me brainchild into a functioning website, these friends enrolled in a <a href="https://generalassemb.ly/" tagret="_blank">General Assembly</a> class where they learned front-end end web design. A mere 16 classes later, after expending lots of blood, sweat, and hair (which could eventually lead to early-onset baldness) these friends created the very website you are viewing now, which allows people to share in the tradition of spreading joy to their friends, with socks. 
+						Eager to turn the Sockscribe Me brainchild into a functioning website, these friends enrolled in a <a href="https://generalassemb.ly/" target="_new">General Assembly</a> class where they learned front-end web design. A mere 16 classes later, after expending lots of blood, sweat, and hair (which could eventually lead to early-onset baldness) these friends created the very website you are viewing now, which allows people to share in the tradition of spreading joy to their friends, with socks. 
 					</p>
 				</div>
 			</article>

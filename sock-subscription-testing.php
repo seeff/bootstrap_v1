@@ -91,6 +91,86 @@ include_once('header.php');
 
 
 	</fieldset>
+
+
+
+
+
+
+	<fieldset>
+			<div class="col-md-12">
+				<h3 class="fs-title">Select a Subscription Duration</h3>
+			</div>
+		
+		
+		<div class="row">
+			<div class="col-md-4">
+				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&cart=checkout" id="month-to-month"/>
+					 <label class="tile radio-duration" for="month-to-month">
+					 		<div class="information">
+					 			<h3>Month to Month</h3>
+						 		<div class="price-block">
+							 		$<strong>12</strong>/month + shipping
+							 	</div>
+							 		<p>Great for the Uncomitted</p>
+								 	<p>1 pair of socks every month</p>
+							 		<p>Cancel anytime</p>
+
+							 	</div>
+							 	<div class="btn btn-block btn-inverse selected">Select<span class="fui-arrow-right"></span></div>
+			 		</label>
+			</div>
+
+			<div class="col-md-4">
+				<input type="radio" name="name" id="6months" value=""/>
+				    <label class="tile radio-duration" for="6months">
+				    	<div class="information">
+				    	<h3>Six Months</h3>
+				 		<div class="price-block">
+					 		$<strong>72</strong>/up-front
+					 	</div>
+					 		<p>Best way to get started</p>
+						 	<p>Free shipping</p>
+					 		<p>Monthly delivery for 6 months</p>
+					 	</div>
+					 		<div class="btn btn-block btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
+
+				    </label>
+			</div>
+
+			<div class="col-md-4">
+
+				<input type="radio" name="name" id="12months" value=""/>
+				    <label class="tile radio-duration" for="12months">
+				    	<div class="information">
+					 	<h3>Twelve Months</h3>
+				 		<div class="price-block">
+					 		$<strong>144</strong>/up-front
+					 	</div>
+					 		<p>Sweet sock drawer</p>
+						 	<p>Free shipping</p>
+					 		<p>Monthly delivery for 12 months</p>
+					 	</div>
+					 		<div class="btn btn-block btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
+				    </label>
+		    </div>
+			 </div>
+				<input type="button" name="next" class="next action-button btn btn-lg style-button col-sm-1 col-md-offset-10" value="Next" />
+
+		</div>
+
+
+	</fieldset>
+
+
+
+
+
+
+
+
+
+
 	<fieldset>
 
 		

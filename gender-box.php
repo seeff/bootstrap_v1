@@ -1,3 +1,4 @@
+<fieldset>
 <div class="row">
   <div class="row">
   	<h2>Select your gender</h2>
@@ -27,4 +28,7 @@
 		 		</label>
 
 			</div>
+					<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
 </div>
+</fieldset>
