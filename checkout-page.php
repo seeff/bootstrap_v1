@@ -259,6 +259,54 @@ BEGIN checkout
 
         {% if not has_multiship %}
 
+<div class="form-group" id="gift_fields">
+    <legend>Gift Options</legend>
+  <div class="fc_inner">
+      <fieldset>
+        <div class="row">
+              <div class="form-group col-sm-4">
+                <input type="text" class="form-control" name="Recipients Name" id="recipients_name" placeholder="Recipients Name">
+              </div>
+
+              <div class="form-group col-sm-4">
+                  <input type="text" class="form-control" name="Recipients Email" id="recipients_email" placeholder="Recipients Email">
+            </div>
+
+            <div class="form-group col-sm-4">
+                 <select class="form-control" name="Occasion" value="Occasion" id="occasion">
+                    <option value="Occasion">Occasion</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Thank You">Thank You</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="Congratulations">Congratulations</option>
+                    <option value="Workplace">Workplace</option>
+                    <option value="Get Well">Get Well</option>
+                    <option value="Good Luck">Good Luck</option>
+                    <option value="Other">Other</option>
+                  </select>
+            </div>
+
+        </div>
+
+          
+      <div class="row">
+        <div class="form-group col-sm-12">
+          <textarea rows="3" placeholder="Message for Recipient" name="Gift Message" id="gift_message" class="col-xs-12 form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-4">
+          <input type="text" class="form-control col-md-4" name="Your Name" id="your_name" placeholder="Your Name">
+        </div>
+      </div>
+        </fieldset>
+
+</div>
+</div>
+
+
 
 
             {% block customer_shipping %}
@@ -709,7 +757,6 @@ BEGIN checkout
                         <div id="fc_complete_order_processing" style="display:none;"><strong class="alert alert-warning"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
                     </div><!-- #fc_complete_order_button_container -->
 
-                    <span class="clearfix">&nbsp;</span>
                 </div><!-- .fc_inner -->
             </fieldset><!-- #fc_payment -->
             <span class="clearfix">&nbsp;</span>
