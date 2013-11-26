@@ -82,20 +82,6 @@
     <script src="./js/app.js"></script>
 
 
-<script type="text/javascript">
-    $(function() {
-        $('#ei-slider').eislideshow({
-          animation     : 'center',
-          autoplay      : true,
-          slideshow_interval  : 3000,
-          speed           : 800,
-           easing          : '',
-          titlesFactor    : 0,
-          thumbMaxWidth       : 150,
-        });
-    });
-</script>
-
 
 <script type="text/javascript">
   adroll_adv_id = "YY264IYFJRDEHFPKSUQ44L";

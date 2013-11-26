@@ -75,8 +75,8 @@ hr {
 	.navbar .navbar-brand {
 		width: 100%;
 		text-align: center;
-		margin-top: -45px;
-	}
+/*		margin-top: -45px;
+*/	}
 	
 	.navbar-brand img {
 		width: 40%;
@@ -95,8 +95,8 @@ hr {
 	}
 
 	#msform {
-	height: 1000px;
-	}
+/*	height: 1000px;
+*/	}
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -152,8 +152,8 @@ hr {
 	}
 
 	#msform {
-	height: 1000px;
-	}
+/*	height: 1000px;
+*/	}
 
 }
 
@@ -804,8 +804,8 @@ label h6 {
 /*form styles*/
 #msform {
 	text-align: center;
-	height: 500px;
-}
+/*	height: 500px;
+*/}
 #msform fieldset {
 	box-sizing: border-box;
 	

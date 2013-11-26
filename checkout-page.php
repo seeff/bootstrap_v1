@@ -29,7 +29,7 @@ BEGIN checkout
 
 <div class="col-md-12">
     {{ html_messages|raw }}
-<form id="fc_form_checkout" method="post" action="https://{{ store_domain }}{{ post_url }}" onsubmit="return false;">
+<form id="fc_form_checkout" class="form-inline" method="post" action="https://{{ store_domain }}{{ post_url }}" onsubmit="return false;">
 
 
 
@@ -92,7 +92,7 @@ BEGIN checkout
  -->    <fieldset id="fc_login_register">
         <div class="shaded-form col-md-8 col-md-offset-2">
                 <legend class="text-center">{% if checkout_type == 'guest_only' %}{{ lang.checkout_as_guest|raw }}{% else %}{{ lang.checkout_login_or_register|raw }}{% endif %}</legend>
-            <div id="fc_login_register_list">
+            <div id="fc_login_register_list" class="text-center">
         {% if not customer_is_authenticated %}
                 <div id="li_customer_email" class="form-group fc_customer_email">
                 <input type="text" value="{{ email }}" autocomplete="off" class="form-control  fc_required" id="customer_email" name="customer_email" placeholder="{{ lang.checkout_email|raw }}">
@@ -277,7 +277,7 @@ BEGIN checkout
                                 <input value="{{ (shipping_country_code == '') ? shipping_country_name : shipping_country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="shipping_country_name" name="shipping_country_name">
                                 <label style="display:none;" class="help-block" for="shipping_country_name">{{ lang.checkout_error_country|raw }}</label>
                             </div>
-                            <div class="form-group">
+                            <div class="row">
                                 <div class="fc_shipping_first_name form-group col-sm-6">
                                     <!-- <label class="control-label" for="shipping_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_first_name }}" class="form-control  fc_required" id="shipping_first_name" name="shipping_first_name" autocomplete="shipping given-name" placeholder="{{ lang.checkout_first_name|raw }}">
@@ -290,7 +290,7 @@ BEGIN checkout
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="row">
                                 <div class="fc_shipping_address1 form-group col-sm-9">
                                     <!-- <label class="control-label" for="shipping_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_address1 }}" class="form-control  fc_required" id="shipping_address1" name="shipping_address1" autocomplete="shipping address-line1" placeholder="{{ lang.checkout_address1|raw }}">
@@ -302,7 +302,7 @@ BEGIN checkout
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="row">
                                 <div class="fc_shipping_city form-group col-sm-6">
                                     <!-- <label class="control-label" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label> -->
                                     <input type="text" value="{{ shipping_city }}" class="form-control  fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality" placeholder="{{ lang.checkout_city|raw }}">
@@ -320,7 +320,7 @@ BEGIN checkout
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="row">
                                 <div class="col-sm-12">
                                 <textarea class="form-control" rows="3" placeholder="Is there anything else we need to know before we ship your order?"></textarea>
                                 </div>
@@ -528,7 +528,7 @@ BEGIN checkout
                                 </div>
 
 
-                                    <div class="form-group">
+                                    <div class="row">
                                         <div id="li_cc_number" class="li_cc_number form-group col-sm-10">
                                             <!-- <label for="cc_number" class="control-label">{{ lang.checkout_card_number|raw }}</label> -->
                                             <input type="text" name="cc_number" id="cc_number" class="form-control col-sm-10 fc_required" autocomplete="off" value="{{ cc_number }}" placeholder="{{ lang.checkout_card_number|raw }}" />
@@ -550,7 +550,7 @@ BEGIN checkout
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="row">
                                         <div class="col-sm-6 form-group">
                                             <!-- <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label> -->
                                             <input type="text" class="form-control  fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name" placeholder="{{ lang.checkout_first_name|raw }}">
@@ -705,7 +705,7 @@ BEGIN checkout
                     </div>
 
                     <div id="fc_complete_order_button_container" class="center">
-                        <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }} {{ checkout_order_total|money_format }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }} {{ checkout_order_total|money_format }}</button>
+                        <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }} of {{ checkout_order_total|money_format }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }} {{ checkout_order_total|money_format }}</button>
                         <div id="fc_complete_order_processing" style="display:none;"><strong class="alert alert-warning"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
                     </div><!-- #fc_complete_order_button_container -->
 

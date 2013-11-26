@@ -1,7 +1,17 @@
 $(window).load(function() {
 
 
-
+    $(function() {
+        $('#ei-slider').eislideshow({
+          animation     : 'center',
+          autoplay      : true,
+          slideshow_interval  : 3500,
+          speed           : 800,
+           easing          : '',
+          titlesFactor    : 0,
+          thumbMaxWidth       : 150,
+        });
+    });
 
 	$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
 	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
