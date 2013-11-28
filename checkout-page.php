@@ -132,21 +132,21 @@ BEGIN checkout
                     <p id="fc_account_message_sso" class="help-block">{{ lang.checkout_sso_already_logged_in|raw }}</p
                 </div>
         {% endif %}
-                <div id="li_customer_password" style="display:none;" class="form-group fc_customer_password">
+                <div id="li_customer_password" style="display:none;" class="form-group row fc_customer_password">
                     <p style="display:none;" class="help-block" id="fc_account_message_password"></p>
                     <!-- <label class="control-label" for="customer_password">{{ lang.checkout_password|raw }}</label> -->
                     <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control " id="customer_password" name="customer_password" placeholder="{{ lang.checkout_password|raw }}">
                     <label style="display:none;" class="help-block" for="customer_password">{{ lang.checkout_error_password|raw }}</label>
                 </div>
-                <div id="li_customer_password2" style="display:none;" class="form-group fc_customer_password2">
+                <div id="li_customer_password2" style="display:none;" class="form-group row fc_customer_password2">
                     <!-- <label class="control-label" for="customer_password2">{{ lang.checkout_retype_password|raw }}</label> -->
                     <input type="password" value="{{ customer_password }}" autocomplete="off" class="form-control " onchange="FC.checkout.checkPasswords()" id="customer_password2" name="customer_password2" placeholder="{{ lang.checkout_retype_password|raw }}">
                     <label style="display:none;" class="help-block" for="customer_password2">{{ lang.checkout_error_retype_password|raw }}</label>
                 </div>
-                <div id="li_customer_email_password" class="form-group text-right" style="display:none">
+                <div id="li_customer_email_password" class="form-group row text-right" style="display:none">
                     <label for="fc_email_password"><a id="fc_email_password" href="javascript:;" onclick="FC.checkout.emailPassword()">{{ lang.checkout_email_my_password|raw }}</a></label>
                 </div>
-                <div id="li_customer_new_password" class="form-group text-right" style="display:none">
+                <div id="li_customer_new_password" class="form-group row text-right" style="display:none">
                     <label for="fc_new_password"><a id="fc_new_password" href="javascript:;" onclick="FC.checkout.newPassword()">{{ lang.checkout_change_my_password|raw }}</a></label>
                 </div>
             </div>
@@ -259,9 +259,24 @@ BEGIN checkout
 
         {% if not has_multiship %}
 
-<div class="form-group" id="gift_fields">
+<div class="form-group">
     <legend>Gift Options</legend>
-  <div class="fc_inner">
+
+    <fieldset class="form-group">
+        <div class="radio gift-toggle">
+        <label>
+          <input type="radio" name="Is_this_a_gift" id="1" value="Nope it is for me" tabindex=400 data-toggle="radio" checked>
+          <p>This is for me</p>
+        </label>
+</div>
+        <div class="radio gift-toggle">        
+    <label>
+          <input type="radio" name="Is_this_a_gift" data-toggle="radio" id="2" value="2">
+          <p>This is a gift</p>
+        </label>
+    </div>
+    </fieldset>
+  <div class="fc_inner" id="gift_fields" style="display: none;">
       <fieldset>
         <div class="row">
               <div class="form-group col-sm-4">
@@ -311,7 +326,7 @@ BEGIN checkout
 
             {% block customer_shipping %}
             <!--  *********** address_shipping : Shipping Address ************* -->
-            <div style="display: none;" class="form-group" id="fc_address_shipping_container">
+            <div class="form-group" id="fc_address_shipping_container">
 <!--                  <h2>{{ lang.checkout_shipping_address|raw }}</h2>
  -->                <fieldset id="fc_shipping_address">
                     <legend>{{ lang.checkout_shipping_address|raw }}</legend>
@@ -587,7 +602,7 @@ BEGIN checkout
                                                 {{ lang.checkout_verification_code|raw }}
                                                 <span id="fc_help_cvv2" class="fc_help">(<a id="fc_help_cvv2_link" class="fc_help fc_jTip" href="https://{{ store_domain }}{{ base_directory }}/checkout.help.php?topic=cvv2&amp;width=308">{{ lang.checkout_question_mark|raw }}</a>)</span>
                                             </label> -->
-                                            <input value="{{ cc_cvv2 }}" type="text" name="cc_cvv2" id="cc_cvv2" autocomplete="off" class="form-control fc_required" maxlength="4" placeholder="{{ lang.checkout_verification_code|raw }}" />
+                                            <input value="{{ cc_cvv2 }}" type="text" name="cc_cvv2" id="cc_cvv2" autocomplete="off" class="form-control fc_required" maxlength="4" placeholder="CVV" />
                                             <label for="cc_cvv2" class="alert alert-warning" style="display:none">{{ lang.checkout_error_verification_code|raw }}</label>
                                         </div>
                                         <div id="li_cc_issue_number" class="col-sm-2 form-group">
@@ -623,7 +638,7 @@ BEGIN checkout
 
                                         <div class="col-sm-2 form-group">
                                             <!-- <label class="fc_pre" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
-                                            <input type="text"  class="form-control fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code" placeholder="{{ lang.checkout_postal_code|raw }}">
+                                            <input type="text"  class="form-control fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code" placeholder="ZIP">
                                             <label style="display:none;" class="alert alert-warning" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
                                             <label style="display:none;" class="alert alert-warning fc_error_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
                                         </div> 
@@ -642,13 +657,13 @@ BEGIN checkout
                                     </div> -->
                                     <div id="li_cc_exp_month" class="col-sm-6 col-md-2 form-group">
                                         <!-- <label for="cc_exp_month" class="control-label">{{ lang.checkout_expiration|raw }}</label> -->
-                                        <input type="text" class="form-control"  id="cc_exp_month" name="cc_exp_month" placeholder="{{ lang.cart_month|raw }}">
+                                        <input type="text" class="form-control"  id="cc_exp_month" name="cc_exp_month" placeholder="MM">
                                             <!-- <option value="">{{ lang.cart_month|raw }}</option>
                                             {{ cc_expiration_month_options|raw }} -->
                                         </input>
                                     </div>
                                     <div class="col-md-2 col-sm-6 form-group">
-                                        <input type="text" class="form-control " id="cc_exp_year" name="cc_exp_year" placeholder="{{ lang.cart_year|raw }}">
+                                        <input type="text" class="form-control " id="cc_exp_year" name="cc_exp_year" placeholder="YY">
                                            <!--  <option value="">{{ lang.cart_year|raw }}</option>
                                             {{ cc_expiration_year_options|raw }} -->
                                         </input>
@@ -753,7 +768,7 @@ BEGIN checkout
                     </div>
 
                     <div id="fc_complete_order_button_container" class="center">
-                        <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }} of {{ checkout_order_total|money_format }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }} {{ checkout_order_total|money_format }}</button>
+                        <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }} {{ checkout_order_total|money_format }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }} of {{ checkout_order_total|money_format }}</button>
                         <div id="fc_complete_order_processing" style="display:none;"><strong class="alert alert-warning"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
                     </div><!-- #fc_complete_order_button_container -->
 
@@ -824,8 +839,8 @@ BEGIN checkout
                 {% endif %}
                     {% if has_discount %}
                         <div class="row">
-                            <div class="col-xs-8 red">{{ lang.checkout_discount|raw }}</div>
-                            <div class="col-xs-4 text-center red">{{ checkout_discount|money_format }}</div>
+                            <div class="col-xs-8 red" id="discount_name">{{ lang.checkout_discount|raw }}</div>
+                            <div class="col-xs-4 text-center red" id="discount-amount">{{ checkout_discount|money_format }}</div>
                             <input value="{{ checkout_discount }}" type="hidden" name="discount" id="discount" />
                         </div>
                     {% endif %}
@@ -842,12 +857,15 @@ BEGIN checkout
                          </div>
 
 
-                         <div class="input-group" id="add_coupon">
+                     <!--     <div class="input-group" id="add_coupon">
                               <input type="text" class="form-control" name="coupon" id="coupon_code" value="">
                               <span class="input-group-btn">
-                                <button class="btn btn-default" type="button" id="apply_coupon" href="javascript:;">Add Coupon</button>
+                                <a  href="javascript:;"><button class="btn btn-default" type="button" id="apply_coupon">Add Coupon</button></a>
                               </span>
-                        </div><!-- /input-group -->
+                        </div> --><!-- /input-group -->
+
+
+
 
 
                     </div>

@@ -40,8 +40,8 @@ include_once('header.php');
 		
 		<div class="row">
 			<div class="col-md-4">
-				<input type="radio" name="name" value="Month%20to%20Month%20Subscription&price=12.00&sub_frequency=1m&code=m2m&empty=true&cart=checkout" id="month-to-month"/>
-					 <label class="tile radio-duration next" for="month-to-month">
+				<input type="radio" name="name" value="" id="monthtomonth"/>
+					 <label class="tile radio-duration next" for="monthtomonth">
 					 		<div class="information">
 					 			<h3>Month to Month</h3>
 						 		<div class="price-block">
@@ -131,8 +131,8 @@ include_once('header.php');
 				</div>
 			</div>
 		
-		<input type="button" name="previous" class="previous action-button btn style-button col-sm-1" value="Back" />
-<!-- 		<input type="button" name="next" class="next action-button btn btn-primary style-button col-sm-1 col-md-offset-10" value="Next" />
+<!-- 		<input type="button" name="previous" class="previous action-button btn style-button col-sm-1" value="Back" />
+ --><!-- 		<input type="button" name="next" class="next action-button btn btn-primary style-button col-sm-1 col-md-offset-10" value="Next" />
  -->
 </fieldset>
 
@@ -141,7 +141,7 @@ include_once('header.php');
   		  <div class="row">
   		  	<div class="col-md-6">
 				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
-						<label class="tile radio-style shapes" for="Shapes">
+						<label class="tile radio-style shapes next" for="Shapes">
 
 					 			<div class="information">
 					 				<h3>Patterns</h3>
@@ -157,7 +157,7 @@ include_once('header.php');
 
 			<div class="col-md-6">
 				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
-					<label class="tile radio-style pictures" for="Pictures">
+					<label class="tile radio-style pictures next" for="Pictures">
 
 						 		<div class="information">
 						 			<h3>Graphics</h3>
@@ -173,17 +173,24 @@ include_once('header.php');
 			 		</label>
 			 	</div>
 
+
+
 		  </div>
-		
-		<input type="button" name="previous" class="previous action-button btn style-button col-sm-1" value="Back" />
-
-
-		<a id="submit" href="https://sockscribemetest.foxycart.com/cart?&" class="btn continue-checkout-btn col-sm-2 col-md-offset-4"> 
-		Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-
-
 	</fieldset>
+
+
+	<fieldset>
+  		  <div class="row">
+			<div class="col-md-12 continue-button text-center">
+
+				<a id="submit" href="https://sockscribeme.foxycart.com/cart?&" class="btn continue-checkout-btn"> 
+				Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			 	</div>
+		  </div>
+	</fieldset>
+
+
 </form>
 
 </div>

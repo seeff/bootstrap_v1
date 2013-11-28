@@ -12,7 +12,7 @@
     <meta content=
     "Sockscribe Me - Awesome Socks Delivered to Your Door Monthly">
     <meta content="http://sockscribe.me/">
-    <meta content="http://sockscribe.me/images/sockscribeme_logo_100_100.png">
+    <meta content="http://sockscribe.me/images/photos/two-feet-linked.png">
     <meta property="og:title" content="Sockscribe Me - Awesome Sock Subscription Service">
     <meta property="og:type" content="product">
     <meta property="og:url" content="http://sockscribe.me/">
@@ -34,6 +34,8 @@
     <link href="css/social-likes.css" rel="stylesheet" >
     <link href="css/colorbox.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
+<!--         '<link href="css/flat-ui-fonts.css" rel="stylesheet">'
+ -->
 
     <!--[if gte IE 9]>
       <style type="text/css">
@@ -51,13 +53,13 @@
   <body>
 
         <div class="navbar navbar-default navbar-static-top sun-flower-background">
-        <div class="row pomegranate-background text-center white-text sale-container">
+<!--         <div class="row pomegranate-background text-center white-text sale-container">
           <div class="container">
               <a href="./sock-subscription.php" class="white-text">
                 <p>Thanksgiving Sale, limited offer! Get <strong>15% off</strong> all 6 and 12 month sock subscriptions. Use code <em>THANKSGIVING</em></p>
               </a>
           </div>
-        </div>
+        </div> -->
       <div class="container">
 
 

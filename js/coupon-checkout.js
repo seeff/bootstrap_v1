@@ -32,11 +32,11 @@ FC.checkout.ApplyCoupon = function(coupon) {
 }
  
 FC.checkout.BuildCouponTR = function(coupons) {
-    var colspan = jQuery("#fc_cart_foot_total .col-xs-8").attr("colspan");
+    var colspan = jQuery("#discount_name").attr();
     fc_cart_foot_discounts = '';
     FC.checkout.config.orderDiscount = 0;
     for (var coupon in coupons) {
-        fc_cart_foot_discounts += '<tr class="fc_cart_foot_discount"><td class="fc_col1" colspan="' + colspan + '">' + coupons[coupon].name + ':</td><td class="fc_col2"><span class="fc_discount">' + FC.formatter.currency(coupons[coupon].discount, true) + '</span></td></tr>';
+        fc_cart_foot_discounts += colspan + coupons[coupon].name + FC.formatter.currency(coupons[coupon].discount, true);
         FC.checkout.config.orderDiscount += coupons[coupon].discount;
     }
     jQuery(fc_cart_foot_discounts).insertAfter('#fc_cart_foot_subtotal');

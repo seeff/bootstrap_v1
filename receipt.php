@@ -55,7 +55,7 @@ include_once('header.php');
 <h1>You have Subscribed!<h1>
 <h4 class="text-muted">Get ready for awesomeness!</h4>
 
-<p>Thank you for subscribing to Sockscribe Me. Your order number is <strong>{{ order_id }}</strong>.  We have charged card ({{ cc_number_masked }}) {{ receipt_subtotal }}.                     
+<p>Thank you for subscribing to Sockscribe Me. Your order number is <strong>{{ order_id }}</strong>.  We have charged card ({{ cc_number_masked }}) {{ receipt_order_total }}.                     
 	{% if has_future_products %}
 	Your card will be charged today every month until you cancel your sock subscription.
 	{% endif %}
