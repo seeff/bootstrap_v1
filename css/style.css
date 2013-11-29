@@ -988,15 +988,9 @@ background-color: #1abc9c;
 	background-color: #FEF252;
 }
 
-.fc_col1{
-	width: 75%;
-}
-.fc_col2{
-	width: 25%;
-}
 
-table{
-	width: 100%;
+.fc_col1, .fc_col2{
+	width: 50%;
 }
 
 /*----COLORS http://flatuicolors.com/ -------

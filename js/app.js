@@ -153,7 +153,13 @@ function padWithZero(value) {
     jQuery("input[id=12months]").val("Twelve%20Months%20Subscription&price=144.00&code=12m&cart=checkout&category=12&2:name=Twelve%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + year + month + day);
 
 
-
+      $('input[name="Is_this_a_gift"]').change(function() {
+	      if(2 == $(this).val()) {
+	          $("#gift_fields").show();
+	      } else {
+	          $("#gift_fields").hide();
+	      }
+	  });
 
 });
 var num = 10; //number of pixels before modifying styles
