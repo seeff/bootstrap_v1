@@ -182,7 +182,14 @@ BEGIN checkout
                     <legend>{{ lang.checkout_billing_address|raw }}</legend>
                     <div class="fc_inner">
                         <div id="fc_customer_billing_list">
-
+                            <div class="fc_row fc_row_select fc_foxycomplete fc_customer_country_name">
+                                <label class="fc_pre" for="customer_country_name">{{ lang.checkout_country|raw }}<span class="fc_ast">*</span></label>
+                                <select class="form-control  fc_required fc_location" id="customer_country" name="customer_country">
+                                {{ country_options|raw }}
+                                </select>
+                                <input type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="customer_country_name" name="customer_country_name">
+                                <label style="display:none;" class="fc_error" for="customer_country_name">{{ lang.checkout_error_country|raw }}</label>
+                            </div>
                             <!-- <div class="fc_row fc_customer_first_name">
                                 <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
                                 <input type="text" class="form-control  fc_required" id="customer_first_name" value="customer_first_name" name="customer_first_name" autocomplete="billing given-name">
@@ -213,19 +220,11 @@ BEGIN checkout
                                 <label style="display:none;" class="fc_error" for="customer_city">{{ lang.checkout_error_city|raw }}</label>
                             </div>
                             <div class="fc_row fc_row_select fc_foxycomplete fc_customer_state_name">
-                            
-                            <div class="fc_row fc_row_select fc_foxycomplete fc_customer_country_name">
-<!--                                 <label class="fc_pre" for="customer_country_name">{{ lang.checkout_country|raw }}<span class="fc_ast">*</span></label>
- -->                             <input type="text"  id="customer_country" name="customer_country" value="United States of America">
-                                
-                                <input type="text" style="display:none;" id="customer_country_name" name="customer_country_name" value="United States of America">
-                                <label style="display:none;" class="fc_error" for="customer_country_name">{{ lang.checkout_error_country|raw }}</label>
-                            </div>
-
-                            <div class="fc_row fc_row_select fc_foxycomplete fc_customer_state_name">
-<!--                                 <label class="fc_pre" for="customer_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
- -->                            <input  type="text" class="form-control"  id="customer_state" name="customer_state" value="CA">
-                                <input  type="text" style="display:none;" value="CA" id="customer_state_name" name="customer_state_name">
+                                <label class="fc_pre" for="customer_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
+                                <select class="form-control  fc_required fc_location"  id="customer_state" name="customer_state">
+                                {{ region_options|raw }}
+                                </select>
+                                <input  type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" value="California" id="customer_state_name" name="customer_state_name">
                                 <label style="display:none;" class="fc_error" for="customer_state_name">{{ lang.checkout_error_state|raw }}</label>
 <!--                             </div>
                                 <div class="fc_row fc_customer_postal_code">
@@ -234,14 +233,6 @@ BEGIN checkout
                                 <label style="display:none;" class="fc_error" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
                                 <label style="display:none;" class="fc_error fc_error_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
                             </div> -->
-<!--                             <div class="fc_row fc_customer_phone">
-                                <label class="fc_pre" for="customer_phone">{{ lang.checkout_phone|raw }}</label>
-                                <input type="text" class="form-control " id="customer_phone" name="customer_phone" value="fc_customer_phone" autocomplete="billing tel">
-                                <label style="display:none;" class="fc_error" for="customer_phone">{{ lang.checkout_error_phone|raw }}</label>
-                            </div> -->
-                        </div>
-
-
                             <div class="fc_row fc_customer_phone">
                                 <label class="fc_pre" for="customer_phone">{{ lang.checkout_phone|raw }}</label>
                                 <input type="text" class="form-control " id="customer_phone" name="customer_phone" value="fc_customer_phone" autocomplete="billing tel">
@@ -343,8 +334,10 @@ BEGIN checkout
                         <div id="fc_address_shipping_list">
                             <div class="form-control_select fc_foxycomplete fc_shipping_country_name hide">
                                 <!-- <label class="control-label" for="shipping_country_name">{{ lang.checkout_country|raw }}<span class="fc_ast">*</span></label> -->
-                                <input type="text" id="shipping_country" name="shipping_country" value="United States of America">
-                                <input text="text" style="display:none;" id="shipping_country_name" name="shipping_country_name" value="United States of America">
+                                <select class="form-control  fc_required fc_location" data-default-value="{{ country_code }}" id="shipping_country" name="shipping_country">
+                                {{ shipping_country_options|raw }}
+                                </select>
+                                <input value="{{ (shipping_country_code == '') ? shipping_country_name : shipping_country_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control  fc_required fc_location" id="shipping_country_name" name="shipping_country_name">
                                 <label style="display:none;" class="help-block" for="shipping_country_name">{{ lang.checkout_error_country|raw }}</label>
                             </div>
                             <div class="row">
@@ -389,9 +382,6 @@ BEGIN checkout
                                     <label style="display:none;" class="help-block" for="shipping_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
                                 </div>
                             </div>
-
-
-
 
                             <div class="row">
                                 <div class="col-sm-12">
