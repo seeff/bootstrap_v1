@@ -989,7 +989,9 @@ background-color: #1abc9c;
 }
 
 
-
+.fc_col1, .fc_col2{
+	width: 50%;
+}
 
 /*----COLORS http://flatuicolors.com/ -------
 */
