@@ -333,9 +333,78 @@ BEGIN checkout
 
 
 
+   <div class="form-group">
+<!--                  <h2>{{ lang.checkout_shipping_address|raw }}</h2>
+ -->                <fieldset>
+                    <legend>{{ lang.checkout_shipping_address|raw }}</legend>
+                    <div class="fc_inner">
+                        <div>
+                            <div class="row">
+                                <div class="fc_shipping_first_name form-group col-sm-6">
+                                    <!-- <label class="control-label" for="shipping_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label> -->
+                                    <input type="text" value="{{ shipping_first_name }}" class="form-control  fc_required" id="shipping_first_name_2" name="shipping_first_name_2" autocomplete="shipping given-name" placeholder="{{ lang.checkout_first_name|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_first_name_2">{{ lang.checkout_error_first_name|raw }}</label>
+                                </div>
+                                <div class="fc_shipping_last_name form-group col-sm-6">
+                                    <!-- <label class="control-label" for="shipping_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label> -->
+                                    <input type="text" value="{{ shipping_last_name }}" class="form-control  fc_required" id="shipping_last_name_2" name="shipping_last_name_2" autocomplete="shipping family-name" placeholder="{{ lang.checkout_last_name|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_last_name_2">{{ lang.checkout_error_last_name|raw }}</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="fc_shipping_address1 form-group col-sm-9">
+                                    <!-- <label class="control-label" for="shipping_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label> -->
+                                    <input type="text" value="{{ shipping_address1 }}" class="form-control  fc_required" id="shipping_address1_2" name="shipping_address1_2" autocomplete="shipping address-line1" placeholder="{{ lang.checkout_address1|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_address1_2">{{ lang.checkout_error_address1|raw }}</label>
+                                </div>
+                                <div class="fc_shipping_address2 form-group col-sm-3">
+                                    <!-- <label class="control-label" for="shipping_address2">{{ lang.checkout_address2|raw }}</label> -->
+                                    <input type="text" value="{{ shipping_address2 }}" class="form-control " id="shipping_address2_2" name="shipping_address2_2" autocomplete="shipping address-line2" placeholder="{{ lang.checkout_address2|raw }}">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="fc_shipping_city form-group col-sm-6">
+                                    <!-- <label class="control-label" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label> -->
+                                    <input type="text" value="{{ shipping_city }}" class="form-control  fc_required" id="shipping_city_2" name="shipping_city_2" autocomplete="shipping locality" placeholder="{{ lang.checkout_city|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_city_2">{{ lang.checkout_error_city|raw }}</label>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <input type="text" value="{{ shipping_region_code }}" class="form-control  fc_required" id="shipping_state_name_2" name="shipping_state_name_2" autocomplete="shipping region" placeholder="{{ lang.checkout_state|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_state_name_2">{{ lang.checkout_error_state|raw }}</label>
+                                </div>
+                                    <div class="fc_shipping_postal_code form-group col-sm-3">
+                                    <!-- <label class="control-label" for="shipping_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
+                                    <input type="text" value="{{ shipping_postal_code }}" class="form-control form-control_short fc_required" id="shipping_postal_code_2" name="shipping_postal_code_2" autocomplete="shipping postal-code" placeholder="{{ lang.checkout_postal_code|raw }}">
+                                    <label style="display:none;" class="help-block" for="shipping_postal_code_2">{{ lang.checkout_error_postal_code|raw }}</label>
+                                    <label style="display:none;" class="help-block" for="shipping_postal_code_2">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                <textarea class="form-control" rows="3" placeholder="Is there anything else we need to know before we ship your order?" name="anythingelse" id="anythingelse"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <small>We ship orders on the 1st Monday of every month</small>
+                            </div>
+                        </div>
+                        <!-- <div id="fc_copy_billing_address">
+                            <p><a href='#' onclick='FC.checkout.copyBillingToShipping(); return false;'>{{ lang.checkout_copy_billing_address_to_shipping|raw }}</a></p>
+                        </div> -->
+                        <span class="clearfix">&nbsp;</span>
+                    </div><!-- .fc_inner -->
+                </fieldset><!-- #fc_address_shipping -->
+                <span class="clearfix">&nbsp;</span>
+            </div>
+
+
             {% block customer_shipping %}
             <!--  *********** address_shipping : Shipping Address ************* -->
-            <div class="form-group" id="fc_address_shipping_container">
+            <div class="form-group hide" id="fc_address_shipping_container">
 <!--                  <h2>{{ lang.checkout_shipping_address|raw }}</h2>
  -->                <fieldset id="fc_shipping_address">
                     <legend>{{ lang.checkout_shipping_address|raw }}</legend>
