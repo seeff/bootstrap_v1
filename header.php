@@ -53,13 +53,13 @@
   <body>
 
         <div class="navbar navbar-default navbar-static-top sun-flower-background">
-<!--         <div class="row pomegranate-background text-center white-text sale-container">
+        <div class="row pomegranate-background text-center white-text sale-container">
           <div class="container">
               <a href="./sock-subscription.php" class="white-text">
                 <p>Thanksgiving Sale, limited offer! Get <strong>15% off</strong> all 6 and 12 month sock subscriptions. Use code <em>THANKSGIVING</em></p>
               </a>
           </div>
-        </div> -->
+        </div>
       <div class="container">
 
 

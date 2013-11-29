@@ -768,7 +768,7 @@ BEGIN checkout
                     </div>
 
                     <div id="fc_complete_order_button_container" class="center">
-                        <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }} {{ checkout_order_total|money_format }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }} of {{ checkout_order_total|money_format }}</button>
+                        <button id="fc_complete_order_button" class="btn btn-primary btn-lg fc_button{{ submit_button_class }}" type="button" value="Sign Up!" onclick="FC.checkout.validateAndSubmit()">Sign Up!</button>
                         <div id="fc_complete_order_processing" style="display:none;"><strong class="alert alert-warning"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
                     </div><!-- #fc_complete_order_button_container -->
 
@@ -1027,6 +1027,7 @@ BEGIN checkout
 </div>
 
  <div class="cart">
+    <legend class="text-center">Order Total</legend>
 <table>
             <tr id="fc_cart_foot_subtotal">
                 <td{{ css_styles.border2_right }} class="fc_col1" colspan="{{ colspan-1 }}" >{{ lang.cart_subtotal|raw }}:</td>
@@ -1058,7 +1059,7 @@ BEGIN checkout
             </tr>
     {% endfor %}
     {% for coupon in future_coupons %}
-        <tr class="fc_cart_foot_discount fc_future">
+        <tr class="fc_cart_foot_discount fc_future red">
             <td{{ css_styles.right }} class="fc_col1" colspan="{{ colspan-1 }}">
                 {{ lang.cart_future_subscriptions|raw }} {{ coupon.name }}: {{ coupon.code }}
             </td>
@@ -1069,12 +1070,12 @@ BEGIN checkout
     {% endfor %}
 
         {% if with_controls and has_eligible_coupons %}
-            <tr id="fc_cart_foot_discount_new">
-                <td{{ css_styles.right }} class="fc_col1" colspan="{{ colspan-1 }}">
+            <tr id="fc_cart_foot_discount_new" class="red">
+                <td{{ css_styles.right }} class="fc_col1 red" colspan="{{ colspan-1 }}">
                     <a href="#" onclick="fc_AddCoupon(); this.blur(); return false;">{{ lang.cart_add_coupon|raw }}</a>
                 </td>
                 <td class="fc_col2">
-                    <input type="text" name="coupon" id="fc_coupon" class="fc_text fc_text_short" value="" style="display:none;" />
+                    <input type="text" name="coupon" id="fc_coupon" class="fc_text fc_text_short red" value="" style="display:none;" />
                 </td>
             </tr>
         {% endif %}
@@ -1135,10 +1136,6 @@ BEGIN checkout
         {% endif %}
     {% endif %}
 {% endif %}
-            <tr id="fc_cart_foot_total">
-                <td class="fc_col1" colspan="{{ colspan-1 }}">{{ lang.cart_order_total|raw }}:</td>
-                <td class="fc_col2">{{ cart_order_total }}</td>
-            </tr>
         </table>
     {% if not for_email %}
         </div>
@@ -1213,6 +1210,16 @@ fb_param.currency = 'USD';
   var ref = document.getElementsByTagName('script')[0];
   ref.parentNode.insertBefore(fpw, ref);
 })();
+</script>
+
+<script>
+      $('input[name="Is_this_a_gift"]').change(function() {
+          if(2 == $(this).val()) {
+              $("#gift_fields").show();
+          } else {
+              $("#gift_fields").hide();
+          }
+      });
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6014717384970&amp;value=0&amp;currency=USD" /></noscript>
 
