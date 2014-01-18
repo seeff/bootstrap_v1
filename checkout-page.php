@@ -685,7 +685,6 @@ BEGIN checkout
                                             <label for="cc_cvv2" class="alert alert-warning" style="display:none">{{ lang.checkout_error_verification_code|raw }}</label>
                                         </div>
                                         <div id="li_cc_issue_number" class="col-sm-2 form-group">
-
                                             <!-- <label for="cc_issue_number" class="control-label">{{ lang.checkout_issue_number|raw }}</label> -->
                                             <input value="{{ cc_issue_number }}" type="text" name="cc_issue_number" id="cc_issue_number" class="form-control fc_required" maxlength="2" placeholder="{{ lang.checkout_issue_number|raw }}"/>
                                             <label for="cc_issue_number" class="alert alert-warning" style="display:none">{{ lang.checkout_error_issue_number|raw }}</label>
@@ -693,11 +692,6 @@ BEGIN checkout
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <!-- <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label> -->
-                                            <input type="text" class="form-control  fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name" placeholder="{{ lang.checkout_first_name|raw }}">
-                                            <label style="display:none;" class="alert alert-warning" for="customer_first_name" value="customer_first_name">{{ lang.checkout_error_first_name|raw }}</label>
-                                        </div>
 
                                         <!-- <div id="li_cc_start_date_month">
                                             <label for="cc_start_date_month" class="control-label">{{ lang.checkout_start_date|raw }}</label>
@@ -715,12 +709,7 @@ BEGIN checkout
                                             <label for="cc_start_date_month" class="alert alert-warning" style="display:none">{{ lang.checkout_error_start_date|raw }}</label>
                                         </div> -->
 
-                                        <div class="col-sm-2 form-group">
-                                            <!-- <label class="fc_pre" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
-                                            <input type="text"  class="form-control fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code" placeholder="ZIP">
-                                            <label style="display:none;" class="alert alert-warning" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
-                                            <label style="display:none;" class="alert alert-warning fc_error_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
-                                        </div> 
+
 
                                    <!--  <div id="li_cc_start_date_month">
                                         <label for="cc_start_date_month" class="control-label">{{ lang.checkout_start_date|raw }}</label>
@@ -749,17 +738,26 @@ BEGIN checkout
                                         <label for="cc_exp_month" class="alert alert-warning" style="display:none">{{ lang.checkout_error_expiration|raw }}</label>
                                     </div>
 
-
-
+                                        <div class="col-sm-2 form-group">
+                                            <!-- <label class="fc_pre" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label> -->
+                                            <input type="text"  class="form-control fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code" placeholder="ZIP">
+                                            <label style="display:none;" class="alert alert-warning" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
+                                            <label style="display:none;" class="alert alert-warning fc_error_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
+                                        </div> 
+                                        <div class="col-sm-6 form-group">
+                                            <!-- <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label> -->
+                                            <input type="text" class="form-control  fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name" placeholder="{{ lang.checkout_first_name|raw }}">
+                                            <label style="display:none;" class="alert alert-warning" for="customer_first_name" value="customer_first_name">{{ lang.checkout_error_first_name|raw }}</label>
+                                        </div>
 
 
                                     </div>
 
                                     <div class="checkbox checkbox-container" id="li_save_cc">
                                         <label>
-                                            <input type="checkbox" name="save_cc" id="save_cc" value="1">{{ save_cc_text }}
-                                        </label>
+                                            <input type="checkbox" name="save_cc" id="save_cc" value="1" checked="checked" checked>{{ save_cc_text }}
                                         <label for="save_cc" class="alert alert-warning" style="display:none">{{ lang.checkout_error_subscription_permission|raw }}</label>
+                                        </label>
                                         <input type="hidden" name="cc_number_masked" id="cc_number_masked" value="{{ checkout_cc_number_masked }}" />
                                     </div>
 

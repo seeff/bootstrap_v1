@@ -139,18 +139,33 @@ function padWithZero(value) {
     jQuery("input[id=monthtomonth]").val("Month%20to%20Month%20Subscription&price=12.00&category=121&sub_frequency=1m&code=m2m&empty=true&cart=checkout");
 
 
-    var end_date_6months = new Date();
-    end_date_6months.setMonth(end_date_6months.getMonth() + 6);
-    sub_enddate_6months = end_date_6months.getFullYear() + padWithZero(end_date_6months.getMonth() + 1) + padWithZero(end_date_6months.getDate() + 1);
-    jQuery("input[id=6months]").val("Six%20Months%20Subscription&price=72.00&code=6m&cart=checkout&category=6&2:name=Six%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + sub_enddate_6months);
+    // var end_date_6months = new Date();
+    // end_date_6months.setMonth(end_date_6months.getMonth() + 6);
+    // sub_enddate_6months = end_date_6months.getFullYear() + padWithZero(end_date_6months.getMonth() + 1) + padWithZero(end_date_6months.getDate() + 1);
+    // jQuery("input[id=6months]").val("Six%20Months%20Subscription&price=72.00&code=6m&cart=checkout&category=6&2:name=Six%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + sub_enddate_6months);
+
+	var currentDate_6mth = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+    var day_6mth = currentDate_6mth.getDate() + 1
+    var month_6mth = "0" + 7
+    // var month_6mth = currentDate_6mth.getMonth() + 6
+    var year_6mth = currentDate_6mth.getFullYear() + 1
+    if (day_6mth < 10){
+	    jQuery("input[id=6months]").val("Six%20Months%20Subscription&price=72.00&code=6m&cart=checkout&category=6&2:name=Six%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + year_6mth + "07" + "0" + day_6mth);
+    }else{
+	    jQuery("input[id=6months]").val("Six%20Months%20Subscription&price=72.00&code=6m&cart=checkout&category=6&2:name=Six%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + year_6mth + "07" + day_6mth);
+    }
 
 
+    var currentDate_12mths = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+    var day_12mths = currentDate_12mths.getDate() + 1
+    var month_12mths = currentDate_12mths.getMonth()
+    var year_12mths = currentDate_12mths.getFullYear() + 1
+    if (day_12mths < 10){
+    	    jQuery("input[id=12months]").val("Twelve%20Months%20Subscription&price=144.00&code=12m&cart=checkout&category=12&2:name=Twelve%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + year_12mths + "01" + "0" + day_12mths);
+    }else{
+    	    jQuery("input[id=12months]").val("Twelve%20Months%20Subscription&price=144.00&code=12m&cart=checkout&category=12&2:name=Twelve%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + year_12mths + "01" + day_12mths);
 
-    var currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
-    var day = currentDate.getDate()
-    var month = currentDate.getMonth() + 1
-    var year = currentDate.getFullYear() + 1
-    jQuery("input[id=12months]").val("Twelve%20Months%20Subscription&price=144.00&code=12m&cart=checkout&category=12&2:name=Twelve%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=" + year + month + day);
+    }
 
 
 
@@ -469,7 +484,7 @@ function mce_success_cb(resp){
 
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
