@@ -57,9 +57,9 @@ include_once('header.php');
 			</div>
 
 			<div class="col-md-4">
-				<input type="radio" name="name" id="6months" value="Six%20Months%20Subscription&price=72.00&code=6m&cart=checkout&category=6&2:name=Six%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=<?php
+				<input type="radio" name="name" id="6months" value="Six%20Months%20Subscription&price=72.00&code=6m&category=6&2:name=Six%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=<?php
 echo date('Ymd', strtotime("+6 month +1 day"));
-?>"/>
+?>&cart=checkout"/>
 				    <label class="tile radio-duration next" for="6months">
 				    	<div class="information">
 				    	<h3>Six Months</h3>
@@ -77,9 +77,9 @@ echo date('Ymd', strtotime("+6 month +1 day"));
 
 			<div class="col-md-4">
 
-				<input type="radio" name="name" id="12months" value="Twelve%20Months%20Subscription&price=144.00&code=12m&cart=checkout&category=12&2:name=Twelve%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=<?php
+				<input type="radio" name="name" id="12months" value="Twelve%20Months%20Subscription&price=144.00&code=12m&category=12&2:name=Twelve%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=<?php
 echo date('Ymd', strtotime("+12 month +1 day"));
-?>"/>
+?>&cart=checkout"/>
 				    <label class="tile radio-duration next" for="12months">
 				    	<div class="information">
 					 	<h3>Twelve Months</h3>

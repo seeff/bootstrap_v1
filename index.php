@@ -191,14 +191,16 @@ include_once('header.php');
       
       <hr class="featurette-divider">
 
-       
         <div class="row featurette">
-        <div class="col-md-5">
-          <a class="youtube" href="//www.youtube.com/embed/nGTxZukeAQM">
-            <span class="play-button"></span>
-            <img class="featurette-image img-responsive" src="./images/sock-video-preview-picture.png" alt="Watch our sock video">
-          </a>
-        </div>
+
+        <div class="col-md-5">  
+        <a class="youtube" href="//www.youtube.com/embed/nGTxZukeAQM">
+          <div class="play-video">
+                      Play Video
+          
+          </div>
+        </a>
+      </div>
         <div class="col-md-7">
           <h2 class="featurette-heading">Watch Our Video. <span class="text-muted">Now.</span></h2>
           <p class="lead">So you’re excited about your impending transformation to greatness, but you apprehensive about coming off like some type of superhero. Well, don’t worry! You’re not  going to possess magical abilities to fly or spin webs any time soon; after all, we’re sending you socks. </p>

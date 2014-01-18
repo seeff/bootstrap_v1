@@ -944,21 +944,20 @@ background-color: #1abc9c;
 	color: black;
 }
 
-
-.play-button {
-	display: block;
-	background: url("../images/play-button-sprite.png") no-repeat;
-	height: 186px;
-	width: 186px;
-	position: absolute;
-	margin-left: 137px;
-	margin-top: 151px;
-	}
-
-.youtube:hover .play-button{
-       background-position: -189px 0;
+.play-video{
+	margin-top: 40px;
+	background: url("../images/sock-video-preview-picture.png") no-repeat;
+	background-position:center; 
+	height: 500px;
+	width: 100%;
+	text-indent: -99999px;
 }
+.play-video:hover{
+	margin-top: 40px;
+	background: url("../images/sock-video-preview-picture-hover.png") no-repeat;
+	background-position:center; 
 
+}
 /*--------FOXYCART---------*/
 .help-block {
 	font-size: .8em;
