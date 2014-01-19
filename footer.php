@@ -69,12 +69,11 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./js/jquery.js"></script>
-    <script src="./js/jquery.eislideshow.js"></script>
-    <script src="./js/jquery.easing.1.3.js"></script>    
     <script src="./js/bootstrap.js"></script>
     <script src="./js/collapse.js"></script>
     <script src="./js/jquery.colorbox.js"></script>
     <script src="./js/placeholders.min.js"></script>
+    <script src="./js/imgLiquid.js"></script>
     <script src="./js/app.js"></script>
 
   </body>

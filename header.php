@@ -33,6 +33,7 @@
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/social-likes.css" rel="stylesheet" >
     <link href="css/colorbox.css" rel="stylesheet" >
+    <link href="css/carousel.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
 <!--         '<link href="css/flat-ui-fonts.css" rel="stylesheet">'
  -->
@@ -77,10 +78,12 @@
             <li class="plusone" title="Share link on Google+">Google+</li>
             <li class="pinterest" title="Share image on Pinterest" data-media="http://sockscribe.me/images/logo.png">Pinterest</li>
           </ul> -->
+
+
         <div class="navbar-collapse collapse <?php echo ($page == "Checkout" ? "hide" : "")?>">
           <ul class="nav navbar-nav navbar-right <?php echo ($page == "Checkout" ? "hide" : "")?>">
 
-            <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-a-Sock-Subscription" ? "active" : "")?>">Sign Up</a></li>
+            <li><a href="./sock-subscription.php" class="<?php echo ($page == "Buy-a-Sock-Subscription" ? "active" : "")?> signup-nav">Sign Up</a></li>
 <!--             <li><a href="./sock-subscription-gift.php" class="<?php echo ($page == "Buy-Sock-Subscription-Gift" ? "active" : "")?>">Give a Gift</a></li>
  -->            <li><a href="./about-us.php" class="<?php echo ($page == "About-Sockscribe-Me" ? "active" : "")?>">About</a></li>
             <li><a href="./frequently-asked-questions.php" class="<?php echo ($page == "Frequently-Asked-Questions" ? "active" : "")?>">FAQ</a></li>
