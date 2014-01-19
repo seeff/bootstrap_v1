@@ -17,33 +17,21 @@ include_once('header.php');
 		<h1>Customize Your Order <p class="lead"> Everyone is special</p><h1>
 	</div>
 
-		<div class="col-md-10 col-md-offset-1">
-<!-- multistep form -->
-<form id="msform">
-	<!-- progressbar -->
-	<div class="row">
-		<div class="shaded-form col-md-6 col-md-offset-3">
-			<ul id="progressbar">
-				<li class="active">Subscription Duration</li>
-				<li>Gender</li>
-				<li>Style</li>
-			</ul>
-		</div>
-	</div>
-	<!-- fieldsets -->
+	<div class="col-md-10 col-md-offset-1">
 
-	<fieldset>
+		<form action="https://sockscribeme.foxycart.com/cart" method="post">
+
 			<div class="col-md-12">
-				<h3 class="fs-title">Select a Subscription Duration</h3>
+				<h3>Step 1: Select a Subscription Duration</h3>
 			</div>
-		
-		
-		<div class="row">
-			<div class="col-md-4">
-				<input type="radio" name="name" value="" id="monthtomonth"/>
-					 <label class="tile radio-duration next" for="monthtomonth">
+
+			<div class="row duration-container">
+				<label class="col-sm-4">
+
+						<div class="tile radio-duration">
 					 		<div class="information">
-					 			<h3>Month to Month</h3>
+								<input type="radio" name="name" value="Month to Month">
+								<h3>Month to Month</h3>
 						 		<div class="price-block">
 							 		$<strong>12</strong>/month + shipping
 							 	</div>
@@ -51,104 +39,94 @@ include_once('header.php');
 								 	<p>1 pair of socks every month</p>
 							 		<p>Cancel anytime</p>
 
-							 	</div>
-							 	<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
-			 		</label>
-			</div>
-
-			<div class="col-md-4">
-				<input type="radio" name="name" id="6months" value="Six%20Months%20Subscription&price=72.00&code=6m&category=6&2:name=Six%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=<?php
-echo date('Ymd', strtotime("+6 month +1 day"));
-?>&cart=checkout"/>
-				    <label class="tile radio-duration next" for="6months">
-				    	<div class="information">
-				    	<h3>Six Months</h3>
-				 		<div class="price-block">
-					 		$<strong>72</strong>/up-front
-					 	</div>
-					 		<p>Best way to get started</p>
-						 	<p>Free shipping</p>
-					 		<p>Monthly delivery for 6 months</p>
-					 	</div>
-					 		<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
-
-				    </label>
-			</div>
-
-			<div class="col-md-4">
-
-				<input type="radio" name="name" id="12months" value="Twelve%20Months%20Subscription&price=144.00&code=12m&category=12&2:name=Twelve%20Months%20Subscription%20Free&2:price=0.00&2:sub_frequency=1m&empty=true&2:code=free&2:sub_enddate=<?php
-echo date('Ymd', strtotime("+12 month +1 day"));
-?>&cart=checkout"/>
-				    <label class="tile radio-duration next" for="12months">
-				    	<div class="information">
-					 	<h3>Twelve Months</h3>
-				 		<div class="price-block">
-					 		$<strong>144</strong>/up-front
-					 	</div>
-					 		<p>Sweet sock drawer</p>
-						 	<p>Free shipping</p>
-					 		<p>Monthly delivery for 12 months</p>
-					 	</div>
-					 		<div class="btn btn-inverse gender-scroll duration-button">Select<span class="fui-arrow-right"></span></div>
-				    </label>
-		    </div>
-			 </div>
-<!-- 				<input type="button" name="next" class="next action-button btn style-button col-sm-1 col-md-offset-11" value="Next" />
- -->
-
-
-	</fieldset>
-
-
-<fieldset>
-			<div class="col-md-12">
-				<h3 class="fs-title">Select your Gender</h3>
-			</div>
-
-			<div class="row">
-				<div class="col-md-6">
-									<input type="radio" name="2:Gender" value="Dudes" id="Dudes"/>
-
-						 <label class="tile radio-gender dudes next" for="Dudes">
-					 		<div class="information">
-					 			<h3>Dudes</h3>
-						 		<lead>Shoe size 8-12 US</lead>
 						 	</div>
+
+						 	<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
+				 		</div>
+				</label>
+
+				<label class="col-sm-4">
+						<div class="tile radio-duration">
+					 		<div class="information">
+								<input type="radio" name="name" value="Six Months Subscription Free">
+								<h3>Six Months</h3>
+
+									
+
+						 		<div class="price-block">
+							 		$<strong>72</strong>/up-front
+							 	</div>
+							 		<p>Best way to get started</p>
+								 	<p>Free shipping</p>
+							 		<p>Monthly delivery for 6 months</p>
+
+						 	</div>
+						 	
+						 	<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
+						 </div>
+				</label>
+
+				<label class="col-sm-4">
+						<div class="tile radio-duration">
+					 		<div class="information">
+								<input type="radio" name="name" value="Twelve Months Subscription Free">
+								<h3>Twelve Months</h3>
+
+
+						 		<div class="price-block">
+							 		$<strong>144</strong>/up-front
+							 	</div>
+							 		<p>Sweet sock drawer</p>
+								 	<p>Free shipping</p>
+							 		<p>Monthly delivery for 12 months</p>
+
+						 	</div>
+						 	
+						 	<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
+						 </div>				
+				</label>
+			</div>
+
+			<div class="row gender-container">
+			<div class="col-md-12">
+				<h3>Step 2: Select a Gender</h3>
+			</div>
+				<div class="row">
+					<label class="col-sm-6">
+						<div class="tile radio-gender">
+					 			<div class="information">
+									<input type="radio" name="gender" value="Dudes"><h3>Dudes</h3></input>
+							 		<lead>Shoe size 8-12 US</lead>
+						 		</div>
+								 	<div class="btn btn-inverse gender-button">Select<span class="fui-arrow-right"></span></div>
+						</div>
+					</label>
+
+					<label class="col-sm-6">
+						<div class="tile radio-gender">
+					 			<div class="information">
+									<input type="radio" name="gender" value="Chicks"><h3>Chicks</h3></input>
+							 		<lead>Shoe size 5-10 US</lead>
+
+							 	</div>
+
 							 	<div class="btn btn-inverse gender-button">Select<span class="fui-arrow-right"></span></div>
 
-
-							</label>
-				</div>
-
-				<div class="col-md-6">
-									<input type="radio" name="2:Gender" value="Female" id="chicks" />
-
-						 <label class="tile radio-gender chicks next" for="chicks">
-
-					 		<div class="information">
-					 			<h3>Chicks</h3>
-						 		<lead>Shoe size 5-10 US</lead>
-						 	</div>
-							 	<div class="btn btn-inverse style-scroll gender-button">Select<span class="fui-arrow-right"></span></div>
-							</label>
+				 		</div>
+					</label>
 				</div>
 			</div>
-		
-<!-- 		<input type="button" name="previous" class="previous action-button btn style-button col-sm-1" value="Back" />
- --><!-- 		<input type="button" name="next" class="next action-button btn btn-primary style-button col-sm-1 col-md-offset-10" value="Next" />
- -->
-</fieldset>
 
-	<fieldset>
-		<h3 class="fs-title">Stelect Your Style</h3>
-  		  <div class="row">
-  		  	<div class="col-md-6">
-				<input type="radio" name="2:Style" value="Shapes" id="Shapes"/>
-						<label class="tile radio-style shapes next" for="Shapes">
+			<div class="row style-container">
+			<div class="col-md-12">
+				<h3>Step 3: Select a Style of Socks</h3>
+			</div>
 
+				<div class="row">
+					<label class="col-sm-6">
+						<div class="tile radio-style shapes">
 					 			<div class="information">
-					 				<h3>Patterns</h3>
+									<input type="radio" name="style" value="Patterns"><h3>Patterns</h3></input>
 						 			<p><strong>Like</strong></p>
 							 		<p><small>Stripes</small></p>
 							 		<p><small>Checks</small></p>
@@ -156,52 +134,61 @@ echo date('Ymd', strtotime("+12 month +1 day"));
 							 	</div>
 							 	<div class="btn btn-inverse style-button">Select<span class="fui-arrow-right"></span></div>
 
-				 		</label>
-				 	</div>
+				 		</div>
+					</label>
 
-			<div class="col-md-6">
-				<input type="radio" name="2:Style" value="Pictures" id="Pictures" />
-					<label class="tile radio-style pictures next" for="Pictures">
-
-						 		<div class="information">
-						 			<h3>Graphics</h3>
+					<label class="col-sm-6">
+						<div class="tile radio-style shapes">
+					 			<div class="information">
+									<input type="radio" name="style" value="Graphics"><h3>Graphics</h3></input>
 						 			<p><strong>Like</strong></p>
 							 		<p><small>Sushi</small></p>
 							 		<p><small>Dogs</small></p>
 							 		<p><small>Flying Toast</small></p>
 							 	</div>
-							 	<div class="btn btn-inverse style-button">Select<span class="fui-arrow-right"></span>
-							 		
-							 	</div>
+							 	<div class="btn btn-inverse style-button">Select<span class="fui-arrow-right"></span></div>
 
-			 		</label>
-			 	</div>
+				 		</div>
+					</label>
+				</div>
+			</div>
 
-
-
-		  </div>
-	</fieldset>
-
-
-	<fieldset>
   		  <div class="row">
-			<div class="col-md-12 continue-button text-center">
-
-				<a id="submit" href="https://sockscribeme.foxycart.com/cart?&" class="btn continue-checkout-btn"> 
-				Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
+				<div class="col-md-12 continue-button text-center">
+				<input type="hidden" name="empty" value="true" />		
+				<input type="hidden" name="cart" value="checkout" />		
+				<button type="submit" id="checkout-button" class="btn continue-checkout-btn">Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span></button>
 			 	</div>
 		  </div>
-	</fieldset>
+		</form>
 
 
-</form>
+<div class="dates hidden">
+<input type="hidden" name="twelveMonthsDate" id="twelveMonthsDate" value="<?php
+	echo date('Ymd', strtotime("+12 month +1 day"));
+	?>" />		
 
+<input type="hidden" name="sixMonthsDate" id="sixMonthsDate"value="<?php
+	echo date('Ymd', strtotime("+6 month +1 day"));
+	?>" />		
 </div>
+
+	</div>
 </div>
+
+
+
 
 <!-- end page content -->
 
 <?php
 include_once('footer.php');
 ?>
+
+<script>
+	var twelveMonthsDate;
+	var sixMonthsDate;
+
+	var twelveMonthsDate = $("#twelveMonthsDate").val();
+	var sixMonthsDate = $("#sixMonthsDate").val();
+</script>
