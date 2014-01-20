@@ -1,7 +1,6 @@
-// FOR TESTING PURPOSES ONLY
-// FoxyCart v0.7.0+
-// 2010.12.20
- 
+$(window).load(function() {
+
+
 FC.checkout.InitCoupon = function() {
     var colspan = jQuery("#fc_cart_foot_total .fc_col1").attr("colspan");
     fc_cart_foot_discount_new = '<tr id="fc_cart_foot_discount_new"><td class="fc_col1" colspan="' + colspan + '"><a href="#" onclick="FC.checkout.AddCoupon(); this.blur(); return false;">Add a coupon</a></td><td class="fc_col2"><input type="text" name="coupon" id="fc_coupon" class="fc_text fc_text_short" value="" style="display:none;" /><a id="fc_coupon_apply" href="javascript:;" style="display:none;">Apply!</a></td></tr>';
@@ -74,3 +73,4 @@ jQuery(document).ready(function(){
     // or not a coupon has already been added, comment out the above lines and uncomment the following
     // FC.checkout.InitCoupon();
 });
+    });

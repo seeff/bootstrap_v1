@@ -48,7 +48,7 @@ include_once('header.php');
 				<label class="col-sm-4">
 						<div class="tile radio-duration">
 					 		<div class="information">
-								<input type="radio" name="name" value="Six Months Subscription Free">
+								<input type="radio" name="name" value="Six Months Subscription">
 								<h3>Six Months</h3>
 
 									
@@ -69,7 +69,7 @@ include_once('header.php');
 				<label class="col-sm-4">
 						<div class="tile radio-duration">
 					 		<div class="information">
-								<input type="radio" name="name" value="Twelve Months Subscription Free">
+								<input type="radio" name="name" value="Twelve Months Subscription">
 								<h3>Twelve Months</h3>
 
 
