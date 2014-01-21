@@ -92,7 +92,7 @@ include_once('header.php');
 				<h3>Step 2: Select a Gender</h3>
 			</div>
 				<div class="row">
-					<label class="col-sm-6">
+					<label class="col-xs-6">
 						<div class="tile radio-gender">
 					 			<div class="information">
 									<input type="radio" name="gender" value="Dudes"><h3>Dudes</h3></input>
@@ -102,7 +102,7 @@ include_once('header.php');
 						</div>
 					</label>
 
-					<label class="col-sm-6">
+					<label class="col-xs-6">
 						<div class="tile radio-gender">
 					 			<div class="information">
 									<input type="radio" name="gender" value="Chicks"><h3>Chicks</h3></input>
@@ -123,11 +123,11 @@ include_once('header.php');
 			</div>
 
 				<div class="row">
-					<label class="col-sm-6">
+					<label class="col-xs-6">
 						<div class="tile radio-style shapes">
 					 			<div class="information">
 									<input type="radio" name="style" value="Patterns"><h3>Patterns</h3></input>
-						 			<p><strong>Like</strong></p>
+						 			<p><strong>Examples of Socks</strong></p>
 							 		<p><small>Stripes</small></p>
 							 		<p><small>Checks</small></p>
 							 		<p><small>Polka-dots</small></p>
@@ -137,11 +137,11 @@ include_once('header.php');
 				 		</div>
 					</label>
 
-					<label class="col-sm-6">
+					<label class="col-xs-6">
 						<div class="tile radio-style shapes">
 					 			<div class="information">
 									<input type="radio" name="style" value="Graphics"><h3>Graphics</h3></input>
-						 			<p><strong>Like</strong></p>
+						 			<p><strong>Examples of Socks</strong></p>
 							 		<p><small>Sushi</small></p>
 							 		<p><small>Dogs</small></p>
 							 		<p><small>Flying Toast</small></p>
@@ -157,7 +157,7 @@ include_once('header.php');
 				<div class="col-md-12 continue-button text-center">
 				<input type="hidden" name="empty" value="true" />		
 				<input type="hidden" name="cart" value="checkout" />		
-				<button type="submit" id="checkout-button" class="btn continue-checkout-btn">Continue to Checkout <span class="glyphicon glyphicon-chevron-right"></span></button>
+				<button type="submit" id="checkout-button" class="btn continue-checkout-btn" >Checkout <span class="glyphicon glyphicon-chevron-right"></span></button>
 			 	</div>
 		  </div>
 		</form>
@@ -184,6 +184,24 @@ include_once('header.php');
 <?php
 include_once('footer.php');
 ?>
+ <script type="text/javascript" charset="utf-8">
+        fcc.events.cart.preprocess.add(function(e, arr) {
+            if (arr['cart'] == 'checkout' || arr['cart'] == 'updateinfo' || arr['output'] == 'json') {
+                return true;
+            }
+            if (arr['cart'] == 'checkout_paypal_express') {
+                _gaq.push(['_trackPageview', '/paypal_checkout']);
+                return true;
+            }
+            _gaq.push(['_trackPageview', '/cart']);
+            return true;
+        });
+        fcc.events.cart.process.add_pre(function(e, arr) {
+            var pageTracker = _gat._getTrackerByName();
+            jQuery.getJSON('https://' + storedomain + '/cart?' + fcc.session_get() + '&h:ga=' + escape(pageTracker._getLinkerUrl('', true)) + '&output=json&callback=?', function(data){});
+            return true;
+        });
+    </script>
 
 <script>
 	var twelveMonthsDate;

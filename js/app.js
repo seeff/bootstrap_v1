@@ -2,6 +2,22 @@ $(window).load(function() {
 
 
 
+	$('input:radio[name="name"]').change(function(){
+	    if($(this).val() == 'Month to Month'){
+	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"price\" value=\"12.00\"<\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>");
+	    } if ($(this).val() == 'Six Months Subscription'){
+	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"sub_enddate\" value=\""+sixMonthsDate+"\"><\/input>\r\n <input type=\"hidden\" name=\"price\" value=\"0.00\"><\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"code\" value=\"free\"><\/input>\r\n<input type=\"hidden\" name=\"2:name\" value=\"Six Months Subscription Paid\"><\/input>\r\n<input type=\"hidden\" name=\"2:price\" value=\"72.00\"><\/input>\r\n<input type=\"hidden\" name=\"2:code\" value=\"6m\"><\/input>\r\n<input type=\"hidden\" name=\"2:category\" value=\"6\"><\/input>\r\n");
+	    } if ($(this).val() == 'Twelve Months Subscription'){
+	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"sub_enddate\" value=\""+twelveMonthsDate+"\"><\/input>\r\n"+"<input type=\"hidden\" name=\"price\" value=\"0.00\"><\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"code\" value=\"free\"><\/input>\r\n<input type=\"hidden\" name=\"2:name\" value=\"Twelve Months Subscription Paid\"><\/input>\r\n<input type=\"hidden\" name=\"2:price\" value=\"144.00\"><\/input>\r\n<input type=\"hidden\" name=\"2:code\" value=\"12m\"><\/input>\r\n<input type=\"hidden\" name=\"2:category\" value=\"12\"><\/input>");
+
+	    }
+	});
+
+    
+
+
+    $(".imgLiquidFill").imgLiquid({fill:true, horizontalAlign:'center', verticalAlign:'center'});
+
 	$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
 	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
 	$(".inline").colorbox({inline:true, width:"50%"});
@@ -14,23 +30,12 @@ $(window).load(function() {
 	});
 
 
-	//Example of preserving a JavaScript event for inline calls.
-	$("#click").click(function(){ 
-		$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
-		return false;
-	});
-
-
 
 	$(".radio-duration").click(function() {
 		// $(".check-duration").css("color", "#1abc9c");
 		// $(".check-duration").css("display", "inline-block");
 		$(".duration-button").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
 		$(this).children(".duration-button").text("Selected");
-		// var divID = '.gender-scroll' + this.id;
-		// $('html, body').animate({
-		// 	scrollTop: $(divID).offset().top
-		// }, 1000);
 		$('.radio-duration').not(this).stop().animate({
 	        opacity: 0.4
 	    }, 150);
@@ -38,6 +43,11 @@ $(window).load(function() {
 	    $(this).stop().animate({
 	        opacity: 1.0
 	    }, 150);
+		// var divID = '.gender-scroll' + this.id;
+		// $('html, body').animate({
+		// 	scrollTop: $(divID).offset().top
+		// }, 1000);
+		
 		// $( this.children(".selected")).addClass("hidden");
 	});
 
@@ -57,10 +67,6 @@ $(window).load(function() {
 		// $(".check-gender").css("display", "inline-block");
 		$(".gender-button").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
 		$(this).children(".gender-button").text("Selected");
-		// var divID = '.style-scroll' + this.id;
-		// $('html, body').animate({
-		// 	scrollTop: $(divID).offset().top
-		// }, 1000);
 		$('.radio-gender').not(this).stop().animate({
 	        opacity: 0.4
 	    }, 150);
@@ -68,6 +74,10 @@ $(window).load(function() {
 	    $(this).stop().animate({
 	        opacity: 1.0
 	    }, 150);
+		// var divID = '.style-scroll' + this.id;
+		// $('html, body').animate({
+		// 	scrollTop: $(divID).offset().top
+		// }, 1000);
 	});
 	// $('.radio-gender').hover(function() {
 	//     // Make all images (except this) transparent
@@ -85,48 +95,70 @@ $(window).load(function() {
 		$(".check-style").css("display", "inline-block");
 		$(".style-button").html("Select\<span class\=\"fui\-arrow\-right\"\>\<\/span\>");
 		$(this).children(".style-button").text("Selected");
-		// var divID = '.submit-scroll' + this.id;
-		// $('html, body').animate({
-		// 	scrollTop: $(divID).offset().top
-		// }, 1000);
 		$('.radio-style').not(this).stop().animate({
 	        opacity: 0.4
 	    }, 150);
 	    // Make this opaque
 	    $(this).stop().animate({
 	        opacity: 1.0
-	    }, 150);
-	});
-
-	$('input[type="radio"]').change(function () {
-	    var queryString = $('input[type="radio"]:checked').map(function () {
-	        $('#' + this.name).text(this.name + ': ' + this.value);
-	        return this.name + '=' + this.value;
-	    }).get().join('&');
-	    $('#submit').attr('href', function () {
-	        return 'https://sockscribeme.foxycart.com/cart?&' + queryString;
-	    });
+	    }, 150);		// var divID = '.submit-scroll' + this.id;
+		// $('html, body').animate({
+		// 	scrollTop: $(divID).offset().top
+		// }, 1000);
+		
 	});
 
 
-            var queryString = $("#gift-fields").click(function () {
-                $('#' + this.name).text(this.name + ': ' + this.value);
-                return this.name + '=' + this.value;
-            }).get().join('&');
-            $('#submit').attr('href', function () {
-                return 'https://sockscribeme.foxycart.com/cart?&' + queryString;
-            });
 
 
-function padWithZero(value) {
-    if (value < 10) {
-        return '0' + value;
-    }
-    return value;
-}
 
 
-});
+    $(".duration-container :radio").hide().click(function(e){
+	    e.stopPropagation();
+	});
+	$(".duration-container div").click(function(e){
+	    $(this).closest(".duration-container").find("div").removeClass("selected-div");
+	    $(this).addClass("selected-div").find(":radio").click();
+	});$(".duration-container :radio").hide().click(function(e){
+	    e.stopPropagation();
+	});
+	$(".duration-container div").click(function(e){
+	    $(this).closest(".duration-container").find("div").removeClass("selected-div");
+	    $(this).addClass("selected-div").find(":radio").click();
+	});
+
+
+
+    $(".gender-container :radio").hide().click(function(e){
+	    e.stopPropagation();
+	});
+	$(".gender-container div").click(function(e){
+	    $(this).closest(".gender-container").find("div").removeClass("selected-div");
+	    $(this).addClass("selected-div").find(":radio").click();
+	});$(".gender-container :radio").hide().click(function(e){
+	    e.stopPropagation();
+	});
+	$(".gender-container div").click(function(e){
+	    $(this).closest(".gender-container").find("div").removeClass("selected-div");
+	    $(this).addClass("selected-div").find(":radio").click();
+	});
+
+
+	    $(".style-container :radio").hide().click(function(e){
+	    e.stopPropagation();
+	});
+	$(".style-container div").click(function(e){
+	    $(this).closest(".style-container").find("div").removeClass("selected-div");
+	    $(this).addClass("selected-div").find(":radio").click();
+	});$(".style-container :radio").hide().click(function(e){
+	    e.stopPropagation();
+	});
+	$(".style-container div").click(function(e){
+	    $(this).closest(".style-container").find("div").removeClass("selected-div");
+	    $(this).addClass("selected-div").find(":radio").click();
+	});
+	});
+
 var num = 10; //number of pixels before modifying styles
 if ($(window).width() > 767) {
 	$(window).bind('scroll', function() {
@@ -429,6 +461,9 @@ function mce_success_cb(resp){
         }
     }
 }
+
+
+
 
 
 // Google analytics

@@ -98,18 +98,37 @@ We ship our socks on the <strong>first Monday of every month</strong>. If you do
 
 
 
-<!-- Google Code for Sale Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 950133067;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "QFWcCJXfkwgQy8KHxQM";
-var google_conversion_value = 0;
-var google_remarketing_only = false;
-/* ]]> */
+
+<script type="text/javascript" charset="utf-8">
+  if (window.location.hash.search(/utma/) == -1 && typeof(fc_json.custom_fields['ga']) != "undefined") {
+    if (fc_json.custom_fields['ga'].length > 0) {
+      window.location.hash = fc_json.custom_fields['ga'].replace( /\&amp;/g, '&' );
+    }
+  }
 </script>
+ 
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37881563-1']);
+  _gaq.push(['_setDomainName', 'sockscribe.me']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setAllowAnchor', true]);
+  _gaq.push(['_trackPageview', '/receipt']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+ 
+^^receipt_only_begin^^
+^^analytics_google_ga_async^^
+^^receipt_only_end^^
+
+
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

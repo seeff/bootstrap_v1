@@ -998,3 +998,23 @@ a.fill-div {
 	background: url(../images/social-buttons.png) -98px 5px;
 	background-color: #00A0D1;
 }
+
+.facebook_recipt{
+  background-color: #32528E;
+  background-image: url("../images/facebook-large.png");
+
+}
+.twitter_recipt{
+  background-color: #00A0D1;
+  background-image: url("../images/twitter-lager.png");
+
+}
+.google_plus_recipt{
+  background-color: #DE3D33;
+  background-image: url("../images/google-plus-large.png");
+
+}
+
+.facebook_recipt:hover, .twitter_recipt:hover, .google_plus_recipt:hover{
+    opacity: .7;
+}
