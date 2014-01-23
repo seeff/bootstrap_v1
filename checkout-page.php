@@ -1027,16 +1027,6 @@ BEGIN checkout
                             <span class="fc_cart_item_option_value">{{ option.value }}</span>
                         </li>
                     {% endfor %}
-                    {% if item.code != '' %}
-                        <li class="fc_cart_item_option fc_cart_item_code">
-                        {{ lang.cart_code|raw }}: {{ item.code }}
-                        </li>
-                    {% endif %}
-                    {% if item.category_code != 'DEFAULT' %}
-                        <li class="fc_cart_item_option fc_cart_category_code">
-                        {{ lang.cart_category|raw }}: {{ item.category_code }}
-                        </li>
-                    {% endif %}
                     {% if item.weight != 0 %}
                         <li class="fc_cart_item_option fc_cart_item_weight">
                         {{ lang.cart_weight|raw }}: {{ item.weight }} <span class="fc_uom_weight">{{ weight_uom }}</span>
