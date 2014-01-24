@@ -179,100 +179,118 @@ BEGIN checkout
                                     <input value="US" type="text" style="display:none;" class="fc_foxycomplete_input form-control fc_text_long fc_required fc_location" id="customer_country_name" name="customer_country_name">
                                     <label style="display:none;" class="fc_error" for="customer_country_name">{{ lang.checkout_error_country|raw }}</label>
                                 </li>
-                                <li class="row fc_customer_first_name">
-                                    <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ first_name }}" class="form-control fc_text_long fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name">
-                                    <label style="display:none;" class="fc_error" for="customer_first_name">{{ lang.checkout_error_first_name|raw }}</label>
-                                </li>
-                                <li class="row fc_customer_last_name">
-                                    <label class="fc_pre" for="customer_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ last_name }}" class="form-control fc_text_long fc_required" id="customer_last_name" name="customer_last_name" autocomplete="billing family-name">
-                                    <label style="display:none;" class="fc_error" for="customer_last_name">{{ lang.checkout_error_last_name|raw }}</label>
-                                </li>
-                                <li class="row">
+
+                                <div class="row">
                                     <div class="col-md-6">
+                                        <li class="fc_customer_first_name">
+                                            <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ first_name }}" class="form-control fc_text_long fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name">
+                                            <label style="display:none;" class="fc_error" for="customer_first_name">{{ lang.checkout_error_first_name|raw }}</label>
+                                        </li>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <li class="fc_customer_last_name">
+                                            <label class="fc_pre" for="customer_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ last_name }}" class="form-control fc_text_long fc_required" id="customer_last_name" name="customer_last_name" autocomplete="billing family-name">
+                                            <label style="display:none;" class="fc_error" for="customer_last_name">{{ lang.checkout_error_last_name|raw }}</label>
+                                        </li>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8">
                                         <li class="fc_customer_address1">
                                             <label class="fc_pre" for="customer_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label>
                                             <input type="text" value="{{ address1 }}" class="form-control fc_text_long fc_required" id="customer_address1" name="customer_address1" autocomplete="billing address-line1">
                                             <label style="display:none;" class="fc_error" for="customer_address1">{{ lang.checkout_error_address1|raw }}</label>
                                         </li>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <li class="fc_customer_address2">
                                             <label class="fc_pre" for="customer_address2">{{ lang.checkout_address2|raw }}</label>
                                             <input type="text" value="{{ address2 }}" class="form-control fc_text_long" id="customer_address2" name="customer_address2" autocomplete="billing address-line2">
                                         </li>
                                     </div>
-                                </li>
-                                <li class="row fc_customer_city">
-                                    <label class="fc_pre" for="customer_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ city }}" class="form-control fc_text_long fc_required" id="customer_city" name="customer_city" autocomplete="billing locality">
-                                    <label style="display:none;" class="fc_error" for="customer_city">{{ lang.checkout_error_city|raw }}</label>
-                                </li>
-                                <li class="row fc_row_select fc_foxycomplete fc_customer_state_name">
-                                    <label class="fc_pre" for="customer_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
-                                     <select class="form-control fc_text_long fc_required" data-default-value="{{ region_code }}" id="customer_state_name" name="customer_state_name"> 
-                                        <option value="" selected="selected">Select a State</option> 
-                                        <option value="AL">Alabama</option> 
-                                        <option value="AK">Alaska</option> 
-                                        <option value="AZ">Arizona</option> 
-                                        <option value="AR">Arkansas</option> 
-                                        <option value="CA">California</option> 
-                                        <option value="CO">Colorado</option> 
-                                        <option value="CT">Connecticut</option> 
-                                        <option value="DE">Delaware</option> 
-                                        <option value="DC">District Of Columbia</option> 
-                                        <option value="FL">Florida</option> 
-                                        <option value="GA">Georgia</option> 
-                                        <option value="ID">Idaho</option> 
-                                        <option value="IL">Illinois</option> 
-                                        <option value="IN">Indiana</option> 
-                                        <option value="IA">Iowa</option> 
-                                        <option value="KS">Kansas</option> 
-                                        <option value="KY">Kentucky</option> 
-                                        <option value="LA">Louisiana</option> 
-                                        <option value="ME">Maine</option> 
-                                        <option value="MD">Maryland</option> 
-                                        <option value="MA">Massachusetts</option> 
-                                        <option value="MI">Michigan</option> 
-                                        <option value="MN">Minnesota</option> 
-                                        <option value="MS">Mississippi</option> 
-                                        <option value="MO">Missouri</option> 
-                                        <option value="MT">Montana</option> 
-                                        <option value="NE">Nebraska</option> 
-                                        <option value="NV">Nevada</option> 
-                                        <option value="NH">New Hampshire</option> 
-                                        <option value="NJ">New Jersey</option> 
-                                        <option value="NM">New Mexico</option> 
-                                        <option value="NY">New York</option> 
-                                        <option value="NC">North Carolina</option> 
-                                        <option value="ND">North Dakota</option> 
-                                        <option value="OH">Ohio</option> 
-                                        <option value="OK">Oklahoma</option> 
-                                        <option value="OR">Oregon</option> 
-                                        <option value="PA">Pennsylvania</option> 
-                                        <option value="RI">Rhode Island</option> 
-                                        <option value="SC">South Carolina</option> 
-                                        <option value="SD">South Dakota</option> 
-                                        <option value="TN">Tennessee</option> 
-                                        <option value="TX">Texas</option> 
-                                        <option value="UT">Utah</option> 
-                                        <option value="VT">Vermont</option> 
-                                        <option value="VA">Virginia</option> 
-                                        <option value="WA">Washington</option> 
-                                        <option value="WV">West Virginia</option> 
-                                        <option value="WI">Wisconsin</option> 
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-                                    <input value="{{ (region_code == '') ? region_name : region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control fc_text_long fc_required fc_location" id="customer_state_name" name="customer_state_name">
-                                    <label style="display:none;" class="fc_error" for="customer_state_name">{{ lang.checkout_error_state|raw }}</label>
-                                </li>
-                                    <li class="row fc_customer_postal_code">
-                                    <label class="fc_pre" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ postal_code }}" class="form-control fc_text_short fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code">
-                                    <label style="display:none;" class="fc_error" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
-                                    <label style="display:none;" class="fc_error fc_error_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
-                                </li>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <li class="fc_customer_city">
+                                            <label class="fc_pre" for="customer_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ city }}" class="form-control fc_text_long fc_required" id="customer_city" name="customer_city" autocomplete="billing locality">
+                                            <label style="display:none;" class="fc_error" for="customer_city">{{ lang.checkout_error_city|raw }}</label>
+                                        </li>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <li class="fc_row_select fc_foxycomplete fc_customer_state_name">
+                                            <label class="fc_pre" for="customer_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
+                                             <select class="form-control fc_text_long fc_required" data-default-value="{{ region_code }}" id="customer_state_name" name="customer_state_name"> 
+                                                <option value="" selected="selected">Select a State</option> 
+                                                <option value="AL">Alabama</option> 
+                                                <option value="AK">Alaska</option> 
+                                                <option value="AZ">Arizona</option> 
+                                                <option value="AR">Arkansas</option> 
+                                                <option value="CA">California</option> 
+                                                <option value="CO">Colorado</option> 
+                                                <option value="CT">Connecticut</option> 
+                                                <option value="DE">Delaware</option> 
+                                                <option value="DC">District Of Columbia</option> 
+                                                <option value="FL">Florida</option> 
+                                                <option value="GA">Georgia</option> 
+                                                <option value="ID">Idaho</option> 
+                                                <option value="IL">Illinois</option> 
+                                                <option value="IN">Indiana</option> 
+                                                <option value="IA">Iowa</option> 
+                                                <option value="KS">Kansas</option> 
+                                                <option value="KY">Kentucky</option> 
+                                                <option value="LA">Louisiana</option> 
+                                                <option value="ME">Maine</option> 
+                                                <option value="MD">Maryland</option> 
+                                                <option value="MA">Massachusetts</option> 
+                                                <option value="MI">Michigan</option> 
+                                                <option value="MN">Minnesota</option> 
+                                                <option value="MS">Mississippi</option> 
+                                                <option value="MO">Missouri</option> 
+                                                <option value="MT">Montana</option> 
+                                                <option value="NE">Nebraska</option> 
+                                                <option value="NV">Nevada</option> 
+                                                <option value="NH">New Hampshire</option> 
+                                                <option value="NJ">New Jersey</option> 
+                                                <option value="NM">New Mexico</option> 
+                                                <option value="NY">New York</option> 
+                                                <option value="NC">North Carolina</option> 
+                                                <option value="ND">North Dakota</option> 
+                                                <option value="OH">Ohio</option> 
+                                                <option value="OK">Oklahoma</option> 
+                                                <option value="OR">Oregon</option> 
+                                                <option value="PA">Pennsylvania</option> 
+                                                <option value="RI">Rhode Island</option> 
+                                                <option value="SC">South Carolina</option> 
+                                                <option value="SD">South Dakota</option> 
+                                                <option value="TN">Tennessee</option> 
+                                                <option value="TX">Texas</option> 
+                                                <option value="UT">Utah</option> 
+                                                <option value="VT">Vermont</option> 
+                                                <option value="VA">Virginia</option> 
+                                                <option value="WA">Washington</option> 
+                                                <option value="WV">West Virginia</option> 
+                                                <option value="WI">Wisconsin</option> 
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+                                            <input value="{{ (region_code == '') ? region_name : region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control fc_text_long fc_required fc_location" id="customer_state_name" name="customer_state_name">
+                                            <label style="display:none;" class="fc_error" for="customer_state_name">{{ lang.checkout_error_state|raw }}</label>
+                                        </li>
+                                    </div>
+                                
+                                <div class="col-md-2">
+                                        <li class="fc_customer_postal_code">
+                                        <label class="fc_pre" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
+                                        <input type="text" value="{{ postal_code }}" class="form-control fc_text_short fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code">
+                                        <label style="display:none;" class="fc_error" for="customer_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
+                                        <label style="display:none;" class="fc_error fc_error_invalid_postal_code" for="customer_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
+                                    </li>
+                                </div>
+                            </div>
                             </ol>
                         {% if has_shippable_products and not has_multiship %}
                             <div class="row fc_row_checkbox" id="fc_use_different_address">
