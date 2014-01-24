@@ -5,6 +5,8 @@ $(window).load(function() {
 	$('input:radio[name="name"]').change(function(){
 	    if($(this).val() == 'Month to Month'){
 	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"price\" value=\"12.00\"<\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"category\" value=\"MonthToMonth\">"); 
+	    }if($(this).val() == 'Month to Month - Hello Giggles'){
+	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"price\" value=\"12.00\"<\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"category\" value=\"MonthToMonthHelloGiggles\">"); 
 	    } if ($(this).val() == 'Six Months Subscription'){
 	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"sub_enddate\" value=\""+sixMonthsDate+"\"><\/input>\r\n <input type=\"hidden\" name=\"price\" value=\"0.00\"><\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"code\" value=\"free\"><\/input>\r\n<input type=\"hidden\" name=\"2:name\" value=\"Six Months Subscription Paid\"><\/input>\r\n<input type=\"hidden\" name=\"2:price\" value=\"72.00\"><\/input>\r\n<input type=\"hidden\" name=\"2:code\" value=\"6m\"><\/input>\r\n<input type=\"hidden\" name=\"2:category\" value=\"SixMonths\"><\/input>\r\n");
 	    } if ($(this).val() == 'Twelve Months Subscription'){

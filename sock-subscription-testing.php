@@ -19,7 +19,7 @@ include_once('header.php');
 
 	<div class="col-md-10 col-md-offset-1">
 
-		<form action="https://sockscribeme.foxycart.com/cart" method="post">
+		<form action="https://sockscribemetest.foxycart.com/cart" method="post">
 
 			<div class="col-md-12">
 				<h3>Step 1: Select a Subscription Duration</h3>

@@ -14,7 +14,14 @@ include_once('header.php');
 
 <div class="container">
 	<div class="row text-center">
+		<h2>All Hello Giggles Readers <bold>save $4</bold> on Month to Month orders!!</h2>
+		<p class="small">Save $2 on order and get free shipping! Offer only available until end of February 2014</p>
+	      
+	      <hr class="featurette-divider">
+
+
 		<h1>Customize Your Order <p class="lead"> Everyone is special</p><h1>
+		
 	</div>
 
 	<div class="col-md-10 col-md-offset-1">
@@ -30,7 +37,7 @@ include_once('header.php');
 
 						<div class="tile radio-duration">
 					 		<div class="information">
-								<input type="radio" name="name" value="Month to Month" required>
+								<input type="radio" name="name" value="Month to Month - Hello Giggles" required>
 								<h3>Month to Month</h3>
 						 		<div class="price-block">
 							 		$<strong>12</strong>/month + shipping

@@ -87,7 +87,7 @@
 <!--             <li><a href="./sock-subscription-gift.php" class="<?php echo ($page == "Buy-Sock-Subscription-Gift" ? "active" : "")?>">Give a Gift</a></li>
  -->            <li><a href="./about-us.php" class="<?php echo ($page == "About-Sockscribe-Me" ? "active" : "")?>">About</a></li>
             <li><a href="./frequently-asked-questions.php" class="<?php echo ($page == "Frequently-Asked-Questions" ? "active" : "")?>">FAQ</a></li>
-            <li><a href="../blog/" class="<?php echo ($page == "Blog" ? "active" : "")?>">Blog</a></li>
+            <li><a href="../blog/" target="_blank" class="<?php echo ($page == "Blog" ? "active" : "")?>">Blog</a></li>
             <li><a href="./contact-us.php" class="<?php echo ($page == "Contact-Sockscribe-Me" ? "active" : "")?>">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->

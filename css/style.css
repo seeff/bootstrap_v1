@@ -415,7 +415,9 @@ blockquote small {
 	height: auto;
 }*/
 .carousel .item{
-	background-color: white;
+	background: url(../images/photos/socks-sitting-on-a-wall.png);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 /*----------Sock subscription options-------------*/
 .form-container {
@@ -863,6 +865,23 @@ table{
 	width: 100%;
 }
 
+li {
+    list-style:none;
+}
+
+.fc_error{
+padding: .2em .6em .3em   !important;
+font-size: 75%   !important;
+font-weight: bold   !important;
+line-height: 1   !important;
+color: #ffffff   !important;
+text-align: center   !important;
+white-space: nowrap   !important;
+vertical-align: baseline   !important;
+border-radius: .25em   !important;
+background-color: #d9534f   !important;
+
+}
 /*----COLORS http://flatuicolors.com/ -------
 */
 .sign-up-divider {

@@ -177,21 +177,6 @@ include_once('header.php');
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">The Best Socks. <span class="text-muted">Trust us.</span></h2>
-          <p class="lead">With great power comes great responsibility, which is why we’ll never send you a pair of Aunt Sheryl’s DIY holiday socks. Every month our sock stylists select high quality socks from some of the most well known brands in the industry.</p>
-          <p class="lead">While you may never see our stylists, appreciate that they share 117% of their DNA with both unicorns and musical, green-haired chocolate factory workers; they’re good at what they do. </p>
-          <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="./images/socks-on-ropes.jpg" alt="Sock Brands - Happy Socks, Richer and Poorer, The Sock Guys and Sock it to Me">
-        </div>
-      </div>
-
-      
-      <hr class="featurette-divider">
-
         <div class="row featurette">
 
         <div class="col-md-5">  
@@ -209,15 +194,26 @@ include_once('header.php');
           <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
         </div>
 
+              <hr class="featurette-divider">
+
+
+      </div>
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">The Best Socks. <span class="text-muted">Trust us.</span></h2>
+          <p class="lead">With great power comes great responsibility, which is why we’ll never send you a pair of Aunt Sheryl’s DIY holiday socks. Every month our sock stylists select high quality socks from some of the most well known brands in the industry.</p>
+          <p class="lead">While you may never see our stylists, appreciate that they share 117% of their DNA with both unicorns and musical, green-haired chocolate factory workers; they’re good at what they do. </p>
+          <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="./images/socks-on-ropes.jpg" alt="Sock Brands - Happy Socks, Richer and Poorer, The Sock Guys and Sock it to Me">
+        </div>
       </div>
 
-      <hr class="featurette-divider">
+      
 
-      <div class="row">
-         <div class="col-md-12 text-center">
-            <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
-          </div>
-      </div>
+
+
 
 
       <!-- /END THE FEATURETTES -->
