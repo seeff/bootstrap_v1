@@ -181,14 +181,14 @@ BEGIN checkout
                                 </li>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6">
                                         <li class="fc_customer_first_name">
                                             <label class="fc_pre" for="customer_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
                                             <input type="text" value="{{ first_name }}" class="form-control fc_text_long fc_required" id="customer_first_name" name="customer_first_name" autocomplete="billing given-name">
                                             <label style="display:none;" class="fc_error" for="customer_first_name">{{ lang.checkout_error_first_name|raw }}</label>
                                         </li>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6">
                                         <li class="fc_customer_last_name">
                                             <label class="fc_pre" for="customer_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
                                             <input type="text" value="{{ last_name }}" class="form-control fc_text_long fc_required" id="customer_last_name" name="customer_last_name" autocomplete="billing family-name">
@@ -198,14 +198,14 @@ BEGIN checkout
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-sm-8">
                                         <li class="fc_customer_address1">
                                             <label class="fc_pre" for="customer_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label>
                                             <input type="text" value="{{ address1 }}" class="form-control fc_text_long fc_required" id="customer_address1" name="customer_address1" autocomplete="billing address-line1">
                                             <label style="display:none;" class="fc_error" for="customer_address1">{{ lang.checkout_error_address1|raw }}</label>
                                         </li>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-sm-4">
                                         <li class="fc_customer_address2">
                                             <label class="fc_pre" for="customer_address2">{{ lang.checkout_address2|raw }}</label>
                                             <input type="text" value="{{ address2 }}" class="form-control fc_text_long" id="customer_address2" name="customer_address2" autocomplete="billing address-line2">
@@ -214,17 +214,17 @@ BEGIN checkout
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-5">
+                                    <div class="col-sm-5">
                                         <li class="fc_customer_city">
                                             <label class="fc_pre" for="customer_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
                                             <input type="text" value="{{ city }}" class="form-control fc_text_long fc_required" id="customer_city" name="customer_city" autocomplete="billing locality">
                                             <label style="display:none;" class="fc_error" for="customer_city">{{ lang.checkout_error_city|raw }}</label>
                                         </li>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-sm-5">
                                         <li class="fc_row_select fc_foxycomplete fc_customer_state_name">
                                             <label class="fc_pre" for="customer_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
-                                             <select class="form-control fc_text_long fc_required" data-default-value="{{ region_code }}" id="customer_state_name" name="customer_state_name"> 
+                                             <select class="form-control fc_text_long fc_required" data-default-value="{{ region_name }}" id="customer_state_name" name="customer_state_name"> 
                                                 <option value="" selected="selected">Select a State</option> 
                                                 <option value="AL">Alabama</option> 
                                                 <option value="AK">Alaska</option> 
@@ -277,12 +277,11 @@ BEGIN checkout
                                                 <option value="WI">Wisconsin</option> 
                                                 <option value="WY">Wyoming</option>
                                             </select>
-                                            <input value="{{ (region_code == '') ? region_name : region_code }}" type="text" style="display:none;" class="fc_foxycomplete_input form-control fc_text_long fc_required fc_location" id="customer_state_name" name="customer_state_name">
                                             <label style="display:none;" class="fc_error" for="customer_state_name">{{ lang.checkout_error_state|raw }}</label>
                                         </li>
                                     </div>
                                 
-                                <div class="col-md-2">
+                                <div class="col-sm-2">
                                         <li class="fc_customer_postal_code">
                                         <label class="fc_pre" for="customer_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
                                         <input type="text" value="{{ postal_code }}" class="form-control fc_text_short fc_required" id="customer_postal_code" name="customer_postal_code" autocomplete="billing postal-code">
@@ -293,17 +292,16 @@ BEGIN checkout
                             </div>
                             </ol>
                         {% if has_shippable_products and not has_multiship %}
-                            <div class="row fc_row_checkbox" id="fc_use_different_address">
+                            <div class="checkbox fc_row_checkbox" id="fc_use_different_address">
                                 <label class="fc_checkbox" for="use_different_addresses">
                                     <input{% if use_alternate_shipping_address %} checked="checked"{% endif %} type="checkbox" onclick="FC.checkout.displayShippingAddress(this)" class="checkbox" value="1" id="use_different_addresses" name="use_different_addresses">
-                                    <span>{{ lang.checkout_use_shipping_address|raw }}</span>
+                                    {{ lang.checkout_use_shipping_address|raw }}
                                 </label>
                             </div>
+
                         {% endif %}
-                            <span class="fc_clear">&nbsp;</span>
                         </div><!-- .fc_inner -->
                     </fieldset><!-- #fc_customer_billing -->
-                    <span class="fc_clear">&nbsp;</span>
                 </div>
             {% endblock customer_billing %}
 
@@ -328,93 +326,114 @@ BEGIN checkout
                                     <input value="US" type="text" style="display:none;" class="fc_foxycomplete_input form-control fc_text_long fc_required fc_location" id="shipping_country_name" name="shipping_country_name">
                                     <label style="display:none;" class="fc_error" for="shipping_country_name">{{ lang.checkout_error_country|raw }}</label>
                                 </li>
-                                <li class="row fc_shipping_first_name">
-                                    <label class="fc_pre" for="shipping_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ shipping_first_name }}" class="form-control fc_text_long fc_required" id="shipping_first_name" name="shipping_first_name" autocomplete="shipping given-name">
-                                    <label style="display:none;" class="fc_error" for="shipping_first_name">{{ lang.checkout_error_first_name|raw }}</label>
-                                </li>
-                                <li class="row fc_shipping_last_name">
-                                    <label class="fc_pre" for="shipping_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ shipping_last_name }}" class="form-control fc_text_long fc_required" id="shipping_last_name" name="shipping_last_name" autocomplete="shipping family-name">
-                                    <label style="display:none;" class="fc_error" for="shipping_last_name">{{ lang.checkout_error_last_name|raw }}</label>
-                                </li>
-                                <li class="row fc_shipping_address1">
-                                    <label class="fc_pre" for="shipping_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ shipping_address1 }}" class="form-control fc_text_long fc_required" id="shipping_address1" name="shipping_address1" autocomplete="shipping address-line1">
-                                    <label style="display:none;" class="fc_error" for="shipping_address1">{{ lang.checkout_error_address1|raw }}</label>
-                                </li>
-                                <li class="row fc_shipping_address2">
-                                    <label class="fc_pre" for="shipping_address2">{{ lang.checkout_address2|raw }}</label>
-                                    <input type="text" value="{{ shipping_address2 }}" class="form-control fc_text_long" id="shipping_address2" name="shipping_address2" autocomplete="shipping address-line2">
-                                </li>
-                                <li class="row fc_shipping_city">
-                                    <label class="fc_pre" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ shipping_city }}" class="form-control fc_text_long fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality">
-                                    <label style="display:none;" class="fc_error" for="shipping_city">{{ lang.checkout_error_city|raw }}</label>
-                                </li>
-                                <li class="row fc_row_select fc_foxycomplete fc_shipping_state_name">
-                                    <label class="fc_pre" for="shipping_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
-                                    <select class="form-control" data-default-value="{{ shipping_region_code }}" id="shipping_state_name" name="shipping_state_name"> 
-                                        <option value="" selected="selected">Select a State</option> 
-                                        <option value="AL">Alabama</option> 
-                                        <option value="AK">Alaska</option> 
-                                        <option value="AZ">Arizona</option> 
-                                        <option value="AR">Arkansas</option> 
-                                        <option value="CA">California</option> 
-                                        <option value="CO">Colorado</option> 
-                                        <option value="CT">Connecticut</option> 
-                                        <option value="DE">Delaware</option> 
-                                        <option value="DC">District Of Columbia</option> 
-                                        <option value="FL">Florida</option> 
-                                        <option value="GA">Georgia</option> 
-                                        <option value="ID">Idaho</option> 
-                                        <option value="IL">Illinois</option> 
-                                        <option value="IN">Indiana</option> 
-                                        <option value="IA">Iowa</option> 
-                                        <option value="KS">Kansas</option> 
-                                        <option value="KY">Kentucky</option> 
-                                        <option value="LA">Louisiana</option> 
-                                        <option value="ME">Maine</option> 
-                                        <option value="MD">Maryland</option> 
-                                        <option value="MA">Massachusetts</option> 
-                                        <option value="MI">Michigan</option> 
-                                        <option value="MN">Minnesota</option> 
-                                        <option value="MS">Mississippi</option> 
-                                        <option value="MO">Missouri</option> 
-                                        <option value="MT">Montana</option> 
-                                        <option value="NE">Nebraska</option> 
-                                        <option value="NV">Nevada</option> 
-                                        <option value="NH">New Hampshire</option> 
-                                        <option value="NJ">New Jersey</option> 
-                                        <option value="NM">New Mexico</option> 
-                                        <option value="NY">New York</option> 
-                                        <option value="NC">North Carolina</option> 
-                                        <option value="ND">North Dakota</option> 
-                                        <option value="OH">Ohio</option> 
-                                        <option value="OK">Oklahoma</option> 
-                                        <option value="OR">Oregon</option> 
-                                        <option value="PA">Pennsylvania</option> 
-                                        <option value="RI">Rhode Island</option> 
-                                        <option value="SC">South Carolina</option> 
-                                        <option value="SD">South Dakota</option> 
-                                        <option value="TN">Tennessee</option> 
-                                        <option value="TX">Texas</option> 
-                                        <option value="UT">Utah</option> 
-                                        <option value="VT">Vermont</option> 
-                                        <option value="VA">Virginia</option> 
-                                        <option value="WA">Washington</option> 
-                                        <option value="WV">West Virginia</option> 
-                                        <option value="WI">Wisconsin</option> 
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-                                    <label style="display:none;" class="fc_error" for="shipping_state_name">{{ lang.checkout_error_state|raw }}</label>
-                                </li>
-                                    <li class="row fc_shipping_postal_code">
-                                    <label class="fc_pre" for="shipping_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
-                                    <input type="text" value="{{ shipping_postal_code }}" class="form-control fc_text_short fc_required" id="shipping_postal_code" name="shipping_postal_code" autocomplete="shipping postal-code">
-                                    <label style="display:none;" class="fc_error" for="shipping_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
-                                    <label style="display:none;" class="fc_error fc_error_invalid_postal_code" for="shipping_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
-                                </li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <li class="fc_shipping_first_name">
+                                            <label class="fc_pre" for="shipping_first_name">{{ lang.checkout_first_name|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ shipping_first_name }}" class="form-control fc_text_long fc_required" id="shipping_first_name" name="shipping_first_name" autocomplete="shipping given-name">
+                                            <label style="display:none;" class="fc_error" for="shipping_first_name">{{ lang.checkout_error_first_name|raw }}</label>
+                                        </li>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <li class="fc_shipping_last_name">
+                                            <label class="fc_pre" for="shipping_last_name">{{ lang.checkout_last_name|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ shipping_last_name }}" class="form-control fc_text_long fc_required" id="shipping_last_name" name="shipping_last_name" autocomplete="shipping family-name">
+                                            <label style="display:none;" class="fc_error" for="shipping_last_name">{{ lang.checkout_error_last_name|raw }}</label>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <li class="fc_shipping_address1">
+                                            <label class="fc_pre" for="shipping_address1">{{ lang.checkout_address1|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ shipping_address1 }}" class="form-control fc_text_long fc_required" id="shipping_address1" name="shipping_address1" autocomplete="shipping address-line1">
+                                            <label style="display:none;" class="fc_error" for="shipping_address1">{{ lang.checkout_error_address1|raw }}</label>
+                                        </li>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <li class="fc_shipping_address2">
+                                            <label class="fc_pre" for="shipping_address2">{{ lang.checkout_address2|raw }}</label>
+                                            <input type="text" value="{{ shipping_address2 }}" class="form-control fc_text_long" id="shipping_address2" name="shipping_address2" autocomplete="shipping address-line2">
+                                        </li>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <li class="fc_shipping_city">
+                                            <label class="fc_pre" for="shipping_city">{{ lang.checkout_city|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ shipping_city }}" class="form-control fc_text_long fc_required" id="shipping_city" name="shipping_city" autocomplete="shipping locality">
+                                            <label style="display:none;" class="fc_error" for="shipping_city">{{ lang.checkout_error_city|raw }}</label>
+                                        </li>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <li class="fc_row_select fc_foxycomplete fc_shipping_state_name">
+                                            <label class="fc_pre" for="shipping_state_name">{{ lang.checkout_state|raw }}<span class="fc_ast">*</span></label>
+                                            <select class="form-control" data-default-value="{{ shipping_region_name }}" id="shipping_state_name" name="shipping_state_name"> 
+                                                <option value="" selected="selected">Select a State</option> 
+                                                <option value="AL">Alabama</option> 
+                                                <option value="AK">Alaska</option> 
+                                                <option value="AZ">Arizona</option> 
+                                                <option value="AR">Arkansas</option> 
+                                                <option value="CA">California</option> 
+                                                <option value="CO">Colorado</option> 
+                                                <option value="CT">Connecticut</option> 
+                                                <option value="DE">Delaware</option> 
+                                                <option value="DC">District Of Columbia</option> 
+                                                <option value="FL">Florida</option> 
+                                                <option value="GA">Georgia</option> 
+                                                <option value="ID">Idaho</option> 
+                                                <option value="IL">Illinois</option> 
+                                                <option value="IN">Indiana</option> 
+                                                <option value="IA">Iowa</option> 
+                                                <option value="KS">Kansas</option> 
+                                                <option value="KY">Kentucky</option> 
+                                                <option value="LA">Louisiana</option> 
+                                                <option value="ME">Maine</option> 
+                                                <option value="MD">Maryland</option> 
+                                                <option value="MA">Massachusetts</option> 
+                                                <option value="MI">Michigan</option> 
+                                                <option value="MN">Minnesota</option> 
+                                                <option value="MS">Mississippi</option> 
+                                                <option value="MO">Missouri</option> 
+                                                <option value="MT">Montana</option> 
+                                                <option value="NE">Nebraska</option> 
+                                                <option value="NV">Nevada</option> 
+                                                <option value="NH">New Hampshire</option> 
+                                                <option value="NJ">New Jersey</option> 
+                                                <option value="NM">New Mexico</option> 
+                                                <option value="NY">New York</option> 
+                                                <option value="NC">North Carolina</option> 
+                                                <option value="ND">North Dakota</option> 
+                                                <option value="OH">Ohio</option> 
+                                                <option value="OK">Oklahoma</option> 
+                                                <option value="OR">Oregon</option> 
+                                                <option value="PA">Pennsylvania</option> 
+                                                <option value="RI">Rhode Island</option> 
+                                                <option value="SC">South Carolina</option> 
+                                                <option value="SD">South Dakota</option> 
+                                                <option value="TN">Tennessee</option> 
+                                                <option value="TX">Texas</option> 
+                                                <option value="UT">Utah</option> 
+                                                <option value="VT">Vermont</option> 
+                                                <option value="VA">Virginia</option> 
+                                                <option value="WA">Washington</option> 
+                                                <option value="WV">West Virginia</option> 
+                                                <option value="WI">Wisconsin</option> 
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+                                            <label style="display:none;" class="fc_error" for="shipping_state_name">{{ lang.checkout_error_state|raw }}</label>
+                                        </li>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <li class="fc_shipping_postal_code">
+                                            <label class="fc_pre" for="shipping_postal_code">{{ lang.checkout_postal_code|raw }}<span class="fc_ast">*</span></label>
+                                            <input type="text" value="{{ shipping_postal_code }}" class="form-control fc_text_short fc_required" id="shipping_postal_code" name="shipping_postal_code" autocomplete="shipping postal-code">
+                                            <label style="display:none;" class="fc_error" for="shipping_postal_code">{{ lang.checkout_error_postal_code|raw }}</label>
+                                            <label style="display:none;" class="fc_error fc_error_invalid_postal_code" for="shipping_postal_code">{{ lang.checkout_error_invalid_postal_code|raw }}</label>
+                                        </li>
+                                    </div>
+                                </div>
                             </ol>
                             <div class="row" id="fc_copy_billing_address">
                                 <p><a href='#' onclick='FC.checkout.copyBillingToShipping(); return false;'>{{ lang.checkout_copy_billing_address_to_shipping|raw }}</a></p>
@@ -572,7 +591,7 @@ BEGIN checkout
 
         {% block checkout_shipping_and_summary %}
             <!--  *********** shipping : Delivery &amp; Subtotal ************* -->
-            <div id="fc_shipping_container" class="row"{% if is_updateinfo %} style="display:none;"{% endif %}>
+            <div id="fc_shipping_container" class="hide"{% if is_updateinfo %} style="display:none;"{% endif %}>
                 <fieldset id="fc_shipping">
                     <legend>{{ lang.checkout_delivery_and_subtotal|raw }}</legend>
                     <div class="fc_inner">
@@ -664,6 +683,7 @@ BEGIN checkout
                                     <input type="{{ payment_method_input_type }}"{% if payment_method_type == 'plastic' %} checked="checked"{% endif %} name="fc_payment_method" id="fc_payment_method_plastic" class="fc_radio" value="plastic" autocomplete="off" />
                                     <span>{{ lang.checkout_pay_with_credit_card|raw }}</span>
                                 </label>
+                                <small class="text-center">Your payment is secure with us.  We use <a href="http://www.foxycart.com/features/feature/security" target="_blank">Foxycart</a> to ensure that all information is encrypet at all times</small>
                             {% if has_multiple_payment_options %}
                                 <fieldset>
                                     <ol>
@@ -683,56 +703,66 @@ BEGIN checkout
                                                 <span>{{ lang.checkout_enter_new_card|raw }}</span>
                                             </label>
                                         </li>
-                                        <li id="li_cc_number" class="row li_cc_number">
-                                            <label for="cc_number" class="fc_pre">{{ lang.checkout_card_number|raw }}</label>
-                                            <input type="text" name="cc_number" id="cc_number" class="form-control fc_text_long fc_required" autocomplete="off" value="{{ cc_number }}" />
-                                            <label for="cc_number" class="fc_error" style="display:none">{{ lang.checkout_error_card_number|raw }}</label>
-                                        </li>
-                                        <li id="li_cc_cvv2" class="row li_cc_cvv2">
-                                            <label for="cc_cvv2" class="fc_pre">
-                                                {{ lang.checkout_verification_code|raw }}
-                                                <span id="fc_help_cvv2" class="fc_help">(<a id="fc_help_cvv2_link" class="fc_help fc_jTip" href="https://{{ store_domain }}{{ base_directory }}/checkout.help.php?topic=cvv2&amp;width=308">{{ lang.checkout_question_mark|raw }}</a>)</span>
-                                            </label>
-                                            <input value="{{ cc_cvv2 }}" type="text" name="cc_cvv2" id="cc_cvv2" autocomplete="off" class="form-control fc_text_short fc_required" maxlength="4" />
-                                            <label for="cc_cvv2" class="fc_error" style="display:none">{{ lang.checkout_error_verification_code|raw }}</label>
-                                        </li>
-                                        <li id="li_cc_issue_number" class="row">
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <li id="li_cc_number" class="li_cc_number">
+                                                    <label for="cc_number" class="fc_pre">{{ lang.checkout_card_number|raw }}</label>
+                                                    <input type="text" name="cc_number" id="cc_number" class="form-control fc_text_long fc_required" autocomplete="off" value="{{ cc_number }}" />
+                                                    <label for="cc_number" class="fc_error" style="display:none">{{ lang.checkout_error_card_number|raw }}</label>
+                                                </li>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <li id="li_cc_cvv2" class="li_cc_cvv2">
+                                                    <label for="cc_cvv2" class="fc_pre">
+                                                        {{ lang.checkout_verification_code|raw }}
+                                                        <span id="fc_help_cvv2" class="fc_help">(<a id="fc_help_cvv2_link" class="fc_help fc_jTip" href="https://{{ store_domain }}{{ base_directory }}/checkout.help.php?topic=cvv2&amp;width=308">{{ lang.checkout_question_mark|raw }}</a>)</span>
+                                                    </label>
+                                                    <input value="{{ cc_cvv2 }}" type="text" name="cc_cvv2" id="cc_cvv2" autocomplete="off" class="form-control fc_text_short fc_required" maxlength="4" />
+                                                    <label for="cc_cvv2" class="fc_error" style="display:none">{{ lang.checkout_error_verification_code|raw }}</label>
+                                                </li>
+                                            </div>
 
-                                            <label for="cc_issue_number" class="fc_pre">
-                                                {{ lang.checkout_issue_number|raw }}
-                                            </label>
-                                            <input value="{{ cc_issue_number }}" type="text" name="cc_issue_number" id="cc_issue_number" class="form-control fc_text_short fc_required" maxlength="2" />
-                                            <label for="cc_issue_number" class="fc_error" style="display:none">{{ lang.checkout_error_issue_number|raw }}</label>
-                                        </li>
-                                        <li id="li_cc_start_date_month" class="row">
-                                            <label for="cc_start_date_month" class="fc_pre">{{ lang.checkout_start_date|raw }}</label>
-                                            <select id="cc_start_date_month" name="cc_start_date_month" class="inline select_mo">
-                                                <option value="">{{ lang.cart_month|raw }}</option>
-                                                {{ cc_start_date_month_options|raw }}
-                                            </select>
-                                            <select id="cc_start_date_year" name="cc_start_date_year" class="inline select_yr">
-                                                <option value="">{{ lang.cart_year|raw }}</option>
-                                                {{ cc_start_date_year_options|raw }}
-                                            </select>
-                                            <label for="cc_start_date_month" class="fc_error" style="display:none">{{ lang.checkout_error_start_date|raw }}</label>
-                                        </li>
-                                        <li id="li_cc_exp_month" class="row">
-                                            <label for="cc_exp_month" class="fc_pre">{{ lang.checkout_expiration|raw }}</label>
-                                            <select id="cc_exp_month" name="cc_exp_month" class="inline select_mo">
-                                                <option value="">{{ lang.cart_month|raw }}</option>
-                                                {{ cc_expiration_month_options|raw }}
-                                            </select>
-                                            <select id="cc_exp_year" name="cc_exp_year" class="inline select_yr">
-                                                <option value="">{{ lang.cart_year|raw }}</option>
-                                                {{ cc_expiration_year_options|raw }}
-                                            </select>
-                                            <label for="cc_exp_month" class="fc_error" style="display:none">{{ lang.checkout_error_expiration|raw }}</label>
-                                        </li>
+                                            <div class="col-sm-3">
+                                                <li id="li_cc_issue_number">
+
+                                                    <label for="cc_issue_number" class="fc_pre">
+                                                        {{ lang.checkout_issue_number|raw }}
+                                                    </label>
+                                                    <input value="{{ cc_issue_number }}" type="text" name="cc_issue_number" id="cc_issue_number" class="form-control fc_text_short fc_required" maxlength="2" />
+                                                    <label for="cc_issue_number" class="fc_error" style="display:none">{{ lang.checkout_error_issue_number|raw }}</label>
+                                                </li>
+                                            </div>
+                                        </div>
+                                                <li id="li_cc_start_date_month">
+                                                    <label for="cc_start_date_month" class="fc_pre">{{ lang.checkout_start_date|raw }}</label>
+                                                    <select id="cc_start_date_month" name="cc_start_date_month" class="inline select_mo">
+                                                        <option value="">{{ lang.cart_month|raw }}</option>
+                                                        {{ cc_start_date_month_options|raw }}
+                                                    </select>
+                                                    <select id="cc_start_date_year" name="cc_start_date_year" class="inline select_yr">
+                                                        <option value="">{{ lang.cart_year|raw }}</option>
+                                                        {{ cc_start_date_year_options|raw }}
+                                                    </select>
+                                                    <label for="cc_start_date_month" class="fc_error" style="display:none">{{ lang.checkout_error_start_date|raw }}</label>
+                                                </li>
+
+                                                <li id="li_cc_exp_month">
+                                                    <label for="cc_exp_month" class="fc_pre">{{ lang.checkout_expiration|raw }}</label>
+                                                    <select id="cc_exp_month" name="cc_exp_month" class="inline select_mo">
+                                                        <option value="">{{ lang.cart_month|raw }}</option>
+                                                        {{ cc_expiration_month_options|raw }}
+                                                    </select>
+                                                    <select id="cc_exp_year" name="cc_exp_year" class="inline select_yr">
+                                                        <option value="">{{ lang.cart_year|raw }}</option>
+                                                        {{ cc_expiration_year_options|raw }}
+                                                    </select>
+                                                    <label for="cc_exp_month" class="fc_error" style="display:none">{{ lang.checkout_error_expiration|raw }}</label>
+                                                </li>
 
                                         <li id="li_save_cc" class="row fc_row_checkbox">
                                             <label for="save_cc" class="fc_checkbox">
-                                                <input{% if save_cc_is_checked %} checked="checked"{% endif %} type="checkbox" name="save_cc" id="save_cc" value="1" class="fc_checkbox" />
-                                                <span>{{ save_cc_text }}</span>
+                                                <input{% if save_cc_is_checked %} checked="checked"{% endif %} type="checkbox" name="save_cc" id="save_cc" value="1"/>
+                                                {{ save_cc_text }}
                                             </label>
                                             <label for="save_cc" class="fc_error" style="display:none">{{ lang.checkout_error_subscription_permission|raw }}</label>
                                             <input type="hidden" name="cc_number_masked" id="cc_number_masked" value="{{ checkout_cc_number_masked }}" />
@@ -813,7 +843,7 @@ BEGIN checkout
                         </ol>
 
                         <div id="fc_complete_order_button_container" class="row fc_row_actions">
-                            <button id="fc_complete_order_button" class="fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }}</button>
+                            <button id="fc_complete_order_button" class="fc_button{{ submit_button_class }} btn btn-primary btn-lg fc_button" type="button" value="{{ submit_button_value }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }}</button>
                             <div id="fc_complete_order_processing" style="display:none;"><strong class="fc_error"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
                         </div><!-- #fc_complete_order_button_container -->
 
@@ -839,7 +869,7 @@ BEGIN checkout
             {{ lang.checkout_subscription_cancel_message|raw }}
         </div><!-- #fc_subscription_cancel_message -->
 
-        <div id="fc_complete_order_button_container" class="row fc_row_actions">
+        <div id="fc_complete_order_button_container" class="row center fc_row_actions">
             <button id="fc_complete_order_button" class="fc_button{{ submit_button_class }}" type="button" value="{{ submit_button_value }}" onclick="FC.checkout.validateAndSubmit()">{{ submit_button_value }}</button>
             <div id="fc_complete_order_processing" style="display:none;"><strong class="fc_error"></strong> <br /><img src="//cdn.foxycart.com/static{{ base_directory }}/images/ajax-loader.gif?ver=1" alt="{{ lang.checkout_loading|raw }}" width="220" height="19" /></div>
         </div><!-- #fc_complete_order_button_container -->
