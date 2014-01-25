@@ -3,11 +3,13 @@
 $PageTitle="Checkout Page - Sockscribe Me - Awesome Socks Delivered to Your Door Monthly";
 $page = "Checkout";
 function customPageHeader(){?>
+
   <!--Arbitrary HTML Tags-->
 <?php }
 
 include_once('header.php');
 ?>
+
 
 <!-- begin page content -->
 
@@ -16,6 +18,7 @@ include_once('header.php');
     <div class="page-header">
         <h1>Checkout  <small>You are 1 step away for happiness</small></h1>
     </div>
+
 {% block checkout %}
 
 {# BEGIN CHECKOUT TWIG TEMPLATE #}
@@ -138,7 +141,7 @@ BEGIN checkout
                     </li>
                 </ol>
                 <input type="hidden" name="email_found" id="email_found" value="{{ email_found }}" />
-                <div id="fc_continue" class="row fc_row_actions"><a href="#" onclick="FC.checkout.checkLogin(); return false;" class="btn btn-block btn-default">{{ lang.checkout_continue|raw }}</a></div>
+                <div id="fc_continue" class="row fc_row_actions center"><a href="#" onclick="FC.checkout.checkLogin(); return false;" class="btn btn-default">{{ lang.checkout_continue|raw }}</a></div>
                 <span class="fc_clear">&nbsp;</span>
             </div><!-- .fc_inner -->
         </fieldset><!-- #fc_login_register -->
@@ -581,61 +584,6 @@ BEGIN checkout
                                         </div>
                                     </div>
                                 </ol>
-
-                                <legend>Gift Options</legend>
-
-                                <fieldset class="form-group">
-                                    <div class="radio gift-toggle">
-                                    <label>
-                                      <input type="radio" name="Is_this_a_gift" id="1" value="Nope it is for me" tabindex=400 data-toggle="radio" checked>
-                                      <p>This is for me</p>
-                                    </label>
-                                </div>
-                                    <div class="radio gift-toggle">        
-                                <label>
-                                      <input type="radio" name="Is_this_a_gift" data-toggle="radio" id="2" value="2">
-                                      <p>This is a gift</p>
-                                    </label>
-                                </div>
-                                </fieldset>
-                                  <div class="fc_inner" id="gift_fields" style="display: none;">
-                                    <ol>
-                                        <div class="row">
-                                              <div class="form-group col-sm-8">
-                                                <li>
-                                                  <input type="text" class="form-control" name="Recipients Email" id="recipients_email" placeholder="Recipients Email">
-                                                </li>
-                                            </div>
-
-                                            <div class="form-group col-sm-4">
-                                                <li>
-                                                 <select class="form-control" name="Occasion" id="occasion">
-                                                    <option value="" selected="selected">Select an Occasion</option> 
-                                                    <option value="Birthday">Birthday</option>
-                                                    <option value="Thank You">Thank You</option>
-                                                    <option value="Anniversary">Anniversary</option>
-                                                    <option value="Graduation">Graduation</option>
-                                                    <option value="Congratulations">Congratulations</option>
-                                                    <option value="Workplace">Workplace</option>
-                                                    <option value="Get Well">Get Well</option>
-                                                    <option value="Good Luck">Good Luck</option>
-                                                    <option value="Other">Other</option>
-                                                  </select>
-                                              </li>
-                                            </div>
-
-                                        </div>
-
-                                          
-                                        <div class="row">
-                                            <div class="form-group col-sm-12">
-                                                <li>
-                                              <textarea rows="3" placeholder="Message for Recipient" name="Gift Message" id="gift_message" class="col-xs-12 form-control"></textarea>
-                                                </li>
-                                            </div>
-                                        </div>       
-                                    </ol>
-                                </div>
                          <ol{% if multiship_data|length == 1 %} style="display:none;"{% endif %} class="fc_shipto_subtotal">
                                     <li class="row fc_shipto_{{ multiship.number }}_subtotal">
                                         <label class="fc_pre" for="shipto_{{ multiship.number }}_subtotal">{{ lang.checkout_shipment_subtotal|raw }}</label>
@@ -663,6 +611,61 @@ BEGIN checkout
                                     </li>
                                 </ol>
 
+
+                                <legend>Gift Options</legend>
+
+                                <fieldset class="form-group">
+                                    <div class="radio gift-toggle">
+                                    <label>
+                                      <input type="radio" name="Is_this_a_gift" id="1" value="Nope it is for me" tabindex=400 data-toggle="radio" checked>
+                                      <p>This is for me</p>
+                                    </label>
+                                </div>
+                                    <div class="radio gift-toggle">        
+                                <label>
+                                      <input type="radio" name="Is_this_a_gift" data-toggle="radio" id="2" value="2">
+                                      <p>This is a gift</p>
+                                    </label>
+                                </div>
+                                </fieldset>
+                                  <div class="fc_inner" id="gift_fields" style="display: none;">
+                                    <ol>
+                                        <div class="row">
+                                              <div class="form-group col-sm-7">
+                                                <li>
+                                                  <input type="text" class="form-control" name="Recipients Email" id="recipients_email" placeholder="Recipients Email">
+                                                </li>
+                                            </div>
+
+                                            <div class="form-group col-sm-5">
+                                                <li>
+                                                 <select class="form-control" name="Occasion" id="occasion">
+                                                    <option value="" selected="selected">Select an Occasion</option> 
+                                                    <option value="Birthday">Birthday</option>
+                                                    <option value="Thank You">Thank You</option>
+                                                    <option value="Anniversary">Anniversary</option>
+                                                    <option value="Graduation">Graduation</option>
+                                                    <option value="Congratulations">Congratulations</option>
+                                                    <option value="Workplace">Workplace</option>
+                                                    <option value="Get Well">Get Well</option>
+                                                    <option value="Good Luck">Good Luck</option>
+                                                    <option value="Other">Other</option>
+                                                  </select>
+                                              </li>
+                                            </div>
+
+                                        </div>
+
+                                          
+                                        <div class="row">
+                                            <div class="form-group col-sm-12">
+                                                <li>
+                                              <textarea rows="3" placeholder="Message for Recipient" name="Gift Message" id="gift_message" class="col-xs-12 form-control"></textarea>
+                                                </li>
+                                            </div>
+                                        </div>   
+                                    </ol>
+                                </div>
                                 ^^multiship_custom_fields_{{ multiship.number }}^^
                                 {% if multiship.has_live_rate_shippable_products %}
                                     <div class="row fc_shipping_methods_container">
@@ -1388,6 +1391,7 @@ BEGIN checkout
 
     {# END CART TWIG TEMPLATE #}
 
+      <hr class="featurette-divider">
 
             {% block continue_shopping %}
         <div id="fc_cancel_continue_shopping">
@@ -1501,6 +1505,99 @@ jQuery(document).ready(function(){
     // FC.checkout.InitCoupon();
 });
 </script>
+
+<script type="text/javascript">
+function verify_address(address_type) {
+ 
+    //Setup Vars
+    var smarty_html_key = "404794707462432964";
+ 
+    var address = $("#" + address_type + "_address1").val();
+    var city = $("#" + address_type + "_city").val();
+    var state = $("#" + address_type + "_state").val();
+    var postal_code = $("#" + address_type + "_postal_code").val();
+    var country = $("#" + address_type + "_country").val();
+ 
+    //Not US, Skip
+    if ($("#" + address_type + "_country").val() != "US") return;
+ 
+    //Not Enough Vals, Skip
+    if (!address || !city || !state) return;
+ 
+    var url = "https://api.smartystreets.com/street-address?street=";
+    url += encodeURIComponent(address);
+    if ($("#" + address_type + "_address1").val()) url += encodeURIComponent(" " + $("#" + address_type + "_address2").val());
+    url += "&city=" + encodeURIComponent(city);
+    url += "&state=" + encodeURIComponent(state);
+    url += "&zipcode=" + encodeURIComponent(postal_code);
+    url += "&candidates=3&auth-token=" + smarty_html_key + "&callback=?";
+    jQuery.getJSON(url, function(response) {
+        $("#" + address_type + "_address_select").html("");
+        if (response.length == 0) {
+            $("#" + address_type + "_address_warning").show();
+            return false;
+        }
+        if (response.length == 1) {
+            var a = response[0];
+            var address1 = a.delivery_line_1;
+            var address2 = a.delivery_line_2;
+            var city = a.components.city_name;
+            var state = a.components.state_abbreviation;
+            var postal_code = a.components.zipcode;
+            if (a.components.plus4_code) postal_code += "-" + a.components.plus4_code;
+ 
+            $("#" + address_type + "_address1").val(address1);
+            $("#" + address_type + "_address2").val(address2);
+            $("#" + address_type + "_city").val(city);
+            $("#" + address_type + "_state").val(state);
+            $("#" + address_type + "_postal_code").val(postal_code);
+ 
+        } else if (response.length > 1) {
+            var str = "<p>Your Address Had a Few Options:</p>";
+            for (i = 0; i < response.length; i++) {
+                var a = response[i];
+                var address1 = a.delivery_line_1;
+                var address2 = a.delivery_line_2 ? a.delivery_line_2 : '';
+                var city = a.components.city_name;
+                var state = a.components.state_abbreviation;
+                var postal_code = a.components.zipcode;
+                if (a.components.plus4_code) postal_code += "-" + a.components.plus4_code;
+                str += '<p><a href="#" class="set_verified_address" data-address_type="' + address_type + '" data-address1="' + address1 + '" data-address2="' + address2 + '" data-city="' + city + '" data-state="' + state + '" data-postal_code="' + postal_code + '">';
+                str += address1 + "<br>";
+                if (address2) str += address1 + "<br>";
+                str += a.last_line;
+                str += "</a></p>";
+            }
+            $("#" + address_type + "_address_select").html(str).show();
+ 
+        }
+        $("#" + address_type + "_address_warning").hide();
+        return true;
+    });
+}
+ 
+jQuery(document).ready(function($){
+    $("#customer_address1, #customer_address2, #customer_city, #customer_state, #customer_state, #customer_postal_code, #customer_country").change(function() {
+        verify_address("customer");
+    });
+    $("#shipping_address1, #shipping_address2, #shipping_city, #shipping_state, #shipping_state, #shipping_postal_code, #shipping_country").change(function() {
+        verify_address("shipping");
+    });
+    $(document).on("click", ".set_verified_address", function() {
+        var address_type = $(this).attr("data-address_type");
+        $("#" + address_type + "_address1").val($(this).attr("data-address1"));
+        $("#" + address_type + "_address2").val($(this).attr("data-address2"));
+        $("#" + address_type + "_city").val($(this).attr("data-city"));
+        $("#" + address_type + "_state").val($(this).attr("data-state"));
+        $("#" + address_type + "_postal_code").val($(this).attr("data-postal_code"));
+        $("#" + address_type + "_address_select").html("").hide();
+        return false;
+    });
+    $("#fc_customer_billing_list").append('<li id="customer_address_select" style="display: none;"></li><li id="customer_address_warning" style="display: none; color: #990000; font-weight: bold;">You may want to check this address as it appears it might have a problem.</li>');
+    $("#fc_address_shipping_list").append('<li id="shipping_address_select" style="display: none;"></li><li id="shipping_address_warning" style="display: none; color: #990000; font-weight: bold;">You may want to check this address as it appears it might have a problem.</li>');
+});
+</script>
+
 <?php
 include_once('footer.php');
 ?>

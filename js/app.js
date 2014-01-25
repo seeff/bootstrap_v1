@@ -2,18 +2,22 @@ $(window).load(function() {
 
 
 
-	$('input:radio[name="name"]').change(function(){
-	    if($(this).val() == 'Month to Month'){
-	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"price\" value=\"12.00\"<\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"category\" value=\"MonthToMonth\">"); 
-	    }if($(this).val() == 'Month to Month - Hello Giggles'){
-	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"price\" value=\"12.00\"<\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"category\" value=\"MonthToMonthHelloGiggles\">"); 
-	    } if ($(this).val() == 'Six Months Subscription'){
-	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"sub_enddate\" value=\""+sixMonthsDate+"\"><\/input>\r\n <input type=\"hidden\" name=\"price\" value=\"0.00\"><\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"code\" value=\"free\"><\/input>\r\n<input type=\"hidden\" name=\"2:name\" value=\"Six Months Subscription Paid\"><\/input>\r\n<input type=\"hidden\" name=\"2:price\" value=\"72.00\"><\/input>\r\n<input type=\"hidden\" name=\"2:code\" value=\"6m\"><\/input>\r\n<input type=\"hidden\" name=\"2:category\" value=\"SixMonths\"><\/input>\r\n");
-	    } if ($(this).val() == 'Twelve Months Subscription'){
-	       $( "#checkout-button" ).before( "<input type=\"hidden\" name=\"sub_enddate\" value=\""+twelveMonthsDate+"\"><\/input>\r\n"+"<input type=\"hidden\" name=\"price\" value=\"0.00\"><\/input>\r\n<input type=\"hidden\" name=\"sub_frequency\" value=\"1m\"><\/input>\r\n<input type=\"hidden\" name=\"code\" value=\"free\"><\/input>\r\n<input type=\"hidden\" name=\"2:name\" value=\"Twelve Months Subscription Paid\"><\/input>\r\n<input type=\"hidden\" name=\"2:price\" value=\"144.00\"><\/input>\r\n<input type=\"hidden\" name=\"2:code\" value=\"12m\"><\/input>\r\n<input type=\"hidden\" name=\"2:category\" value=\"TwelveMonths\"><\/input>");
+	<!-- link example -->
+<a href="https://sockscribeme.foxycart.com/cart?name=Cool+Example||5ff217e2c9b38e5b2bce4473ec1745586fb197754087e89c1334578a002e6e79&price=10||a0dfb29511b8c738d58ed283c4587f8a640b98c8a411b11b187078c3696fb886&color=red||4e0adc8563d27777b87221b4e5ea98b5f566e702ade841f815c55d0914f2116d&code=sku123||c99266575f1876f69f20a1f061a98cc563190d4fab7c36f8339ed05c6c73ba0d">Add a red Cool Example</a>
+<!-- form example -->
+<form action="https://sockscribeme.foxycart.com/cart" method="post" accept-charset="utf-8">
+<input type="hidden" name="name||5ff217e2c9b38e5b2bce4473ec1745586fb197754087e89c1334578a002e6e79" value="Cool Example" />
+<input type="hidden" name="price||a0dfb29511b8c738d58ed283c4587f8a640b98c8a411b11b187078c3696fb886" value="10" />
+<input type="hidden" name="code||c99266575f1876f69f20a1f061a98cc563190d4fab7c36f8339ed05c6c73ba0d" value="sku123" />
+<label class="label_left">Size</label>
+<select name="size">
+    <option value="small||daeee200f83dc106a10aa17d39805b084c781d3b84bc63f99498b447e344806c">Small</option>
+    <option value="medium||3b0651fe242012bf650f736a67d696096c5f797b5ab5f3ad730ff6afc13fca77">Medium</option>
+    <option value="large||2dba4bc9f0419921ce23cabcc4bb157378f335e601cb1fddf3a435017a75dea8">Large</option>
+</select>
+<input type="submit" name="Add a Cool Example||a4158170ad784cd1869a60e0933a1fcadac493b0d7ab5ca014fbd7b3bd73f117" value="Add a Cool Example||a4158170ad784cd1869a60e0933a1fcadac493b0d7ab5ca014fbd7b3bd73f117" class="submit" />
+</form>
 
-	    }
-	});
 
     
 

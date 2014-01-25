@@ -8,5 +8,5 @@ $recipient = "werebreakingup@sockscribe.me";
 $subject = "Cancelation Feedback from $first_name";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "Thank You for your feedback! "<a href='./index.php'> Back to Sockscribe Me</a>";
+echo "Thank You!" . " -" . "<a href='./index.php'> Back to Sockscribe Me</a>";
 ?>

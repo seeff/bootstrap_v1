@@ -115,7 +115,9 @@ include_once('header.php');
         <div class="col-md-7">
           <h2 class="featurette-heading">The surprise <span class="text-muted">It’s freaking exciting!</span></h2>
           <p class="lead">Unlike boysenberry picking season, sock picking season is an activity we partake in year round. While we allow you the option to choose from two categories of sock styles--patterns and graphics--we wouldn’t be able to call your socks a surprise if you knew exactly what you were getting ahead of time. So relax, we’ve got your feet covered.</p>
-          <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+           <div class="row center">
+            <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+          </div>
         </div>
       </div>
 
@@ -191,19 +193,24 @@ include_once('header.php');
           <h2 class="featurette-heading">Watch Our Video. <span class="text-muted">Now.</span></h2>
           <p class="lead">So you’re excited about your impending transformation to greatness, but you apprehensive about coming off like some type of superhero. Well, don’t worry! You’re not  going to possess magical abilities to fly or spin webs any time soon; after all, we’re sending you socks. </p>
           <p class="lead">Either way, if you want a more realistic idea of what these socks will do for you watch this video, it may give you a glimpse into your future. </p>
-          <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+          <div class="row center">
+            <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+          </div>
         </div>
 
-              <hr class="featurette-divider">
-
-
       </div>
+
+      <hr class="featurette-divider">
+
+
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">The Best Socks. <span class="text-muted">Trust us.</span></h2>
           <p class="lead">With great power comes great responsibility, which is why we’ll never send you a pair of Aunt Sheryl’s DIY holiday socks. Every month our sock stylists select high quality socks from some of the most well known brands in the industry.</p>
           <p class="lead">While you may never see our stylists, appreciate that they share 117% of their DNA with both unicorns and musical, green-haired chocolate factory workers; they’re good at what they do. </p>
-          <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+           <div class="row center">
+            <a class="btn btn-lg btn-primary" href="./sock-subscription.php">Get Started</a>
+          </div>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="./images/socks-on-ropes.jpg" alt="Sock Brands - Happy Socks, Richer and Poorer, The Sock Guys and Sock it to Me">
