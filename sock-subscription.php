@@ -26,7 +26,7 @@ include_once('header.php');
 			</div>
 
 			<div class="row duration-container">
-				<label class="col-sm-4">
+				<label class="col-xs-4">
 
 						<div class="tile radio-duration">
 					 		<div class="information">
@@ -45,7 +45,7 @@ include_once('header.php');
 				 		</div>
 				</label>
 
-				<label class="col-sm-4">
+				<label class="col-xs-4">
 						<div class="tile radio-duration">
 					 		<div class="information">
 								<input type="radio" name="name" value="Six Months Subscription" required>
@@ -66,7 +66,7 @@ include_once('header.php');
 						 </div>
 				</label>
 
-				<label class="col-sm-4">
+				<label class="col-xs-4">
 						<div class="tile radio-duration">
 					 		<div class="information">
 								<input type="radio" name="name" value="Twelve Months Subscription" required>

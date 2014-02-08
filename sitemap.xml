@@ -8,468 +8,663 @@
 
 <url>
   <loc>http://sockscribe.me/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/sock-subscription.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/about-us.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/frequently-asked-questions.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/contact-us.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/www.youtube.com/embed/nGTxZukeAQM</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/privacy.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/terms.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/feed/</loc>
-  <lastmod>2013-11-26T23:33:13+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <lastmod>2014-01-30T01:51:27+00:00</lastmod>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-3/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <loc>http://sockscribe.me/blog/2014/01/school-pencil-socks/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/category/fun-sock-picture-of-the-day/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/category/instagram/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/awesome-sock-pictures/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/awesome-socks/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/fun-sock-pictures/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/fun-socks/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/happy-socks/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/instagram/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/mysockswerehere/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/sock-it-to-me/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/sock-of-the-day/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/sock-subscription/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <loc>http://sockscribe.me/blog/2014/01/toast-socks/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <loc>http://sockscribe.me/blog/2014/01/sushi-socks/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-26/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <loc>http://sockscribe.me/blog/2014/01/leopard-print-socks/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/tag/sock-pictures/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-28/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-25/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-24/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-23/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-22/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-21/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-20/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/embed/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/embed/sock-subscription.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/embed/about-us.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/embed/frequently-asked-questions.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/blog/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/embed/contact-us.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/embed/privacy.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/www.youtube.com/embed/terms.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/category/instagram/page/2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/tag/awesome-sock-pictures/page/2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/tag/instagram/page/2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/tag/mysockswerehere/page/2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/08/sock-quote-of-the-day/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/category/sock-quote/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/category/sockisms/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/tag/quote-of-the-day/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/tag/sock-quote-2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-19/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-18/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-17/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/tag/sock-pictures/page/2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/10/instagram-pic-of-the-day-2/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/10/instagram-pic-of-the-day/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/10/socktime-akeiba-mysockswerehere-sockscribeme-socks-stripesocks-polkadotsocks-contrast-texture-fuzzysocks-color-sockwar-cute-happysocks-socksofinstagram-follow-photooftheday-instagood/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/10/sock-quote-eddie-lizzard/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/sock-subscription-options.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2014/01/crazy-socks-rock/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/category/uncategorized/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/10/adventure-time-evvd_d-mysockswerehere-sockscribeme-adventuretime-adventuretimesocks-stripesocks-jake-jakethedog-color-sockwar-cute-happysocks-mensstyle-socksofinstagram-follow-photoof/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/tag/single-socks/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/10/rubber-ducks-classic-dhamme3-mysockswerehere-sockscribeme-rubberducky-rubberduck-ducksocks-color-sockwar-cute-happysocks-mensstyle-socksofinstagram-follow-photooftheday-instagood-sock/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/tag/white-socks/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/10/legs-or-hotdogs-dalmatian-socks-from-lachilblu-for-reference-httphot-dog-legs-tumblr-com-socks-mysockswerehere-sockoftheday-sotd-hotdogorlegs-legsorhotdogs-picoftheday-potd-instagood/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-27/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-26/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-25/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-24/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/embed/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/embed/sock-subscription.php</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/embed/about-us.php</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/embed/frequently-asked-questions.php</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/blog/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/embed/contact-us.php</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/embed/privacy.php</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/www.youtube.com/embed/terms.php</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-23/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/fun-sock-picture-of-the-day/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/instagram/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/awesome-sock-pictures/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/awesome-socks/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/fun-sock-pictures/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/fun-socks/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/happy-socks/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/instagram/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/mysockswerehere/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-it-to-me/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-of-the-day/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-subscription/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/crazy-socks-new-year-message/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/crazy-socks/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/fun-corporate-socks/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/happy-new-year/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/10/sock-quote-eddie-lizzard/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/sock-subscription-options.html</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/2013/10/losing-socks-laundry-cartoon/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/2013/10/nick-saban-wearing-socks/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-16/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-16/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-15/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-15/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-14/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-14/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-13/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-13/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-12/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-12/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-11/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-11/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-10/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-10/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-9/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/12/fun-sock-picture-of-the-day-8/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-7/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-6/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-5/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-3/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day-2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/fun-sock-picture-of-the-day/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-26/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-pictures/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-25/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-24/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/10/instagram-pic-of-the-day-2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/10/instagram-pic-of-the-day/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/10/socktime-akeiba-mysockswerehere-sockscribeme-socks-stripesocks-polkadotsocks-contrast-texture-fuzzysocks-color-sockwar-cute-happysocks-socksofinstagram-follow-photooftheday-instagood/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/10/adventure-time-evvd_d-mysockswerehere-sockscribeme-adventuretime-adventuretimesocks-stripesocks-jake-jakethedog-color-sockwar-cute-happysocks-mensstyle-socksofinstagram-follow-photoof/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/10/rubber-ducks-classic-dhamme3-mysockswerehere-sockscribeme-rubberducky-rubberduck-ducksocks-color-sockwar-cute-happysocks-mensstyle-socksofinstagram-follow-photooftheday-instagood-sock/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/10/legs-or-hotdogs-dalmatian-socks-from-lachilblu-for-reference-httphot-dog-legs-tumblr-com-socks-mysockswerehere-sockoftheday-sotd-hotdogorlegs-legsorhotdogs-picoftheday-potd-instagood/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/08/sock-quote-of-the-day/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/sock-quote/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/sockisms/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/quote-of-the-day/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-quote-2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-22/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-21/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-20/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-19/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-18/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2014/01/fun-sock-picture-of-the-day-17/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/www.youtube.com/blog/sock-subscription.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/www.youtube.com/blog/about-us.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/www.youtube.com/blog/frequently-asked-questions.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/www.youtube.com/blog/contact-us.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/www.youtube.com/blog/privacy.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/www.youtube.com/blog/terms.php</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/fun-sock-picture-of-the-day/page/3/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/category/instagram/page/3/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/awesome-sock-pictures/page/3/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/awesome-socks/page/3/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/fun-sock-pictures/page/3/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/fun-socks/page/3/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/happy-socks/page/3/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/instagram/page/3/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/mysockswerehere/page/3/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-9/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <loc>http://sockscribe.me/blog/tag/sock-it-to-me/page/3/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-8/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <loc>http://sockscribe.me/blog/tag/sock-of-the-day/page/3/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-7/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <loc>http://sockscribe.me/blog/tag/sock-subscription/page/3/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/tag/sock-pictures/page/3/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-23/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-22/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-21/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-20/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-19/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-18/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-17/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-pictures/page/2/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-16/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-15/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-14/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-3/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-6/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-5/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-4/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.41</priority>
+  <loc>http://sockscribe.me/blog/category/fun-sock-picture-of-the-day/page/4/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/category/instagram/page/4/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.33</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/awesome-sock-pictures/page/4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/awesome-socks/page/4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/fun-sock-pictures/page/4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/fun-socks/page/4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/happy-socks/page/4/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/instagram/page/4/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.33</priority>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://sockscribe.me/blog/tag/mysockswerehere/page/4/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.33</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-it-to-me/page/4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-of-the-day/page/4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-subscription/page/4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-13/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-12/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-11/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-10/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-9/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-8/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-7/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/sock-pictures/page/3/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-6/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-5/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/2013/11/instagram-pic-of-the-day-4/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/instagram/page/5/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/awesome-sock-pictures/page/5/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/instagram/page/5/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/mysockswerehere/page/5/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/instagram/page/6/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/awesome-sock-pictures/page/6/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/instagram/page/6/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/mysockswerehere/page/6/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/category/instagram/page/7/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/instagram/page/7/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://sockscribe.me/blog/tag/mysockswerehere/page/7/</loc>
+  <changefreq>daily</changefreq>
 </url>
 </urlset>

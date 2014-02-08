@@ -33,6 +33,7 @@
                     target="_new">Follow the Sockscribe Me Blog on
                     Tumblr</a>
                 </div>
+
             </div>
 
             <div class="col-sm-12 col-md-3 newsletter-footer" id="mc_embed_signup">
@@ -59,6 +60,11 @@
                 <p>&copy; 2013 Sockscribe Me LLC. &middot; <a href="./privacy.php">Privacy</a> &middot; <a href="./terms.php">Terms</a></p>
               </div>
             </div>
+        </div>
+
+        <div class="row">
+                            <div class="fb-like navbar-right" data-href="https://www.facebook.com/sockscribeme" data-width="250" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
         </div>
       </footer>
 
@@ -92,9 +98,12 @@ olark.identify('9610-690-10-8450');/*]]>*/</script><noscript><a href="https://ww
     <script src="./js/collapse.js"></script>
     <script src="./js/jquery.colorbox.js"></script>
     <script src="./js/placeholders.min.js"></script>
+    <script src="./js/fancybox.js"></script>
+    <script src="./js/fancybox.pack.js"></script>
+    <script src="./js/fancybox-media.js"></script>
     <script src="./js/imgLiquid.js"></script>
     <script src="./js/app.js"></script>
 
-   
+
   </body>
 </html>

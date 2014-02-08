@@ -101,6 +101,10 @@ hr {
 	#msform {
 /*	height: 1000px;
 */	}
+
+	.information p{
+		display: none;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -415,9 +419,18 @@ blockquote small {
 	height: auto;
 }*/
 .carousel .item{
-	background: url(../images/photos/socks-sitting-on-a-wall.png);
+	background: url(../images/photos/never-go-missing.png);
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.small-carousel{
+	height: 200px;
+	width: 100%;
+	background: url(../images/photos/never-go-missing-small.png);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat no-repeat;
 }
 /*----------Sock subscription options-------------*/
 .form-container {
@@ -741,6 +754,16 @@ label h6 {
 }
 
 
+.btn-primary{
+	background-color: #0591FF;
+}
+.btn-primary:hover{
+	background-color: #51B3FF;
+}
+.btn-primary:active{
+	background-color: #0591FF;
+}
+
 .continue-checkout-btn{
 width:220px;
 padding-left: 50px;
@@ -1039,4 +1062,22 @@ a.fill-div {
 
 .facebook_recipt:hover, .twitter_recipt:hover, .google_plus_recipt:hover{
     opacity: .7;
+}
+
+
+.btn-to-options{
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+	margin-bottom: 30px;
+	font-size: 28px;
+	line-height: 1.46428571;
+	font-weight: 500;
+}
+.btn-primary{
+	background-color: #0591FF;
+}
+.btn-primary:hover{
+	background-color: #51B3FF;
+}
+.btn-primary:active{
+	background-color: #0591FF;
 }
