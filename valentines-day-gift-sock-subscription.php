@@ -193,6 +193,11 @@ include_once('header.php');
 </div>
 </div>
 
+<!-- end page content -->
+<?php
+include_once('footer.php');
+?>
+
 <script>
 	var twelveMonthsDate;
 	var sixMonthsDate;
@@ -200,7 +205,3 @@ include_once('header.php');
 	var twelveMonthsDate = $("#twelveMonthsDate").val();
 	var sixMonthsDate = $("#sixMonthsDate").val();
 </script>
-<!-- end page content -->
-<?php
-include_once('footer.php');
-?>

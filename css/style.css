@@ -254,8 +254,10 @@ hr {
 
 .navbar {
 	width: 100%;
-	-moz-transition: opacity .25s ease-in-out;
-	-webkit-transition: opacity .25s ease-in-out;
+	webkit-transition:all 1.0s ease-in-out;
+	  -moz-transition:all 1.0s ease-in-out;
+	  -o-transition:all 1.0s ease-in-out;
+	  transition:all 1.0s ease-in-out;
 }
 
 @media (max-width: 990px) {
@@ -299,6 +301,10 @@ hr {
 
 .navbar-brand img {
 	width: 200px;
+	webkit-transition:all 1.0s ease-in-out;
+  -moz-transition:all 1.0s ease-in-out;
+  -o-transition:all 1.0s ease-in-out;
+  transition:all 1.0s ease-in-out;
 }
 
 .bold-pill {

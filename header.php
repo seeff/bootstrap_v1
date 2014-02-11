@@ -33,7 +33,7 @@
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/social-likes.css" rel="stylesheet" >
     <link href="css/colorbox.css" rel="stylesheet" >
-    <link href="css/jquery.fancybox.css" rel="stylesheet" >
+    <link href="css/fancybox.css" rel="stylesheet" >
     <link href="css/carousel.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
 <!--         '<link href="css/flat-ui-fonts.css" rel="stylesheet">'

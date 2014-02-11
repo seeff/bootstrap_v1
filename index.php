@@ -101,8 +101,16 @@ include_once('header.php');
 
 
 
+<!-- THIS IS TESTING THE FANCYBOX - REMOVING SEO STUFF
+ -->
+      <a class="fancybox" href="http://www.youtube.com/embed/nGTxZukeAQM?autoplay=1">
+       Watch video
+      </a>
 
-      <a class="fancybox-media" itemprop="video" itemscope itemtype="http://schema.org/VideoObject" href="http://www.youtube.com/embed/nGTxZukeAQM?autoplay=1">
+    <a class="various fancybox.iframe" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">Youtube (iframe)</a>
+
+
+      <a class="various fancybox.iframe" itemprop="video" itemscope itemtype="http://schema.org/VideoObject" href="http://www.youtube.com/embed/nGTxZukeAQM?autoplay=1">
         <div class="col-md-5">  
               <div class="list play-video">
                 <div class="hide">
