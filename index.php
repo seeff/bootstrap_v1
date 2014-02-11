@@ -99,10 +99,23 @@ include_once('header.php');
 
         <div class="row featurette">
 
-      <a class="fancybox-media" href="http://www.youtube.com/embed/nGTxZukeAQM?autoplay=1">
+
+
+
+      <a class="fancybox-media" itemprop="video" itemscope itemtype="http://schema.org/VideoObject" href="http://www.youtube.com/embed/nGTxZukeAQM?autoplay=1">
         <div class="col-md-5">  
               <div class="list play-video">
-                   Play Video
+                <div class="hide">
+                     <h2>Video: <span itemprop="name">Sock Subscription Service Video - Sockscribe Me</span></h2>
+                      <meta itemprop="duration" content="T1M37S" />
+                      <meta itemprop="thumbnailUrl" content="./images/sock-video-preview-picture.png" />
+                      <meta itemprop="contentURL" 
+                            content="http://www.youtube.com/embed/nGTxZukeAQM" />
+                      <meta itemprop="embedURL" 
+                            content="hhttp://www.youtube.com/embed/nGTxZukeAQM" />
+                      <meta itemprop="uploadDate" content="2013-09-09T08:00:00+08:00" />
+                      <span itemprop="description">Take off your flip-flops and white tube socks; change the conversation. Our socks are for freethinkers who know what they deserve.</span> 
+              </div>
               </div>
         </div>
       </a>

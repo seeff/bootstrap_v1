@@ -29,10 +29,7 @@ include_once('header.php');
 		</div>
 		<div class="col-md-7">
 		  <h2 class="featurette-heading">This is explaining the product <span class="text-muted">Subtitle</span></h2>
-		  <p class="lead">This will be the text we going to put in.</p>
-		   <div class="row center">
-		    <a class="btn btn-lg btn-primary btn-to-options" href="./sock-subscription.php">Get Started <span class="glyphicon glyphicon-chevron-right"></span></a>
-		  </div>
+		  <p class="lead">Yup, valentines day is almost here. The big day. Don’t disappoint your lover with another cliche bouquet of flowers or another box of fancy chocolate that is re-gifted to your house guests. This year we invite you to be creative and unique by spoiling your loved one with a sock subscription for valentines day. This is the perfect last minute valentines day gift and you won’t regret it.  </p>
 		</div>
 	</div>
  </div><!-- end container -->
@@ -43,22 +40,17 @@ include_once('header.php');
 		<div class="row featurette">
 		<div class="col-md-7">
 		  <h2 class="featurette-heading">This is why you should buy it <span class="text-muted">Subtitle</span></h2>
-		  <p class="lead">This will be the text we going to put in.</p>
-		   <div class="row center">
-		    <a class="btn btn-lg btn-primary btn-to-options" href="./sock-subscription.php">Get Started <span class="glyphicon glyphicon-chevron-right"></span></a>
-		  </div>
+		  <p class="lead">If you sign up for the valentines day sock subscription special we will specially package the first months subscription to impress your lover and we will include a custom card with your personalized message. So what are you waiting for, get started by choosing your subscription duration below!</p>
 		</div>
 		<div class="col-md-5">
 		  <img class="featurette-image img-responsive" src="./images/socks-in-envelopes.jpg" alt="Sock Delivery in Envelopes">
 		</div>
-	</div>
  </div><!-- end container -->
 
        <hr class="featurette-divider">
 
 
-
-<div class="col-md-10 col-md-offset-1">
+	<div class="col-md-10 col-md-offset-1">
 
 		<form action="https://sockscribeme.foxycart.com/cart" method="post">
 
@@ -67,26 +59,8 @@ include_once('header.php');
 			</div>
 
 			<div class="row duration-container">
-				<label class="col-sm-4">
 
-						<div class="tile radio-duration">
-					 		<div class="information">
-								<input type="radio" name="name" value="Month to Month" required>
-								<h3>Month to Month</h3>
-						 		<div class="price-block">
-							 		$<strong>12</strong>/month + shipping
-							 	</div>
-							 		<p>Great for the Uncomitted</p>
-								 	<p>1 pair of socks every month</p>
-							 		<p>Cancel anytime</p>
-
-						 	</div>
-
-						 	<div class="btn btn-inverse duration-button">Select<span class="fui-arrow-right"></span></div>
-				 		</div>
-				</label>
-
-				<label class="col-sm-4">
+				<label class="col-xs-6">
 						<div class="tile radio-duration">
 					 		<div class="information">
 								<input type="radio" name="name" value="Six Months Subscription" required>
@@ -107,7 +81,7 @@ include_once('header.php');
 						 </div>
 				</label>
 
-				<label class="col-sm-4">
+				<label class="col-xs-6">
 						<div class="tile radio-duration">
 					 		<div class="information">
 								<input type="radio" name="name" value="Twelve Months Subscription" required>
@@ -133,7 +107,7 @@ include_once('header.php');
 				<h3>Step 2: Select a Gender</h3>
 			</div>
 				<div class="row">
-					<label class="col-xs-4">
+					<label class="col-xs-6">
 						<div class="tile radio-gender">
 					 			<div class="information">
 									<input type="radio" name="gender" value="Dudes" required><h3>Dudes</h3></input >
@@ -143,7 +117,7 @@ include_once('header.php');
 						</div>
 					</label>
 
-					<label class="col-xs-4">
+					<label class="col-xs-6">
 						<div class="tile radio-gender">
 					 			<div class="information">
 									<input type="radio" name="gender" value="Chicks" required><h3>Chicks</h3></input>
@@ -155,19 +129,7 @@ include_once('header.php');
 
 				 		</div>
 					</label>
-
-					<label class="col-xs-4">
-						<div class="tile radio-gender">
-					 			<div class="information">
-									<input type="radio" name="gender" value="Chicks" required><h3>Both</h3></input>
-							 		<lead>Get one for yourself and Partner</lead>
-
-							 	</div>
-
-							 	<div class="btn btn-inverse gender-button">Select<span class="fui-arrow-right"></span></div>
-
-				 		</div>
-					</label>				</div>
+				</div>
 			</div>
 
 			<div class="row style-container">
@@ -208,6 +170,7 @@ include_once('header.php');
 
   		  <div class="row">
 				<div class="col-md-12 continue-button text-center">
+				<input type="hidden" name="occasion" value="Valentines-Day-Gift" />		
 				<input type="hidden" name="empty" value="true" />		
 				<input type="hidden" name="cart" value="checkout" />		
 				<button type="submit" id="checkout-button" class="btn continue-checkout-btn" >Checkout <span class="glyphicon glyphicon-chevron-right"></span></button>
@@ -225,8 +188,19 @@ include_once('header.php');
 	echo date('Ymd', strtotime("+6 month +1 day"));
 	?>" />		
 </div>
-<!-- end page content -->
 
+	</div>
+</div>
+</div>
+
+<script>
+	var twelveMonthsDate;
+	var sixMonthsDate;
+
+	var twelveMonthsDate = $("#twelveMonthsDate").val();
+	var sixMonthsDate = $("#sixMonthsDate").val();
+</script>
+<!-- end page content -->
 <?php
 include_once('footer.php');
 ?>

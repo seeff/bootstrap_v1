@@ -98,12 +98,11 @@ olark.identify('9610-690-10-8450');/*]]>*/</script><noscript><a href="https://ww
     <script src="./js/collapse.js"></script>
     <script src="./js/jquery.colorbox.js"></script>
     <script src="./js/placeholders.min.js"></script>
-    <script src="./js/fancybox.js"></script>
     <script src="./js/fancybox.pack.js"></script>
     <script src="./js/fancybox-media.js"></script>
     <script src="./js/imgLiquid.js"></script>
+    <script src="./js/google_analytics.js"></script>
     <script src="./js/app.js"></script>
-
 
   </body>
 </html>

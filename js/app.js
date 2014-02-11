@@ -4,9 +4,6 @@ $(window).load(function() {
 	$('.fancybox-media').fancybox({
 		openEffect  : 'none',
 		closeEffect : 'none',
-		helpers : {
-			media : {}
-		}
 	});
 
 	$('input:radio[name="name"]').change(function(){
