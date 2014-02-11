@@ -1,6 +1,6 @@
 <?php
 
-$PageTitle="Sockscribe Me - Awesome Socks Delivered to Your Door Monthly";
+$PageTitle="Subscribe to our Sock of the Month Club - Sockscribe Me";
 $page = "";
 
 function customPageHeader(){?>

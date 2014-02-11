@@ -1,7 +1,7 @@
 <?php
 
 $PageTitle="Frequently Asked Questions - Sockscribe Me";
-$page = "Frequently-Asked-Questions";
+$page = "Frequently Asked Questions";
 
 function customPageHeader(){?>
   <!--Arbitrary HTML Tags-->

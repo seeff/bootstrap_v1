@@ -1,7 +1,7 @@
 <?php
 
-$PageTitle="Sockscribe Me - Awesome Socks Delivered to Your Door Monthly";
-$page = "Privacy Policy";
+$PageTitle="Terms and Conditions - Sockscribe Me";
+$page = "Terms and Conditions";
 
 function customPageHeader(){?>
   <!--Arbitrary HTML Tags-->
